@@ -7103,7 +7103,7 @@ pre .deletion {
 .home-banner-container .content .description {
   width: 100vw;
   font-weight: 450;
-  font-size: 2.8rem;
+  font-size: 2rem;
   line-height: 1.2;
   text-align: center;
   color: var(--home-banner-text-color);
@@ -7123,7 +7123,7 @@ pre .deletion {
 }
 @media (max-width: 780px) {
   .home-banner-container .content .description {
-    font-size: 2.52rem;
+    font-size: 1.8rem;
   }
 }
 .home-banner-container .content .social-contacts {
