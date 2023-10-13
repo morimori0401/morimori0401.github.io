@@ -42,8 +42,29 @@
 <meta property="og:image" content="https://morimori0401.github.io/pictures/zikong2-6-2-3.png">
 <meta property="og:image" content="https://morimori0401.github.io/pictures/zikong2-6-3-1.png">
 <meta property="og:image" content="https://morimori0401.github.io/pictures/zikong2-6-3-2.png">
+<meta property="og:image" content="https://morimori0401.github.io/pictures/zikong3-1.png">
+<meta property="og:image" content="https://morimori0401.github.io/pictures/zikong3-2.png">
+<meta property="og:image" content="https://morimori0401.github.io/pictures/zikong3-3.png">
+<meta property="og:image" content="https://morimori0401.github.io/pictures/zikong3-4.png">
+<meta property="og:image" content="https://morimori0401.github.io/pictures/zikong3-5.png">
+<meta property="og:image" content="https://morimori0401.github.io/pictures/zikong3-6.png">
+<meta property="og:image" content="https://morimori0401.github.io/pictures/zikong3-7.png">
+<meta property="og:image" content="https://morimori0401.github.io/pictures/zikong3-8.png">
+<meta property="og:image" content="https://morimori0401.github.io/pictures/zikong3-9.png">
+<meta property="og:image" content="https://morimori0401.github.io/pictures/zikong3-10.png">
+<meta property="og:image" content="https://morimori0401.github.io/pictures/zikong3-11.png">
+<meta property="og:image" content="https://morimori0401.github.io/pictures/zikong3-12.png">
+<meta property="og:image" content="https://morimori0401.github.io/pictures/zikong3-13.png">
+<meta property="og:image" content="https://morimori0401.github.io/pictures/zikong3-14.png">
+<meta property="og:image" content="https://morimori0401.github.io/pictures/zikong3-15.png">
+<meta property="og:image" content="https://morimori0401.github.io/pictures/zikong3-16.png">
+<meta property="og:image" content="https://morimori0401.github.io/pictures/zikong3-17.png">
+<meta property="og:image" content="https://morimori0401.github.io/pictures/zikong3-19.png">
+<meta property="og:image" content="https://morimori0401.github.io/pictures/zikong3-18.png">
+<meta property="og:image" content="https://morimori0401.github.io/pictures/zikong3-20.png">
+<meta property="og:image" content="https://morimori0401.github.io/pictures/zikong3-21.png">
 <meta property="article:published_time" content="2023-09-15T03:47:17.293Z">
-<meta property="article:modified_time" content="2023-09-22T04:24:35.634Z">
+<meta property="article:modified_time" content="2023-10-12T14:34:18.700Z">
 <meta property="article:author" content="morimori">
 <meta property="article:tag" content="大三上提纲">
 <meta name="twitter:card" content="summary">
@@ -446,8 +467,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2023-09-22 12:24:35</span>
-            <span class="mobile">2023-09-22 12:24</span>
+            <span class="desktop">2023-10-12 22:34:18</span>
+            <span class="mobile">2023-10-12 22:34</span>
             <span class="hover-info">Updated</span>
         </span>
     
@@ -825,20 +846,21 @@
 <li>结构图等效变换或者梅森公式求传递函数</li>
 <li>典型反馈系统的传递函数</li>
 </ul>
-<h2 id="时域分析"><a href="#时域分析" class="headerlink" title="时域分析"></a>时域分析</h2><h3 id="一些定义"><a href="#一些定义" class="headerlink" title="一些定义"></a>一些定义</h3><ul>
-<li><p>时域分析定义</p>
+<h2 id="时域分析"><a href="#时域分析" class="headerlink" title="时域分析"></a>时域分析</h2><h3 id="时域分析基础"><a href="#时域分析基础" class="headerlink" title="时域分析基础"></a>时域分析基础</h3><p><img lazyload src="/images/loading.svg" data-src="/pictures/zikong3-1.png"></p>
 <ul>
-<li>零初始状态下的典型时间响应</li>
-</ul>
+<li><p>所利用的零状态响应：<strong>典型初始状态</strong>下的系统在<strong>典型外作用</strong>下<strong>典型时间响应</strong></p>
 </li>
-<li><p>典型初始状态：</p>
+<li><p>定义：利用响应的时域表达式与时间曲线分析控制<strong>性能</strong>（稳、快、准）</p>
 </li>
-<li><p>典型外作用：</p>
+<li><p>典型初始状态：<strong>零初始状态</strong></p>
+</li>
+<li><p>典型外作用</p>
+<p>【注意其拉氏变换很重要！】</p>
 <ul>
-<li>单位冲激</li>
-<li>单位阶跃</li>
-<li>加速度（斜坡）</li>
-<li>正弦</li>
+<li>单位脉冲（冲击力等）</li>
+<li>单位阶跃（数控车床的车刀进给）</li>
+<li>单位斜坡（烘箱温度、加速度）</li>
+<li>正弦（摇摆台角）</li>
 <li>….</li>
 </ul>
 </li>
@@ -846,29 +868,161 @@
 <ol>
 <li><p>单位脉冲响应（k）：单位脉冲响应的拉氏变换就是系统的<strong>传递函数</strong></p>
 </li>
-<li><p>单位阶跃响应（h）：相当于（1）积分之后求L变换</p>
+<li><p>单位阶跃响应（h）：相当于（1）积分</p>
 </li>
-<li><p>单位斜坡响应（c）：相当于（2）积分之后求L变换</p>
+<li><p>单位斜坡响应（c）：相当于（2）积分</p>
 </li>
 </ol>
 </li>
 <li><p>控制系统的主要<strong>时域</strong>性能指标</p>
 <ol>
 <li><p>概念</p>
+<p>通常采用系统的<strong>阶跃响应</strong>来定义时域指标</p>
 </li>
 <li><p>主要时域指标</p>
 <ul>
-<li>延迟时间：达到一半稳态值需要的时间（越小越快）</li>
-<li>上升时间：第一次达到稳态值的时间</li>
-<li>峰值时间：达到最大值的时间</li>
-<li>调节时间：进入误差带并且不再出误差带的事件</li>
-<li>超调量：最大值与响应的稳态值的差9（越小越稳）</li>
+<li><p>延迟时间：达到一半稳态值需要的时间（越小越快）</p>
+</li>
+<li><p>上升时间：第一次达到稳态值的时间</p>
+</li>
+<li><p>峰值时间：达到最大值的时间</p>
+</li>
+<li><p>调节时间：进入误差带并且不再出误差带的时间</p>
+</li>
+<li><p>超调量：最大值与响应的稳态值的差（越小越稳）</p>
+</li>
+<li><p>稳态误差：t-&gt;∞时期望值与稳态值之差（稳态指标）</p>
+</li>
 </ul>
 </li>
 </ol>
 </li>
 </ul>
-
+<h3 id="典型一、二阶系统的分析和指标计算"><a href="#典型一、二阶系统的分析和指标计算" class="headerlink" title="典型一、二阶系统的分析和指标计算"></a>典型一、二阶系统的分析和指标计算</h3><h4 id="一阶系统的数学模型与单位阶跃响应"><a href="#一阶系统的数学模型与单位阶跃响应" class="headerlink" title="一阶系统的数学模型与单位阶跃响应"></a>一阶系统的数学模型与单位阶跃响应</h4><ul>
+<li><p>数学模型</p>
+<p><img lazyload src="/images/loading.svg" data-src="/pictures/zikong3-2.png"></p>
+<p>这里的时间常数T为系统<strong>调节时间</strong>。在这个式子的基础上可以乘K作为<strong>放大倍数</strong>。</p>
+</li>
+<li><p>单位阶跃响应函数与曲线</p>
+</li>
+<li><p>性能指标</p>
+<ul>
+<li>平稳性：非周期、无振荡</li>
+<li>快速性：ts&#x3D;3T（5%误差带）</li>
+<li>准确性：稳态误差为0</li>
+</ul>
+<p>【元件参数决定系统参数，系统<strong>参数</strong>决定<strong>指标</strong>】</p>
+</li>
+</ul>
+<h4 id="二阶系统的数学模型与单位阶跃响应"><a href="#二阶系统的数学模型与单位阶跃响应" class="headerlink" title="二阶系统的数学模型与单位阶跃响应"></a>二阶系统的数学模型与单位阶跃响应</h4><ul>
+<li><p>数学模型</p>
+<p><img lazyload src="/images/loading.svg" data-src="/pictures/zikong3-3.png"></p>
+<p><img lazyload src="/images/loading.svg" data-src="/pictures/zikong3-4.png"></p>
+</li>
+<li><p>单位阶跃响应函数</p>
+<p><img lazyload src="/images/loading.svg" data-src="/pictures/zikong3-5.png"></p>
+</li>
+<li><p>特征根与其分布</p>
+<p>系统的动态性能主要体现于hts，则时域分析首先分析系统特征根的分布</p>
+<p>特征根：<img lazyload src="/images/loading.svg" data-src="/pictures/zikong3-6.png"></p>
+<p><img lazyload src="/images/loading.svg" data-src="/pictures/zikong3-7.png"></p>
+</li>
+</ul>
+<h4 id="过阻尼（ζ-1）二阶系统的单位阶跃响应"><a href="#过阻尼（ζ-1）二阶系统的单位阶跃响应" class="headerlink" title="过阻尼（ζ &gt;1）二阶系统的单位阶跃响应"></a>过阻尼（ζ &gt;1）二阶系统的单位阶跃响应</h4><ul>
+<li><p>单位阶跃响应函数</p>
+<p><img lazyload src="/images/loading.svg" data-src="/pictures/zikong3-8.png"></p>
+</li>
+<li><p>单位阶跃响应曲线</p>
+<ol>
+<li>响应单调上升，非周期，无振荡</li>
+<li>T1指数项系数大且衰减慢，瞬态响应主要取决于该项</li>
+<li>T1&gt;4T2也就是ζ &gt;1.25时，系统可以近似为T1的一阶惯性环节，因此<strong>只有1&lt;ζ &lt;1.25的需要作为二阶系统处理</strong></li>
+</ol>
+</li>
+<li><p>性能指标</p>
+<ol>
+<li><p>平稳性：非周期，无振荡</p>
+</li>
+<li><p>快速性：ζ 增大时快速性下降</p>
+</li>
+<li><p>准确性：稳态误差为0</p>
+</li>
+</ol>
+</li>
+</ul>
+<h4 id="欠阻尼（0"><a href="#欠阻尼（0" class="headerlink" title="欠阻尼（0&lt;ζ &lt;1）二阶系统的单位阶跃响应（重点）"></a>欠阻尼（0&lt;ζ &lt;1）二阶系统的单位阶跃响应（重点）</h4><ul>
+<li><p>特征根</p>
+<p><img lazyload src="/images/loading.svg" data-src="/pictures/zikong3-9.png"></p>
+<p><img lazyload src="/images/loading.svg" data-src="/pictures/zikong3-10.png"></p>
+</li>
+<li><p>单位阶跃响应及其曲线</p>
+<p><img lazyload src="/images/loading.svg" data-src="/pictures/zikong3-11.png"></p>
+</li>
+<li><p>包络线</p>
+<p><img lazyload src="/images/loading.svg" data-src="/pictures/zikong3-12.png"></p>
+</li>
+<li><p>性能指标</p>
+<ol>
+<li><p>上升时间tr：<img lazyload src="/images/loading.svg" data-src="/pictures/zikong3-13.png"></p>
+</li>
+<li><p>峰值时间tp：<img lazyload src="/images/loading.svg" data-src="/pictures/zikong3-14.png"></p>
+<p><img lazyload src="/images/loading.svg" data-src="/pictures/zikong3-15.png"></p>
+</li>
+<li><p>超调量</p>
+<p><img lazyload src="/images/loading.svg" data-src="/pictures/zikong3-16.png"></p>
+</li>
+<li><p>调节时间ts</p>
+<p><img lazyload src="/images/loading.svg" data-src="/pictures/zikong3-17.png"></p>
+</li>
+<li><p>稳态误差：0</p>
+</li>
+</ol>
+</li>
+<li><p>总结</p>
+<p><img lazyload src="/images/loading.svg" data-src="/pictures/zikong3-19.png"></p>
+</li>
+</ul>
+<h4 id="临界阻尼（ζ-1）二阶系统的单位阶跃响应"><a href="#临界阻尼（ζ-1）二阶系统的单位阶跃响应" class="headerlink" title="临界阻尼（ζ &#x3D;1）二阶系统的单位阶跃响应"></a>临界阻尼（ζ &#x3D;1）二阶系统的单位阶跃响应</h4><p><img lazyload src="/images/loading.svg" data-src="/pictures/zikong3-18.png"></p>
+<h4 id="总结（重要！！！）"><a href="#总结（重要！！！）" class="headerlink" title="总结（重要！！！）"></a>总结（重要！！！）</h4><p><img lazyload src="/images/loading.svg" data-src="/pictures/zikong3-20.png"></p>
+<h4 id="改善二阶系统性能的措施"><a href="#改善二阶系统性能的措施" class="headerlink" title="改善二阶系统性能的措施"></a>改善二阶系统性能的措施</h4><ol>
+<li><p>调整元件参数</p>
+<ul>
+<li>优点：实现简单</li>
+<li>缺点<ul>
+<li>某些控制参数可能无法影响特定性能</li>
+<li>不同性能对参数要求互相矛盾</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>改进系统结构【也就是“控制系统校正”，第六章核心内容】</p>
+<ol>
+<li><p>误差信号的比例-微分控制（PD控制）</p>
+<p>利用一阶微分（PD）环节对于误差信号的一阶外推（预测、超前）能力，使控制量具有前瞻性。</p>
+</li>
+<li><p>输出量的速度反馈控制</p>
+</li>
+</ol>
+</li>
+</ol>
+<p><img lazyload src="/images/loading.svg" data-src="/pictures/zikong3-21.png"></p>
+<h3 id="系统稳定性分析"><a href="#系统稳定性分析" class="headerlink" title="系统稳定性分析"></a>系统稳定性分析</h3><h4 id="稳定性的概念"><a href="#稳定性的概念" class="headerlink" title="稳定性的概念"></a>稳定性的概念</h4><ul>
+<li><p>系统是稳定的：<strong>任意</strong>扰动作用消失后，系统可以由初始偏差状态恢复到原平衡<strong>状态</strong>（<strong>不是位置</strong>）</p>
+</li>
+<li><p><strong>线性</strong>系统稳定与否是<strong>固有</strong>属性</p>
+<ul>
+<li><p>只取决于自身结构与参数</p>
+</li>
+<li><p>与初始条件与外作用无关</p>
+<p>【注意：稳定与平衡不一样！稳定是系统的重要<strong>属性</strong>之一，而平衡是系统的<strong>特定状态</strong>，其稳定性同（线性）系统稳定性】</p>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="系统稳定的充要条件"><a href="#系统稳定的充要条件" class="headerlink" title="系统稳定的充要条件"></a>系统稳定的充要条件</h4><ol>
+<li>控制系统的全响应</li>
+</ol>
+<h3 id="稳态误差分析和计算"><a href="#稳态误差分析和计算" class="headerlink" title="稳态误差分析和计算"></a>稳态误差分析和计算</h3>
             </div>
 
             
@@ -880,7 +1034,7 @@
         <li><strong>Created at:</strong> 2023-09-15 11:47:17</li>
         
             <li>
-                <strong>Updated at:</strong> 2023-09-22 12:24:35
+                <strong>Updated at:</strong> 2023-10-12 22:34:18
             </li>
         
         <li>
@@ -909,21 +1063,6 @@
 
             
                 <div class="article-nav">
-                    
-                        <div class="article-prev">
-                            <a class="prev"
-                            rel="prev"
-                            href="/2023/09/22/%E5%8D%81%E4%B8%80%E5%9B%BD%E5%BA%86%E5%87%BA%E6%B8%B8%E8%AE%A1%E5%88%92/"
-                            >
-                                <span class="left arrow-icon flex-center">
-                                    <i class="fa-solid fa-chevron-left"></i>
-                                </span>
-                                <span class="title flex-center">
-                                    <span class="post-nav-title-item"></span>
-                                    <span class="post-nav-item">Prev posts</span>
-                                </span>
-                            </a>
-                        </div>
                     
                     
                         <div class="article-next">
@@ -954,7 +1093,7 @@
     <div class="post-toc">
         <div class="toc-title">On this page</div>
         <div class="page-title">自动控制原理</div>
-        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%87%AA%E5%8A%A8%E6%8E%A7%E5%88%B6%E7%9A%84%E4%B8%80%E8%88%AC%E6%A6%82%E5%BF%B5"><span class="nav-number">1.</span> <span class="nav-text">自动控制的一般概念</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E8%87%AA%E5%8A%A8%E6%8E%A7%E5%88%B6"><span class="nav-number">1.1.</span> <span class="nav-text">什么是自动控制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%87%AA%E5%8A%A8%E6%8E%A7%E5%88%B6%E6%9C%89%E4%BB%80%E4%B9%88%E5%9F%BA%E6%9C%AC%E6%96%B9%E5%BC%8F"><span class="nav-number">1.2.</span> <span class="nav-text">自动控制有什么基本方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%87%AA%E5%8A%A8%E6%8E%A7%E5%88%B6%E7%B3%BB%E7%BB%9F%E6%80%A7%E8%83%BD%E5%A6%82%E4%BD%95%E8%AF%84%E4%BB%B7"><span class="nav-number">1.3.</span> <span class="nav-text">自动控制系统性能如何评价</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0%E9%87%8D%E7%82%B9%E9%9A%BE%E7%82%B9"><span class="nav-number">1.4.</span> <span class="nav-text">第一章重点难点</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%87%AA%E5%8A%A8%E6%8E%A7%E5%88%B6%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%95%B0%E5%AD%A6%E6%A8%A1%E5%9E%8B"><span class="nav-number">2.</span> <span class="nav-text">自动控制系统的数学模型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8E%A7%E5%88%B6%E7%B3%BB%E7%BB%9F%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B%E5%BB%BA%E7%AB%8B"><span class="nav-number">2.1.</span> <span class="nav-text">控制系统微分方程建立</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9D%9E%E7%BA%BF%E6%80%A7%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B%E7%9A%84%E7%BA%BF%E6%80%A7%E5%8C%96"><span class="nav-number">2.2.</span> <span class="nav-text">非线性微分方程的线性化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BC%A0%E9%80%92%E5%87%BD%E6%95%B0"><span class="nav-number">2.3.</span> <span class="nav-text">传递函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8A%A8%E6%80%81%E7%BB%93%E6%9E%84%E5%9B%BE"><span class="nav-number">2.4.</span> <span class="nav-text">动态结构图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%A8%E6%A2%85%E6%A3%AE%E5%85%AC%E5%BC%8F%E6%B1%82%E4%BC%A0%E9%80%92%E5%87%BD%E6%95%B0"><span class="nav-number">2.5.</span> <span class="nav-text">用梅森公式求传递函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%B3%BB%E7%BB%9F%E7%9A%84%E8%84%89%E5%86%B2%E5%93%8D%E5%BA%94%E5%87%BD%E6%95%B0"><span class="nav-number">2.6.</span> <span class="nav-text">系统的脉冲响应函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B8%E5%9E%8B%E5%8F%8D%E9%A6%88%E7%B3%BB%E7%BB%9F%E7%9A%84%E4%BC%A0%E9%80%92%E5%87%BD%E6%95%B0"><span class="nav-number">2.7.</span> <span class="nav-text">典型反馈系统的传递函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0%E9%87%8D%E7%82%B9%E9%9A%BE%E7%82%B9"><span class="nav-number">2.8.</span> <span class="nav-text">第二章重点难点</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%97%B6%E5%9F%9F%E5%88%86%E6%9E%90"><span class="nav-number">3.</span> <span class="nav-text">时域分析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E4%BA%9B%E5%AE%9A%E4%B9%89"><span class="nav-number">3.1.</span> <span class="nav-text">一些定义</span></a></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%87%AA%E5%8A%A8%E6%8E%A7%E5%88%B6%E7%9A%84%E4%B8%80%E8%88%AC%E6%A6%82%E5%BF%B5"><span class="nav-number">1.</span> <span class="nav-text">自动控制的一般概念</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E8%87%AA%E5%8A%A8%E6%8E%A7%E5%88%B6"><span class="nav-number">1.1.</span> <span class="nav-text">什么是自动控制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%87%AA%E5%8A%A8%E6%8E%A7%E5%88%B6%E6%9C%89%E4%BB%80%E4%B9%88%E5%9F%BA%E6%9C%AC%E6%96%B9%E5%BC%8F"><span class="nav-number">1.2.</span> <span class="nav-text">自动控制有什么基本方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%87%AA%E5%8A%A8%E6%8E%A7%E5%88%B6%E7%B3%BB%E7%BB%9F%E6%80%A7%E8%83%BD%E5%A6%82%E4%BD%95%E8%AF%84%E4%BB%B7"><span class="nav-number">1.3.</span> <span class="nav-text">自动控制系统性能如何评价</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0%E9%87%8D%E7%82%B9%E9%9A%BE%E7%82%B9"><span class="nav-number">1.4.</span> <span class="nav-text">第一章重点难点</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%87%AA%E5%8A%A8%E6%8E%A7%E5%88%B6%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%95%B0%E5%AD%A6%E6%A8%A1%E5%9E%8B"><span class="nav-number">2.</span> <span class="nav-text">自动控制系统的数学模型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8E%A7%E5%88%B6%E7%B3%BB%E7%BB%9F%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B%E5%BB%BA%E7%AB%8B"><span class="nav-number">2.1.</span> <span class="nav-text">控制系统微分方程建立</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9D%9E%E7%BA%BF%E6%80%A7%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B%E7%9A%84%E7%BA%BF%E6%80%A7%E5%8C%96"><span class="nav-number">2.2.</span> <span class="nav-text">非线性微分方程的线性化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BC%A0%E9%80%92%E5%87%BD%E6%95%B0"><span class="nav-number">2.3.</span> <span class="nav-text">传递函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8A%A8%E6%80%81%E7%BB%93%E6%9E%84%E5%9B%BE"><span class="nav-number">2.4.</span> <span class="nav-text">动态结构图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%A8%E6%A2%85%E6%A3%AE%E5%85%AC%E5%BC%8F%E6%B1%82%E4%BC%A0%E9%80%92%E5%87%BD%E6%95%B0"><span class="nav-number">2.5.</span> <span class="nav-text">用梅森公式求传递函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%B3%BB%E7%BB%9F%E7%9A%84%E8%84%89%E5%86%B2%E5%93%8D%E5%BA%94%E5%87%BD%E6%95%B0"><span class="nav-number">2.6.</span> <span class="nav-text">系统的脉冲响应函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B8%E5%9E%8B%E5%8F%8D%E9%A6%88%E7%B3%BB%E7%BB%9F%E7%9A%84%E4%BC%A0%E9%80%92%E5%87%BD%E6%95%B0"><span class="nav-number">2.7.</span> <span class="nav-text">典型反馈系统的传递函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0%E9%87%8D%E7%82%B9%E9%9A%BE%E7%82%B9"><span class="nav-number">2.8.</span> <span class="nav-text">第二章重点难点</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%97%B6%E5%9F%9F%E5%88%86%E6%9E%90"><span class="nav-number">3.</span> <span class="nav-text">时域分析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%97%B6%E5%9F%9F%E5%88%86%E6%9E%90%E5%9F%BA%E7%A1%80"><span class="nav-number">3.1.</span> <span class="nav-text">时域分析基础</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B8%E5%9E%8B%E4%B8%80%E3%80%81%E4%BA%8C%E9%98%B6%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%88%86%E6%9E%90%E5%92%8C%E6%8C%87%E6%A0%87%E8%AE%A1%E7%AE%97"><span class="nav-number">3.2.</span> <span class="nav-text">典型一、二阶系统的分析和指标计算</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%80%E9%98%B6%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%95%B0%E5%AD%A6%E6%A8%A1%E5%9E%8B%E4%B8%8E%E5%8D%95%E4%BD%8D%E9%98%B6%E8%B7%83%E5%93%8D%E5%BA%94"><span class="nav-number">3.2.1.</span> <span class="nav-text">一阶系统的数学模型与单位阶跃响应</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BA%8C%E9%98%B6%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%95%B0%E5%AD%A6%E6%A8%A1%E5%9E%8B%E4%B8%8E%E5%8D%95%E4%BD%8D%E9%98%B6%E8%B7%83%E5%93%8D%E5%BA%94"><span class="nav-number">3.2.2.</span> <span class="nav-text">二阶系统的数学模型与单位阶跃响应</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BF%87%E9%98%BB%E5%B0%BC%EF%BC%88%CE%B6-1%EF%BC%89%E4%BA%8C%E9%98%B6%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%8D%95%E4%BD%8D%E9%98%B6%E8%B7%83%E5%93%8D%E5%BA%94"><span class="nav-number">3.2.3.</span> <span class="nav-text">过阻尼（ζ &gt;1）二阶系统的单位阶跃响应</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%AC%A0%E9%98%BB%E5%B0%BC%EF%BC%880"><span class="nav-number">3.2.4.</span> <span class="nav-text">欠阻尼（0&lt;ζ &lt;1）二阶系统的单位阶跃响应（重点）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%B4%E7%95%8C%E9%98%BB%E5%B0%BC%EF%BC%88%CE%B6-1%EF%BC%89%E4%BA%8C%E9%98%B6%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%8D%95%E4%BD%8D%E9%98%B6%E8%B7%83%E5%93%8D%E5%BA%94"><span class="nav-number">3.2.5.</span> <span class="nav-text">临界阻尼（ζ &#x3D;1）二阶系统的单位阶跃响应</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%80%BB%E7%BB%93%EF%BC%88%E9%87%8D%E8%A6%81%EF%BC%81%EF%BC%81%EF%BC%81%EF%BC%89"><span class="nav-number">3.2.6.</span> <span class="nav-text">总结（重要！！！）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%94%B9%E5%96%84%E4%BA%8C%E9%98%B6%E7%B3%BB%E7%BB%9F%E6%80%A7%E8%83%BD%E7%9A%84%E6%8E%AA%E6%96%BD"><span class="nav-number">3.2.7.</span> <span class="nav-text">改善二阶系统性能的措施</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%B3%BB%E7%BB%9F%E7%A8%B3%E5%AE%9A%E6%80%A7%E5%88%86%E6%9E%90"><span class="nav-number">3.3.</span> <span class="nav-text">系统稳定性分析</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%A8%B3%E5%AE%9A%E6%80%A7%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="nav-number">3.3.1.</span> <span class="nav-text">稳定性的概念</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%B3%BB%E7%BB%9F%E7%A8%B3%E5%AE%9A%E7%9A%84%E5%85%85%E8%A6%81%E6%9D%A1%E4%BB%B6"><span class="nav-number">3.3.2.</span> <span class="nav-text">系统稳定的充要条件</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A8%B3%E6%80%81%E8%AF%AF%E5%B7%AE%E5%88%86%E6%9E%90%E5%92%8C%E8%AE%A1%E7%AE%97"><span class="nav-number">3.4.</span> <span class="nav-text">稳态误差分析和计算</span></a></li></ol></li></ol>
 
     </div>
 </div>
