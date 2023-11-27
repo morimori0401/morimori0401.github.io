@@ -44,7 +44,7 @@
 <meta property="og:image" content="https://morimori0401.github.io/pictures/zikong4-17.png">
 <meta property="og:image" content="https://morimori0401.github.io/pictures/zikong4-18.png">
 <meta property="article:published_time" content="2023-11-14T10:38:02.839Z">
-<meta property="article:modified_time" content="2023-11-17T02:10:55.322Z">
+<meta property="article:modified_time" content="2023-11-18T02:21:44.191Z">
 <meta property="article:author" content="morimori">
 <meta property="article:tag" content="大三上提纲">
 <meta name="twitter:card" content="summary">
@@ -433,7 +433,7 @@
                         <div class="author">
                             <span class="name">morimori0401</span>
                             
-                                <span class="author-label">Lv3</span>
+                                <span class="author-label">Lv1</span>
                             
                         </div>
                         <div class="meta-info">
@@ -447,8 +447,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2023-11-17 10:10:55</span>
-            <span class="mobile">2023-11-17 10:10</span>
+            <span class="desktop">2023-11-18 10:21:44</span>
+            <span class="mobile">2023-11-18 10:21</span>
             <span class="hover-info">更新</span>
         </span>
     
@@ -540,6 +540,11 @@
 </li>
 </ul>
 <h2 id="根之和与根之积"><a href="#根之和与根之积" class="headerlink" title="根之和与根之积"></a>根之和与根之积</h2><p><img lazyload src="/images/loading.svg" data-src="/pictures/zikong4-15.png"></p>
+<ul>
+<li>根之和跟根之积为定值</li>
+<li>满足若有一部分根轨迹曲线向一个方向，则必有另一部分曲线去往相反方向</li>
+<li>可以利用这个性质来改善系统的稳定性</li>
+</ul>
 <h1 id="广义根轨迹"><a href="#广义根轨迹" class="headerlink" title="广义根轨迹"></a>广义根轨迹</h1><p>根轨迹：（后两者为广义根轨迹）</p>
 <ul>
 <li>常规根轨迹（K*变化时对应的180°根轨迹）</li>
@@ -548,18 +553,20 @@
 </ul>
 <h2 id="参数根轨迹"><a href="#参数根轨迹" class="headerlink" title="参数根轨迹"></a>参数根轨迹</h2><ul>
 <li>若系统开环传递函数含参数A，则将原闭环特征方程转化为以A为根轨迹增益的方程形式，并取此形式的含A项为<strong>等效开环传递函数</strong>。<ol>
-<li><p>开环零点时间常数变化时的根轨迹</p>
+<li><p><strong>开环零点</strong>时间常数变化时的根轨迹</p>
 <p>n&lt;m时根轨迹规则调整：互换零极点，反标箭头，可以沿用之前的规则画常规根轨迹</p>
 </li>
-<li><p>开环极点时间常数变化时的根轨迹（从p67开始）</p>
+<li><p><strong>开环极点</strong>时间常数变化时的根轨迹</p>
 </li>
 </ol>
 </li>
 </ul>
 <h2 id="零度根轨迹"><a href="#零度根轨迹" class="headerlink" title="零度根轨迹"></a>零度根轨迹</h2><ul>
-<li>开环增益为负时候的根轨迹。</li>
+<li>开环传递函数–&gt;（分子加分母）闭环特征方程–&gt;（闭环特征方程做分母，前向通道传递函数做分子）闭环传递函数</li>
 <li>在实轴上的根轨迹区间与常规根轨迹相反：<ol>
-<li></li>
+<li>若实轴上根轨迹右边零极点之和为偶数个，则为根轨迹</li>
+<li>首条渐近线为正实轴方向，相邻渐近线夹角为2π&#x2F;(n-m)</li>
+<li>在算起始角与终止角时用2kπ代替(2k+1)π</li>
 </ol>
 </li>
 </ul>
@@ -567,6 +574,7 @@
 <li>在化成根轨迹特征方程的时候，先将方程变成首1形式</li>
 <li>闭环传递函数极点就是根轨迹与虚轴相交的点</li>
 <li>根轨迹相同，但是响应不一定一样（只是对应的闭环传递函数相同）</li>
+<li>若通过主导极点之外的点消掉了，要保证被消掉的极点是尾1型的（增益相同）</li>
 <li>通常：<ol>
 <li>由开环传递函数算出<strong>极点跟零点</strong></li>
 <li>用法则四确定实轴上的根轨迹<strong>区段</strong></li>
@@ -606,7 +614,7 @@
         <li><strong>创建于:</strong> 2023-11-14 18:38:02</li>
         
             <li>
-                <strong>更新于:</strong> 2023-11-17 10:10:55
+                <strong>更新于:</strong> 2023-11-18 10:21:44
             </li>
         
         <li>
