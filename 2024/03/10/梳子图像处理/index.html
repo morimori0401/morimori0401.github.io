@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Hexo Theme Redefine">
+    
+    <meta name="author" content="morimori0401">
+    <!-- preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    
+    <!--- Seo Part-->
+    
+    <link rel="canonical" href="https://morimori0401.github.io/2024/03/10/梳子图像处理/"/>
+    <meta name="robots" content="index,follow">
+    <meta name="googlebot" content="index,follow">
+    <meta name="revisit-after" content="1 days">
+    
+        <meta name="description" content="绪论概念 图像：二维函数f(x, y) x与y为位置坐标，该函数为某点处的值，与强度或者灰度相关 灰度图像是一个二维灰度函数 彩色图像是三个二维灰度（或者亮度）函数   数字图像：连续图像f(x, y)离散化之后的结果 数字图像由有限数量的元素组成，每个元素都有一个特定位置和幅值 二维阵列的每个元素被称为pixel或者pel 定义域、值域都是有限、离散的数值 灰度图像：f(x, y)∈[0, 25">
+<meta property="og:type" content="article">
+<meta property="og:title" content="梳子图像处理">
+<meta property="og:url" content="https://morimori0401.github.io/2024/03/10/%E6%A2%B3%E5%AD%90%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/index.html">
+<meta property="og:site_name" content="梦的化石与现实记录">
+<meta property="og:description" content="绪论概念 图像：二维函数f(x, y) x与y为位置坐标，该函数为某点处的值，与强度或者灰度相关 灰度图像是一个二维灰度函数 彩色图像是三个二维灰度（或者亮度）函数   数字图像：连续图像f(x, y)离散化之后的结果 数字图像由有限数量的元素组成，每个元素都有一个特定位置和幅值 二维阵列的每个元素被称为pixel或者pel 定义域、值域都是有限、离散的数值 灰度图像：f(x, y)∈[0, 25">
+<meta property="og:locale">
+<meta property="og:image" content="https://morimori0401.github.io/pictures/sztx1.png">
+<meta property="article:published_time" content="2024-03-10T12:36:34.203Z">
+<meta property="article:modified_time" content="2024-03-10T12:36:34.254Z">
+<meta property="article:author" content="morimori">
+<meta property="article:tag" content="大三下提纲">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://morimori0401.github.io/pictures/sztx1.png">
+    
+    
+    <!--- Icon Part-->
+    <link rel="icon" type="image/png" href="/images/redefine-favicon.svg" sizes="192x192">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/redefine-favicon.svg">
+    <meta name="theme-color" content="#A31F34">
+    <link rel="shortcut icon" href="/images/redefine-favicon.svg">
+    <!--- Page Info-->
+    
+    <title>
+        
+            梳子图像处理 -
+        
+        第四十四个宇宙的兔子洞
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    
+<link rel="stylesheet" href="/fonts/fonts.css">
+
+    
+<link rel="stylesheet" href="/fonts/Satoshi/satoshi.css">
+
+    
+<link rel="stylesheet" href="/fonts/Chillax/chillax.css">
+
+    <!--- Font Part-->
+    
+    
+    
+    
+
+    <!--- Inject Part-->
+    
+    <script id="hexo-configurations">
+    let Global = window.Global || {};
+    Global.hexo_config = {"hostname":"morimori0401.github.io","root":"/","language":"zh"};
+    Global.theme_config = {"articles":{"style":{"font_size":"16px","line_height":1.5,"image_border_radius":"14px","image_alignment":"center","image_caption":true,"link_icon":true},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":true,"auto":false,"list":[]},"code_block":{"copy":true,"style":"mac","font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":4,"number":true,"expand":true,"init_open":true},"copyright":true,"lazyload":true,"recommendation":{"enable":false,"title":"推荐阅读","limit":3,"mobile_limit":2,"placeholder":"/images/wallhaven-wqery6-light.webp","skip_dirs":[]}},"colors":{"primary":"#A31F34","secondary":null},"global":{"fonts":{"chinese":{"enable":false,"family":null,"url":null},"english":{"enable":false,"family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":false},"scroll_progress":{"bar":false,"percentage":true},"busuanzi_counter":{"enable":true,"site_pv":false,"site_uv":false,"post_pv":true},"pjax":true,"open_graph":true,"google_analytics":{"enable":false,"id":null}},"home_banner":{"enable":true,"style":"fixed","image":{"light":"/images/wallhaven-wqery6-light.webp","dark":"/images/wallhaven-wqery6-dark.webp"},"title":"恭喜您跌落进这里！也许，您愿意坐下来喝杯茶？","subtitle":{"text":["我们相遇在茫茫的海上，","你有你的 我有我的正当"],"hitokoto":{"enable":false,"api":"https://v1.hitokoto.cn"},"typing_speed":100,"backing_speed":80,"starting_delay":500,"backing_delay":1500,"loop":true,"smart_backspace":true},"text_color":{"light":"#fff","dark":"#d1d1b6"},"text_style":{"title_size":"2rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":false,"family":null,"url":null},"social_links":{"enable":false,"links":{"github":null,"instagram":null,"zhihu":null,"twitter":null,"email":null}}},"plugins":{"feed":{"enable":false},"aplayer":{"enable":false,"type":"fixed","audios":[{"name":"audio name","artist":null,"url":null,"cover":null}]},"mermaid":{"enable":true,"version":"9.3.0"}},"version":"2.2.1","navbar":{"auto_hide":false,"color":{"left":"#f78736","right":"#367df7","transparency":35},"links":{"Home":{"path":"/","icon":"fa-solid fa-house"},"Archives":{"path":"/archives","icon":"fa-brands fa-docker"},"About":{"icon":"fa-solid fa-sparkles","submenus":{"Me":"/about","Github":"/about","Blog":"/about"}},"Links":{"icon":"fa-solid fa-link","submenus":{"Luoyutong47":"https://luoyutong47.github.io/","Link2":"/link2","Link3":"/link3"}},"Gallery":{"icon":"fa-solid fa-sparkles","path":"/masonry"}},"search":{"enable":true,"preload":true},"tags":{"Tags":{"icon":"fa-solid fa-tag","path":"/tags"}}},"page_templates":{"friends_column":3,"tags_style":"blur"},"home":{"sidebar":{"enable":true,"position":"left","first_item":"menu","announcement":"","links":{"归档":{"path":"/archives","icon":"fa-brands fa-docker"},"标签":{"path":"/tags","icon":"fa-solid fa-tag"},"分类":{"path":"/categories","icon":"fa-solid fa-feather"}}},"article_date_format":"auto","categories":{"enable":true,"limit":5},"tags":{"enable":true,"limit":5}},"footerStart":"2023/7/13 11:59:59"};
+    Global.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
+    Global.data_config = {"masonry":true};
+  </script>
+    
+    <!--- Fontawesome Part-->
+    
+<link rel="stylesheet" href="/fontawesome/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/brands.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/solid.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/regular.min.css">
+
+    
+    
+    
+    
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+        <span class="pjax-progress-icon">
+            <i class="fa-solid fa-circle-notch fa-spin"></i>
+        </span>
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="main-content-container">
+
+        <div class="main-content-header">
+            <header class="navbar-container">
+    
+    <div class="navbar-content">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+                
+                第四十四个宇宙的兔子洞
+                
+            </a>
+        </div>
+
+        <div class="right">
+            <!-- PC -->
+            <div class="desktop">
+                <ul class="navbar-list">
+                    
+                        
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class="" 
+                                    href="/"  >
+                                    
+                                        
+                                            <i class="fa-solid fa-house"></i>
+                                        
+                                        首頁
+                                    
+                                </a>
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class="" 
+                                    href="/archives"  >
+                                    
+                                        
+                                            <i class="fa-brands fa-docker"></i>
+                                        
+                                        歸檔
+                                    
+                                </a>
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class="has-dropdown" 
+                                    href="#" onClick="return false;">
+                                    
+                                        
+                                            <i class="fa-solid fa-sparkles"></i>
+                                        
+                                        關於&nbsp;<i class="fa-solid fa-chevron-down"></i>
+                                    
+                                </a>
+                                <!-- Submenu -->
+                                
+                                    <ul class="sub-menu">
+                                    
+                                        <li>
+                                        <a href="/about">ME
+                                        </a>
+                                        </li>
+                                    
+                                        <li>
+                                        <a href="/about">GITHUB
+                                        </a>
+                                        </li>
+                                    
+                                        <li>
+                                        <a href="/about">BLOG
+                                        </a>
+                                        </li>
+                                    
+                                    </ul>
+                                
+                            </li>
+                    
+                        
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class="has-dropdown" 
+                                    href="#" onClick="return false;">
+                                    
+                                        
+                                            <i class="fa-solid fa-link"></i>
+                                        
+                                        鏈接&nbsp;<i class="fa-solid fa-chevron-down"></i>
+                                    
+                                </a>
+                                <!-- Submenu -->
+                                
+                                    <ul class="sub-menu">
+                                    
+                                        <li>
+                                        <a target="_blank" rel="noopener" href="https://luoyutong47.github.io/">LUOYUTONG47
+                                        </a>
+                                        </li>
+                                    
+                                        <li>
+                                        <a href="/link2">LINK2
+                                        </a>
+                                        </li>
+                                    
+                                        <li>
+                                        <a href="/link3">LINK3
+                                        </a>
+                                        </li>
+                                    
+                                    </ul>
+                                
+                            </li>
+                    
+                        
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class="" 
+                                    href="/masonry"  >
+                                    
+                                        
+                                            <i class="fa-solid fa-sparkles"></i>
+                                        
+                                        GALLERY
+                                    
+                                </a>
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                    
+                        <li class="navbar-item search search-popup-trigger">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <!-- Mobile -->
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fa-solid fa-magnifying-glass"></i></div>
+                
+                <div class="icon-item navbar-bar">
+                    <div class="navbar-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile drawer -->
+    <div class="navbar-drawer">
+        <ul class="drawer-navbar-list">
+            
+                
+                    <li class="drawer-navbar-item flex-center">
+                        <a class="" 
+                        href="/"  >
+                             
+                                
+                                    <i class="fa-solid fa-house"></i>
+                                
+                                首頁
+                            
+                        </a>
+                    </li>
+                    <!-- Submenu -->
+                    
+            
+                
+                    <li class="drawer-navbar-item flex-center">
+                        <a class="" 
+                        href="/archives"  >
+                             
+                                
+                                    <i class="fa-brands fa-docker"></i>
+                                
+                                歸檔
+                            
+                        </a>
+                    </li>
+                    <!-- Submenu -->
+                    
+            
+                
+                    <li class="drawer-navbar-item flex-center">
+                        <a class="has-dropdown" 
+                        href="#" onClick="return false;">
+                            
+                                
+                                    <i class="fa-solid fa-sparkles"></i>
+                                
+                                關於&nbsp;<i class="fa-solid fa-chevron-down"></i>
+                            
+                        </a>
+                    </li>
+                    <!-- Submenu -->
+                              
+                        
+                            <li class="dropdown-item flex-center">
+                                <a class="dropdown-item" href="/about">ME</a>
+                            </li>
+                        
+                            <li class="dropdown-item flex-center">
+                                <a class="dropdown-item" href="/about">GITHUB</a>
+                            </li>
+                        
+                            <li class="dropdown-item flex-center">
+                                <a class="dropdown-item" href="/about">BLOG</a>
+                            </li>
+                        
+                    
+            
+                
+                    <li class="drawer-navbar-item flex-center">
+                        <a class="has-dropdown" 
+                        href="#" onClick="return false;">
+                            
+                                
+                                    <i class="fa-solid fa-link"></i>
+                                
+                                鏈接&nbsp;<i class="fa-solid fa-chevron-down"></i>
+                            
+                        </a>
+                    </li>
+                    <!-- Submenu -->
+                              
+                        
+                            <li class="dropdown-item flex-center">
+                                <a class="dropdown-item" target="_blank" rel="noopener" href="https://luoyutong47.github.io/">LUOYUTONG47</a>
+                            </li>
+                        
+                            <li class="dropdown-item flex-center">
+                                <a class="dropdown-item" href="/link2">LINK2</a>
+                            </li>
+                        
+                            <li class="dropdown-item flex-center">
+                                <a class="dropdown-item" href="/link3">LINK3</a>
+                            </li>
+                        
+                    
+            
+                
+                    <li class="drawer-navbar-item flex-center">
+                        <a class="" 
+                        href="/masonry"  >
+                             
+                                
+                                    <i class="fa-solid fa-sparkles"></i>
+                                
+                                GALLERY
+                            
+                        </a>
+                    </li>
+                    <!-- Submenu -->
+                    
+            
+
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="main-content-body">
+
+            
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="post-page-container">
+        <div class="article-content-container">
+
+            
+            
+                <div class="article-title">
+                    <h1 class="article-title-regular">梳子图像处理</h1>
+                </div>
+            
+                
+            
+
+            
+                <div class="article-header">
+                    <div class="avatar">
+                        <img src="/images/redefine-avatar.svg">
+                    </div>
+                    <div class="info">
+                        <div class="author">
+                            <span class="name">morimori0401</span>
+                            
+                                <span class="author-label">Lv3</span>
+                            
+                        </div>
+                        <div class="meta-info">
+                            <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
+        <span class="desktop">2024-03-10 20:36:34</span>
+        <span class="mobile">2024-03-10 20:36</span>
+        <span class="hover-info">撰寫</span>
+    </span>
+    
+        <span class="article-date article-meta-item">
+            <i class="fa-regular fa-wrench"></i>&nbsp;
+            <span class="desktop">2024-03-10 20:36:34</span>
+            <span class="mobile">2024-03-10 20:36</span>
+            <span class="hover-info">更新</span>
+        </span>
+    
+
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fa-regular fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/%E5%A4%A7%E4%B8%89%E4%B8%8B%E6%8F%90%E7%BA%B2/">大三下提纲</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fa-regular fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+                        </div>
+                    </div>
+                </div>
+            
+
+            <div class="article-content markdown-body">
+                <h1 id="绪论"><a href="#绪论" class="headerlink" title="绪论"></a>绪论</h1><h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><ul>
+<li>图像：二维函数f(x, y)<ul>
+<li>x与y为位置坐标，该函数为某点处的值，与强度或者灰度相关</li>
+<li>灰度图像是<strong>一个</strong>二维灰度函数</li>
+<li>彩色图像是<strong>三个</strong>二维灰度（或者亮度）函数</li>
+</ul>
+</li>
+<li>数字图像：连续图像f(x, y)离散化之后的结果<ul>
+<li>数字图像由有限数量的元素组成，每个元素都有一个特定位置和幅值</li>
+<li>二维阵列的每个元素被称为pixel或者pel</li>
+<li>定义域、值域都是有限、离散的数值<ul>
+<li>灰度图像：f(x, y)∈[0, 255]，x, y∈N</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>数字图像处理：借助计算机来处理数字图像（data+algorithm）<ul>
+<li>三个层次：低级、中级、高级<ul>
+<li>越往上，算法越复杂，数据量越小</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="历史"><a href="#历史" class="headerlink" title="历史"></a>历史</h2><ul>
+<li>人类解译<ul>
+<li>注意：只有数字计算机发展之后，才有数字图像处理的概念</li>
+</ul>
+</li>
+<li>机器感知<ul>
+<li>特点<ul>
+<li>以更适合计算机处理的形式从图像中提取信息</li>
+<li>多维距离测度</li>
+<li>傅里叶变换系数</li>
+<li>统计矩</li>
+</ul>
+</li>
+<li>典型应用</li>
+</ul>
+</li>
+</ul>
+<h2 id="应用领域"><a href="#应用领域" class="headerlink" title="应用领域"></a>应用领域</h2><ul>
+<li>图像获取<ul>
+<li>人类视觉感知：EM的可见光波段</li>
+<li>机器感知<ul>
+<li>EM整个波段</li>
+<li>电子显微镜</li>
+<li>超声波</li>
+<li>计算成像</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>根据图像源的分类（不同波长）</li>
+</ul>
+<h2 id="基本步骤"><a href="#基本步骤" class="headerlink" title="基本步骤"></a>基本步骤</h2><ul>
+<li>两个类别<ul>
+<li>输入输出都为图像</li>
+<li>输入为图像，输出为从图像中提取的属性</li>
+</ul>
+</li>
+</ul>
+<p><img lazyload src="/images/loading.svg" data-src="/pictures/sztx1.png"></p>
+<ul>
+<li>数据流<ul>
+<li>图像获取+预处理→图像分割+特征提取→目标识别+视觉计算</li>
+</ul>
+</li>
+</ul>
+<h2 id="视觉测量与目标检测"><a href="#视觉测量与目标检测" class="headerlink" title="视觉测量与目标检测"></a>视觉测量与目标检测</h2><h1 id="成像模型（该章较多地方不明，需要参照ppt修改）"><a href="#成像模型（该章较多地方不明，需要参照ppt修改）" class="headerlink" title="成像模型（该章较多地方不明，需要参照ppt修改）"></a>成像模型（该章较多地方不明，需要参照ppt修改）</h1><h2 id="人眼成像模型"><a href="#人眼成像模型" class="headerlink" title="人眼成像模型"></a>人眼成像模型</h2><ul>
+<li>透视投影模型：<br>$$<br>H&#x2F;d &#x3D; h &#x2F; f<br>$$</li>
+</ul>
+<h2 id="图像感知与获取"><a href="#图像感知与获取" class="headerlink" title="图像感知与获取"></a>图像感知与获取</h2><ul>
+<li>影响因素：时间、能量</li>
+<li>组合输入电能与传感器对正被检测能量类型的响应</li>
+</ul>
+<h3 id="单个成像传感器"><a href="#单个成像传感器" class="headerlink" title="单个成像传感器"></a>单个成像传感器</h3><ul>
+<li>精度高、慢</li>
+<li>由机械装置携带单个传感器，在x、y轴位移</li>
+</ul>
+<h3 id="条带成像传感器"><a href="#条带成像传感器" class="headerlink" title="条带成像传感器"></a>条带成像传感器</h3><h3 id="阵列成像传感器"><a href="#阵列成像传感器" class="headerlink" title="阵列成像传感器"></a>阵列成像传感器</h3><h2 id="成像模型"><a href="#成像模型" class="headerlink" title="成像模型"></a>成像模型</h2><ul>
+<li>f(x, y) &#x3D; i(x, y)r(x, y)<ul>
+<li>其中，i(x, y)为入射函数，r(x, y)为<strong>反射</strong>&#x2F;透射&#x2F;开关函数</li>
+</ul>
+</li>
+</ul>
+<h2 id="图像取样与量化"><a href="#图像取样与量化" class="headerlink" title="图像取样与量化"></a>图像取样与量化</h2><ul>
+<li><p>取样</p>
+</li>
+<li><p>量化</p>
+</li>
+<li><p>连续取样与量化，生成一幅二维图像</p>
+</li>
+<li><p>空间域：由图像坐标张成的平面，x与y称为空间变量&#x2F;空间坐标</p>
+</li>
+<li><p>数字图像表现方式</p>
+<ol>
+<li>三维可视化图像</li>
+<li>二维灰度图像阵列</li>
+<li>二维<strong>矩阵</strong>阵列<ul>
+<li>该值并不一定为灰度值</li>
+<li>教材与opencv中为<strong>右手笛卡尔坐标系</strong>，x为列，y为行</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><p>对数字图像三要素的限制：取样、量化（本质为赋值）</p>
+</li>
+<li><p>动态范围、对比度</p>
+<ul>
+<li>动态范围<strong>上限取决于饱和度</strong>，<strong>下限取决于噪声</strong></li>
+<li>动态范围↑，对比度↑<ul>
+<li>此部分内容与第三章直方图部分相关联</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>空间分辨率：图像中可区分最小细节的度量</p>
+<ul>
+<li>线对数：单位距离内可分辨的最大线对数</li>
+</ul>
+</li>
+<li><p>PPI：电子显示设备</p>
+</li>
+<li><p>DPI：打印设备</p>
+</li>
+<li><p>注意：图像好坏要与空间单位声明关联</p>
+</li>
+<li><p>灰度分辨率：伪轮廓</p>
+</li>
+<li><p>等偏爱曲线：向右上方移动</p>
+<ul>
+<li>细节↑，曲线竖直，灰度级↓</li>
+</ul>
+</li>
+<li><p>图像插值：重取样</p>
+<ul>
+<li>最近邻插值（邻1像素）</li>
+<li>双线性插值（邻4像素）</li>
+<li>三次线性插值（邻16像素）</li>
+</ul>
+</li>
+</ul>
+
+            </div>
+
+            
+                <div class="post-copyright-info">
+                    <div class="article-copyright-info-container">
+    <ul>
+        <li><strong>標題:</strong> 梳子图像处理</li>
+        <li><strong>作者:</strong> morimori0401</li>
+        <li><strong>撰寫于:</strong> 2024-03-10 20:36:34</li>
+        
+            <li>
+                <strong>更新于:</strong> 2024-03-10 20:36:34
+            </li>
+        
+        <li>
+            <strong>連結:</strong> https://morimori0401.github.io/2024/03/10/梳子图像处理/
+        </li>
+        <li>
+            <strong>版權宣告:</strong> 本作品采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0</a> 进行许可。
+        </li>
+    </ul>
+</div>
+
+                </div>
+            
+
+            
+                <ul class="post-tags-box">
+                    
+                        <li class="tag-item">
+                            <a href="/tags/%E5%A4%A7%E4%B8%89%E4%B8%8B%E6%8F%90%E7%BA%B2/">#大三下提纲</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            
+
+            
+
+            
+                <div class="article-nav">
+                    
+                    
+                        <div class="article-next">
+                            <a class="next"
+                            rel="next"
+                            href="/2024/03/09/%E8%9B%87%E5%BD%B1%E6%B5%8B%E9%87%8F%E5%9F%BA%E7%A1%80/"
+                            >
+                                <span class="title flex-center">
+                                    <span class="post-nav-title-item">蛇影测量基础</span>
+                                    <span class="post-nav-item">下一篇</span>
+                                </span>
+                                <span class="right arrow-icon flex-center">
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </span>
+                            </a>
+                        </div>
+                    
+                </div>
+            
+
+
+            
+        </div>
+
+        
+            <div class="toc-content-container">
+                <div class="post-toc-wrap">
+    <div class="post-toc">
+        <div class="toc-title">此頁目錄</div>
+        <div class="page-title">梳子图像处理</div>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BB%AA%E8%AE%BA"><span class="nav-number">1.</span> <span class="nav-text">绪论</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A6%82%E5%BF%B5"><span class="nav-number">1.1.</span> <span class="nav-text">概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8E%86%E5%8F%B2"><span class="nav-number">1.2.</span> <span class="nav-text">历史</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BA%94%E7%94%A8%E9%A2%86%E5%9F%9F"><span class="nav-number">1.3.</span> <span class="nav-text">应用领域</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E6%AD%A5%E9%AA%A4"><span class="nav-number">1.4.</span> <span class="nav-text">基本步骤</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%86%E8%A7%89%E6%B5%8B%E9%87%8F%E4%B8%8E%E7%9B%AE%E6%A0%87%E6%A3%80%E6%B5%8B"><span class="nav-number">1.5.</span> <span class="nav-text">视觉测量与目标检测</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%88%90%E5%83%8F%E6%A8%A1%E5%9E%8B%EF%BC%88%E8%AF%A5%E7%AB%A0%E8%BE%83%E5%A4%9A%E5%9C%B0%E6%96%B9%E4%B8%8D%E6%98%8E%EF%BC%8C%E9%9C%80%E8%A6%81%E5%8F%82%E7%85%A7ppt%E4%BF%AE%E6%94%B9%EF%BC%89"><span class="nav-number">2.</span> <span class="nav-text">成像模型（该章较多地方不明，需要参照ppt修改）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%BA%E7%9C%BC%E6%88%90%E5%83%8F%E6%A8%A1%E5%9E%8B"><span class="nav-number">2.1.</span> <span class="nav-text">人眼成像模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%BE%E5%83%8F%E6%84%9F%E7%9F%A5%E4%B8%8E%E8%8E%B7%E5%8F%96"><span class="nav-number">2.2.</span> <span class="nav-text">图像感知与获取</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%95%E4%B8%AA%E6%88%90%E5%83%8F%E4%BC%A0%E6%84%9F%E5%99%A8"><span class="nav-number">2.2.1.</span> <span class="nav-text">单个成像传感器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9D%A1%E5%B8%A6%E6%88%90%E5%83%8F%E4%BC%A0%E6%84%9F%E5%99%A8"><span class="nav-number">2.2.2.</span> <span class="nav-text">条带成像传感器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%98%B5%E5%88%97%E6%88%90%E5%83%8F%E4%BC%A0%E6%84%9F%E5%99%A8"><span class="nav-number">2.2.3.</span> <span class="nav-text">阵列成像传感器</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%88%90%E5%83%8F%E6%A8%A1%E5%9E%8B"><span class="nav-number">2.3.</span> <span class="nav-text">成像模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%BE%E5%83%8F%E5%8F%96%E6%A0%B7%E4%B8%8E%E9%87%8F%E5%8C%96"><span class="nav-number">2.4.</span> <span class="nav-text">图像取样与量化</span></a></li></ol></li></ol>
+
+    </div>
+</div>
+            </div>
+        
+    </div>
+</div>
+
+
+                
+
+            </div>
+            
+            
+
+        </div>
+
+        <div class="main-content-footer">
+            <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info">
+            &copy;
+            
+              <span>2023</span>
+              -
+            
+            2024&nbsp;&nbsp;<i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s; color: #f54545"></i>&nbsp;&nbsp;<a href="/">morimori0401</a>
+        </div>
+        
+            <script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="website-count info-item">
+                
+                
+            </div>
+        
+        <div class="theme-info info-item">
+            <span class="powered-by-container"><?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1rem" height="1rem" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path fill="#0E83CD" d="M256.4,25.8l-200,115.5L56,371.5l199.6,114.7l200-115.5l0.4-230.2L256.4,25.8z M349,354.6l-18.4,10.7l-18.6-11V275H200v79.6l-18.4,10.7l-18.6-11v-197l18.5-10.6l18.5,10.8V237h112v-79.6l18.5-10.6l18.5,10.8V354.6z"/></svg><a target="_blank" href="https://hexo.io">Hexo</a> 框架</span>
+                <br>
+            <span class="theme-version-container">主題&nbsp;<a class="theme-version" target="_blank" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine v2.2.1</a>
+        </div>
+        
+        
+        
+        
+            <div class="customize-info info-item">到底啦！><；</div>
+        
+        
+        
+        
+    </div>  
+</footer>
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="article-tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="right-bottom-tools page-aside-toggle">
+                <i class="fa-regular fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-side-tools-container">
+        <div class="side-tools-container">
+    <ul class="hidden-tools-list">
+        <li class="right-bottom-tools tool-font-adjust-plus flex-center">
+            <i class="fa-regular fa-magnifying-glass-plus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-font-adjust-minus flex-center">
+            <i class="fa-regular fa-magnifying-glass-minus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-expand-width flex-center">
+            <i class="fa-regular fa-expand"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-dark-light-toggle flex-center">
+            <i class="fa-regular fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+
+        <li class="right-bottom-tools tool-scroll-to-bottom flex-center">
+            <i class="fa-regular fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="visible-tools-list">
+        <li class="right-bottom-tools toggle-tools-list flex-center">
+            <i class="fa-regular fa-cog fa-spin"></i>
+        </li>
+        
+            <li class="right-bottom-tools tool-scroll-to-top flex-center">
+                <i class="arrow-up fas fa-arrow-up"></i>
+                <span class="percent"></span>
+            </li>
+        
+        
+    </ul>
+</div>
+
+    </div>
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fa-solid fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="搜尋..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fa-solid fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fa-solid fa-spinner fa-spin-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+
+</main>
+
+
+
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/layouts/navbarShrink.js"></script>
+
+<script src="/js/tools/scrollTopBottom.js"></script>
+
+<script src="/js/tools/lightDarkSwitch.js"></script>
+
+
+
+    
+<script src="/js/tools/localSearch.js"></script>
+
+
+
+
+    
+<script src="/js/tools/codeBlock.js"></script>
+
+
+
+
+    
+<script src="/js/layouts/lazyload.js"></script>
+
+
+
+
+
+
+  
+<script src="/js/libs/Typed.min.js"></script>
+
+  
+<script src="/js/plugins/typed.js"></script>
+
+
+
+
+    
+<script src="/js/libs/mermaid.min.js"></script>
+
+    
+<script src="/js/plugins/mermaid.js"></script>
+
+
+
+
+    
+<script src="/js/libs/minimasonry.min.js"></script>
+
+    
+<script src="/js/plugins/masonry.js"></script>
+
+
+
+<div class="post-scripts pjax">
+    
+        
+<script src="/js/tools/tocToggle.js"></script>
+
+<script src="/js/libs/anime.min.js"></script>
+
+<script src="/js/layouts/toc.js"></script>
+
+<script src="/js/plugins/tabs.js"></script>
+
+    
+</div>
+
+
+    
+<script src="/js/libs/pjax.min.js"></script>
+
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        window.pjax = new Pjax({
+            selectors: [
+                'head title',
+                '.page-container',
+                '.pjax',
+            ],
+            history: true,
+            debug: false,
+            cacheBust: false,
+            timeout: 0,
+            analytics: false,
+            currentUrlFullReload: false,
+            scrollRestoration: false,
+            // scrollTo: true,
+        });
+
+        document.addEventListener('pjax:send', () => {
+            Global.utils.pjaxProgressBarStart();
+        });
+
+        document.addEventListener('pjax:complete', () => {
+            Global.utils.pjaxProgressBarEnd();
+            window.pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
+            Global.refresh();
+        });
+    });
+</script>
+
+
+
+
+</body>
+</html>
