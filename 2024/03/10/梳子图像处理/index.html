@@ -26,8 +26,10 @@
 <meta property="og:description" content="绪论概念 图像：二维函数f(x, y) x与y为位置坐标，该函数为某点处的值，与强度或者灰度相关 灰度图像是一个二维灰度函数 彩色图像是三个二维灰度（或者亮度）函数   数字图像：连续图像f(x, y)离散化之后的结果 数字图像由有限数量的元素组成，每个元素都有一个特定位置和幅值 二维阵列的每个元素被称为pixel或者pel 定义域、值域都是有限、离散的数值 灰度图像：f(x, y)∈[0, 25">
 <meta property="og:locale">
 <meta property="og:image" content="https://morimori0401.github.io/pictures/sztx1.png">
+<meta property="og:image" content="https://morimori0401.github.io/pictures/sztx2.png">
+<meta property="og:image" content="https://morimori0401.github.io/pictures/sztx3.png">
 <meta property="article:published_time" content="2024-03-10T12:36:34.203Z">
-<meta property="article:modified_time" content="2024-03-10T12:36:34.254Z">
+<meta property="article:modified_time" content="2024-03-25T12:12:37.595Z">
 <meta property="article:author" content="morimori">
 <meta property="article:tag" content="大三下提纲">
 <meta name="twitter:card" content="summary">
@@ -141,7 +143,7 @@
                                         
                                             <i class="fa-solid fa-house"></i>
                                         
-                                        首頁
+                                        首页
                                     
                                 </a>
                                 <!-- Submenu -->
@@ -157,7 +159,7 @@
                                         
                                             <i class="fa-brands fa-docker"></i>
                                         
-                                        歸檔
+                                        归档
                                     
                                 </a>
                                 <!-- Submenu -->
@@ -173,7 +175,7 @@
                                         
                                             <i class="fa-solid fa-sparkles"></i>
                                         
-                                        關於&nbsp;<i class="fa-solid fa-chevron-down"></i>
+                                        关于&nbsp;<i class="fa-solid fa-chevron-down"></i>
                                     
                                 </a>
                                 <!-- Submenu -->
@@ -208,7 +210,7 @@
                                         
                                             <i class="fa-solid fa-link"></i>
                                         
-                                        鏈接&nbsp;<i class="fa-solid fa-chevron-down"></i>
+                                        链接&nbsp;<i class="fa-solid fa-chevron-down"></i>
                                     
                                 </a>
                                 <!-- Submenu -->
@@ -281,7 +283,7 @@
                                 
                                     <i class="fa-solid fa-house"></i>
                                 
-                                首頁
+                                首页
                             
                         </a>
                     </li>
@@ -296,7 +298,7 @@
                                 
                                     <i class="fa-brands fa-docker"></i>
                                 
-                                歸檔
+                                归档
                             
                         </a>
                     </li>
@@ -311,7 +313,7 @@
                                 
                                     <i class="fa-solid fa-sparkles"></i>
                                 
-                                關於&nbsp;<i class="fa-solid fa-chevron-down"></i>
+                                关于&nbsp;<i class="fa-solid fa-chevron-down"></i>
                             
                         </a>
                     </li>
@@ -340,7 +342,7 @@
                                 
                                     <i class="fa-solid fa-link"></i>
                                 
-                                鏈接&nbsp;<i class="fa-solid fa-chevron-down"></i>
+                                链接&nbsp;<i class="fa-solid fa-chevron-down"></i>
                             
                         </a>
                     </li>
@@ -425,13 +427,13 @@
         <i class="fa-regular fa-pen-fancy"></i>&nbsp;
         <span class="desktop">2024-03-10 20:36:34</span>
         <span class="mobile">2024-03-10 20:36</span>
-        <span class="hover-info">撰寫</span>
+        <span class="hover-info">创建</span>
     </span>
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2024-03-10 20:36:34</span>
-            <span class="mobile">2024-03-10 20:36</span>
+            <span class="desktop">2024-03-25 20:12:37</span>
+            <span class="mobile">2024-03-25 20:12</span>
             <span class="hover-info">更新</span>
         </span>
     
@@ -535,48 +537,69 @@
 </ul>
 </li>
 </ul>
-<h2 id="视觉测量与目标检测"><a href="#视觉测量与目标检测" class="headerlink" title="视觉测量与目标检测"></a>视觉测量与目标检测</h2><h1 id="成像模型（该章较多地方不明，需要参照ppt修改）"><a href="#成像模型（该章较多地方不明，需要参照ppt修改）" class="headerlink" title="成像模型（该章较多地方不明，需要参照ppt修改）"></a>成像模型（该章较多地方不明，需要参照ppt修改）</h1><h2 id="人眼成像模型"><a href="#人眼成像模型" class="headerlink" title="人眼成像模型"></a>人眼成像模型</h2><ul>
+<h1 id="数字图像基础"><a href="#数字图像基础" class="headerlink" title="数字图像基础"></a>数字图像基础</h1><h2 id="人眼成像模型"><a href="#人眼成像模型" class="headerlink" title="人眼成像模型"></a>人眼成像模型</h2><ul>
 <li>透视投影模型：<br>$$<br>H&#x2F;d &#x3D; h &#x2F; f<br>$$</li>
 </ul>
 <h2 id="图像感知与获取"><a href="#图像感知与获取" class="headerlink" title="图像感知与获取"></a>图像感知与获取</h2><ul>
+<li>成像传感器原理：将传感器响应数字化，光电转换，A&#x2F;D转换</li>
 <li>影响因素：时间、能量</li>
 <li>组合输入电能与传感器对正被检测能量类型的响应</li>
 </ul>
 <h3 id="单个成像传感器"><a href="#单个成像传感器" class="headerlink" title="单个成像传感器"></a>单个成像传感器</h3><ul>
 <li>精度高、慢</li>
-<li>由机械装置携带单个传感器，在x、y轴位移</li>
+<li>由机械装置携带单个传感器，在x、y轴位移；与激光器、平面反射镜等组合，有具体的实现形式</li>
 </ul>
-<h3 id="条带成像传感器"><a href="#条带成像传感器" class="headerlink" title="条带成像传感器"></a>条带成像传感器</h3><h3 id="阵列成像传感器"><a href="#阵列成像传感器" class="headerlink" title="阵列成像传感器"></a>阵列成像传感器</h3><h2 id="成像模型"><a href="#成像模型" class="headerlink" title="成像模型"></a>成像模型</h2><ul>
-<li>f(x, y) &#x3D; i(x, y)r(x, y)<ul>
+<h3 id="条带成像传感器"><a href="#条带成像传感器" class="headerlink" title="条带成像传感器"></a>条带成像传感器</h3><ul>
+<li>线阵扫描</li>
+<li>医学成像等高动态成像</li>
+</ul>
+<h3 id="阵列成像传感器"><a href="#阵列成像传感器" class="headerlink" title="阵列成像传感器"></a>阵列成像传感器</h3><ul>
+<li>响应正比于传感器上能量的积分，有去噪的能力</li>
+<li>直接对光源成像</li>
+</ul>
+<h2 id="成像模型"><a href="#成像模型" class="headerlink" title="成像模型"></a>成像模型</h2><ul>
+<li><p>f(x, y) &#x3D; i(x, y)r(x, y)</p>
+<ul>
 <li>其中，i(x, y)为入射函数，r(x, y)为<strong>反射</strong>&#x2F;透射&#x2F;开关函数</li>
 </ul>
 </li>
+<li><p>物理含义：传感器单元接收到的能量值</p>
+</li>
+<li><p>灰度级范围：<br>$$<br>[L_{min}, L_{max}] →[0, L - 1]<br>$$<br>可以归一化，则最终为[0,1]</p>
+<p>出于存储考虑，灰度取2的整数次幂。离散的灰度是等间隔的[0, L - 1]的整数</p>
+</li>
 </ul>
-<h2 id="图像取样与量化"><a href="#图像取样与量化" class="headerlink" title="图像取样与量化"></a>图像取样与量化</h2><ul>
-<li><p>取样</p>
+<h2 id="图像取样与量化（重点）"><a href="#图像取样与量化（重点）" class="headerlink" title="图像取样与量化（重点）"></a>图像取样与量化（重点）</h2><ul>
+<li><p>取样：对图像的坐标进行数字化</p>
 </li>
-<li><p>量化</p>
-</li>
-<li><p>连续取样与量化，生成一幅二维图像</p>
-</li>
-<li><p>空间域：由图像坐标张成的平面，x与y称为空间变量&#x2F;空间坐标</p>
+<li><p>量化：对图像的幅度值进行数字化</p>
+<ul>
+<li>从连续图像的顶部开始，逐行取样与量化，生成一幅二维图像</li>
+<li>空间域：由图像坐标张成的平面，x与y称为空间变量&#x2F;空间坐标（<strong>一定是整数！</strong>）</li>
+</ul>
 </li>
 <li><p>数字图像表现方式</p>
 <ol>
-<li>三维可视化图像</li>
+<li>三维可视化图形</li>
 <li>二维灰度图像阵列</li>
 <li>二维<strong>矩阵</strong>阵列<ul>
 <li>该值并不一定为灰度值</li>
-<li>教材与opencv中为<strong>右手笛卡尔坐标系</strong>，x为列，y为行</li>
+<li>教材与opencv中为<strong>右手笛卡尔坐标系</strong>，x为行（向下为正），y为列（向右为正）</li>
+<li>图像中心向下取整</li>
 </ul>
 </li>
 </ol>
 </li>
-<li><p>对数字图像三要素的限制：取样、量化（本质为赋值）</p>
+<li><p>对数字图像三要素的限制：</p>
+<ul>
+<li>取样：将xy平面分为网格，每个单元的中心坐标为整数集合</li>
+<li>量化：本质为对坐标为(x, y)的元素赋值</li>
+</ul>
 </li>
 <li><p>动态范围、对比度</p>
 <ul>
-<li>动态范围<strong>上限取决于饱和度</strong>，<strong>下限取决于噪声</strong></li>
+<li>动态范围：最大与最小可检测灰度之比。<strong>上限取决于饱和度</strong>，<strong>下限取决于噪声（也会出现在较亮的灰度中）</strong></li>
+<li>对比度：一幅图像中最高与最低灰度之间的的灰度差</li>
 <li>动态范围↑，对比度↑<ul>
 <li>此部分内容与第三章直方图部分相关联</li>
 </ul>
@@ -585,27 +608,249 @@
 </li>
 <li><p>空间分辨率：图像中可区分最小细节的度量</p>
 <ul>
-<li>线对数：单位距离内可分辨的最大线对数</li>
+<li>线对数：单位距离内可分辨的最大线对数<ul>
+<li>PPI：电子显示设备</li>
+<li>DPI：单位距离的点数，用于打印设备</li>
 </ul>
 </li>
-<li><p>PPI：电子显示设备</p>
-</li>
-<li><p>DPI：打印设备</p>
-</li>
-<li><p>注意：图像好坏要与空间单位声明关联</p>
-</li>
-<li><p>灰度分辨率：伪轮廓</p>
-</li>
-<li><p>等偏爱曲线：向右上方移动</p>
-<ul>
-<li>细节↑，曲线竖直，灰度级↓</li>
+<li><strong>图像好坏要与空间单位声明关联，图像大小本身并不含有空间分辨率信息</strong></li>
 </ul>
 </li>
-<li><p>图像插值：重取样</p>
+<li><p>灰度分辨率：灰度级中可分辨的最小变化</p>
 <ul>
-<li>最近邻插值（邻1像素）</li>
-<li>双线性插值（邻4像素）</li>
-<li>三次线性插值（邻16像素）</li>
+<li>量化灰度时用的比特数描述</li>
+<li>灰度级越多，可区分的图像细节越精细。一般灰度级数是2的整次幂</li>
+<li>灰度可分辨变化影响因素：噪声、饱和度值、人类感知</li>
+<li>伪轮廓：平滑区域灰度级不够产生<ul>
+<li><strong>通常在16个灰度级以下显示的图像中产生</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>改变空间分辨率与灰度分辨率对图像质量的影响</p>
+<ul>
+<li>等偏爱曲线：向右上方移动</li>
+<li>细节↑，曲线垂直，灰度级↓</li>
+</ul>
+</li>
+<li><p>图像插值：</p>
+<ul>
+<li><p>在诸如放大、缩小、旋转和几何校正的过程中，采用<strong>重取样</strong>，计算<strong>非整数坐标位置</strong>像素点的对应值（灰度，梯度等），用已知数据估计未知位置的数据</p>
+</li>
+<li><p>最近邻插值（邻1像素）</p>
+<ul>
+<li>计算量小，但会造成<strong>图像灰度不连续</strong>，在灰度变化的地方可能出现明显的锯齿状</li>
+</ul>
+</li>
+<li><p>双线性插值（邻4像素）</p>
+<ul>
+<li>灰度<br>$$<br>v(x, y) &#x3D; ax + by + cxy + d<br>$$<br>其中a到d可以由(x, y)的<strong>四个最近邻点</strong>求出</li>
+</ul>
+</li>
+<li><p>三次线性插值（邻16像素）</p>
+<ul>
+<li>用矩形网络中最近16个采样点加权平均得到，使用两个多项式插值三次函数（具体使用卷积实现）</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="图像间的基本关系（重点）"><a href="#图像间的基本关系（重点）" class="headerlink" title="图像间的基本关系（重点）"></a>图像间的基本关系（重点）</h2><ul>
+<li><p>邻域</p>
+<ul>
+<li><p>p相邻像素的图像位置集合称为p的邻域。如果包含p则为闭邻域，不含p则为开邻域</p>
+</li>
+<li><p>4-邻域，D-邻域，8-邻域</p>
+<p><img lazyload src="/images/loading.svg" data-src="/pictures/sztx2.png"></p>
+</li>
+</ul>
+</li>
+<li><p>邻接：两个图像<strong>位置</strong>相邻+<strong>灰度值</strong>满足相似性</p>
+<ul>
+<li><p>判断灰度值相似的时候，会定义一个灰度值集合V（0到255中的子集）</p>
+</li>
+<li><p>4-邻接（位置在4-邻域），8-邻接（位置在8-邻域），m-邻接（混合邻接）</p>
+<ul>
+<li>m-邻接：<strong>用于消除8-邻接产生的二义性</strong><ol>
+<li>4-邻域</li>
+<li>D-邻域，且这种方式相邻的两元素的4-邻域内没有共同元素</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>通路：两两互相邻接的像素组成的坐标序列</p>
+<ul>
+<li>通路长度：不是几何长度！<strong>是通路中点的个数</strong></li>
+<li>闭合通路：第一个点坐标等于最后一个点坐标</li>
+<li>4通路、8通路、m通路</li>
+</ul>
+</li>
+<li><p>连通：p与q之间存在一个完全由S中像素组成的通路</p>
+<ul>
+<li><p>连通分量：对于S中任何像素p，在S中连通到p的像素集称为S的连通分量</p>
+</li>
+<li><p>连通集：若S只有一个连通分量，则S称为连通集</p>
+</li>
+<li><p>R属于I，若R是一个连通集，则称R为图像的一个<strong>区域</strong></p>
+<ul>
+<li><p>两个区域联合形成连通集时为<strong>邻接区域</strong>，不邻接的区域称为<strong>不相交区域</strong></p>
+</li>
+<li><p>Rk为图像中K个不相交区域，Ru为Rk的并集（前景），(Ru)^{c}为补集（背景）。</p>
+</li>
+</ul>
+</li>
+<li><p>边界（轮廓）：R和R的补集中像素相邻的一组像素</p>
+<ul>
+<li><p>内边界：至少有一个背景邻点的像素集</p>
+</li>
+<li><p>外边界：依据背景定义的边界，确保边界是闭合通路</p>
+</li>
+<li><p>图像的边界：图像第一行、第一列与最后一行、最后一列的像素集</p>
+</li>
+<li><p>边缘：因为导数超过某个预设阈值的像素而形成，是局部的概念</p>
+</li>
+</ul>
+</li>
+<li><p>距离</p>
+<ul>
+<li><p>满足以下条件：</p>
+<p><img lazyload src="/images/loading.svg" data-src="/pictures/sztx3.png"></p>
+</li>
+<li><p>距离总是正的，与起终点无关；两像素最短距离沿直线</p>
+</li>
+<li><p>距离度量：</p>
+<ol>
+<li><p>欧几里得距离（模2）：几何距离</p>
+<p>到点(x, y)的距离小于等于r的像素，是中心在(x, y)， 半径为r的圆盘</p>
+</li>
+<li><p>城市街区距离（模1）</p>
+<p>两个轴方向上的坐标差值绝对值的和</p>
+</li>
+<li><p>棋盘距离（模∞）</p>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="数字图像处理所用数学知识"><a href="#数字图像处理所用数学知识" class="headerlink" title="数字图像处理所用数学知识"></a>数字图像处理所用数学知识</h2><h2 id="直方图处理"><a href="#直方图处理" class="headerlink" title="直方图处理"></a>直方图处理</h2><h3 id="局部直方图"><a href="#局部直方图" class="headerlink" title="局部直方图"></a>局部直方图</h3><h3 id="直方图处理-1"><a href="#直方图处理-1" class="headerlink" title="直方图处理"></a>直方图处理</h3><ul>
+<li>基于直方图计算：由其计算均值、方差、n阶矩</li>
+<li>基于灰度计算：计算均值、方差</li>
+</ul>
+<h3 id="图像对比度与均值、标准差"><a href="#图像对比度与均值、标准差" class="headerlink" title="图像对比度与均值、标准差"></a>图像对比度与均值、标准差</h3><ul>
+<li>均值：与亮度相关</li>
+<li>标准差：与对比度相关</li>
+</ul>
+<h3 id="直方图形状与均值、方差、三阶与四阶矩"><a href="#直方图形状与均值、方差、三阶与四阶矩" class="headerlink" title="直方图形状与均值、方差、三阶与四阶矩"></a>直方图形状与均值、方差、三阶与四阶矩</h3><ul>
+<li>三阶矩：两端对称性（绝对值越小，越对称）</li>
+<li>四阶矩：倾斜程度（越小，越倾斜）</li>
+</ul>
+<h3 id="局部均值和方差"><a href="#局部均值和方差" class="headerlink" title="局部均值和方差"></a>局部均值和方差</h3><ul>
+<li><p>邻域方差与均值的含义：<br>$$<br>σ^2_{s_{xy}} &#x3D;<br>$$</p>
+</li>
+<li><p>无法用模型描述的情况，可以考虑转向深度学习</p>
+</li>
+</ul>
+<h2 id="空间滤波"><a href="#空间滤波" class="headerlink" title="空间滤波"></a>空间滤波</h2><ul>
+<li><p>滤波：频域处理，指接收、改变、拒绝特定频率分量</p>
+</li>
+<li><p>空间滤波器：又称<strong>空间掩膜</strong>、<strong>核</strong>、模板或者窗口，直接作用于图像本身叶可以完成频率</p>
+</li>
+<li><p>滤波器构成</p>
+<ul>
+<li>规定一个邻域</li>
+<li>对邻域覆盖的图像像素执行预定义操作，由滤波器系数决定</li>
+</ul>
+</li>
+<li><p>空间滤波（<strong>滑动、乘积、求和</strong>）</p>
+<ul>
+<li>滤波产生新像素，坐标为邻域中心对应输入图像的坐标；像素的值为滤波操作的结果	<ul>
+<li>平滑滤波后所有的系数之和为1：为了不改变图像的灰度范围</li>
+<li>润滑滤波：</li>
+</ul>
+</li>
+<li>线性操作：线性滤波器；反之为非线性滤波器</li>
+<li>在实践时，因为有二维循环，硬件条件可能不满足快速解算</li>
+</ul>
+</li>
+<li><p>空间滤波机理——图像边界处理</p>
+<ul>
+<li>处理具体边界时，需要与具体的需求联系起来<ol>
+<li>直接复制相邻元素</li>
+<li>镜像填充1</li>
+<li>镜像填充2（认为图像是首尾相接的，因此没有覆盖的卷积核的一部分是覆盖到了图像下面的部分）</li>
+<li>几何变换</li>
+<li>当作常数</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p>空间相关和卷积</p>
+<ul>
+<li>相关：在图像上移动滤波器中心，并计算每个位置乘积和<ul>
+<li>得到滤波器的翻转版本</li>
+</ul>
+</li>
+<li>卷积：与相关的机理相似，但滤波器首先要旋转180°<ul>
+<li>得到滤波器本身</li>
+<li>在滤波器关于其中心对称的情况下，卷积与相关的计算结果相同</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>空间域与频域滤波的对应</p>
+<ol>
+<li>卷积是空间域滤波的基础，等效于频域中的乘法</li>
+<li>空间域中振幅为A的冲激，是频域中值为A的一个常数。反之亦然</li>
+</ol>
+<ul>
+<li>周期信号，或是曲线下面的面积是有限的非周期信号：可以表示为不同频率与振幅的正弦波之和</li>
+<li>将某些频段与图像特征关联<ul>
+<li>强度缓慢变化的图像区域的特征在低频正弦波</li>
+<li>边缘和其他尖锐的强度突变以<strong>高频</strong>为特征</li>
+<li>减少图像的高频分量将趋于使其模糊<ul>
+<li>能量：低频；信息：高频</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>空间滤波器模板的产生</p>
+<ol>
+<li>基于数学知识设计滤波器<ol>
+<li>基于<strong>积分</strong>的滤波器<strong>模糊</strong>图像</li>
+<li>基于<strong>微分</strong>的滤波器<strong>锐化</strong>图像</li>
+</ol>
+</li>
+<li>对具有期望形状的连续二维函数进行离散取样<ul>
+<li>高斯函数离散化构建加权均值滤波</li>
+<li>根据频域内指定的二维滤波器F逆变换</li>
+</ul>
+</li>
+<li>设计具有指定频率响应的空间滤波器<ol>
+<li>利用滤波器设计软件，设计出一维，然后合成二维</li>
+</ol>
+</li>
+<li>典型线性滤波器<ol>
+<li>box</li>
+<li>Gaussian</li>
+<li>Laplacian</li>
+</ol>
+</li>
+</ol>
+</li>
+</ul>
+<h2 id="平滑（低通）空间滤波器"><a href="#平滑（低通）空间滤波器" class="headerlink" title="平滑（低通）空间滤波器"></a>平滑（低通）空间滤波器</h2><ul>
+<li>性质<ul>
+<li>空间线性滤波主要是滤波器与图像的卷积，平滑滤波器与图像的卷积模糊了图像，模糊程度由滤波器的大小与系数决定</li>
+<li>低通滤波器派生锐化滤波器、带通滤波器、带阻滤波器</li>
+<li>负面效应：平滑滤波器降低了图像中噪声，模糊了图像中的边缘</li>
+<li>盒状滤波器：最简单的可分离低通滤波器</li>
 </ul>
 </li>
 </ul>
@@ -616,19 +861,19 @@
                 <div class="post-copyright-info">
                     <div class="article-copyright-info-container">
     <ul>
-        <li><strong>標題:</strong> 梳子图像处理</li>
+        <li><strong>标题:</strong> 梳子图像处理</li>
         <li><strong>作者:</strong> morimori0401</li>
-        <li><strong>撰寫于:</strong> 2024-03-10 20:36:34</li>
+        <li><strong>创建于:</strong> 2024-03-10 20:36:34</li>
         
             <li>
-                <strong>更新于:</strong> 2024-03-10 20:36:34
+                <strong>更新于:</strong> 2024-03-25 20:12:37
             </li>
         
         <li>
-            <strong>連結:</strong> https://morimori0401.github.io/2024/03/10/梳子图像处理/
+            <strong>链接:</strong> https://morimori0401.github.io/2024/03/10/梳子图像处理/
         </li>
         <li>
-            <strong>版權宣告:</strong> 本作品采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0</a> 进行许可。
+            <strong>版权声明:</strong> 本文章采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0</a> 进行许可。
         </li>
     </ul>
 </div>
@@ -650,6 +895,21 @@
 
             
                 <div class="article-nav">
+                    
+                        <div class="article-prev">
+                            <a class="prev"
+                            rel="prev"
+                            href="/2024/03/11/%E8%87%AA%E5%8A%A8%E7%A9%BA%E5%80%BC%E5%8E%9F%E7%90%86%EF%BC%88%E4%B8%8B%EF%BC%89/"
+                            >
+                                <span class="left arrow-icon flex-center">
+                                    <i class="fa-solid fa-chevron-left"></i>
+                                </span>
+                                <span class="title flex-center">
+                                    <span class="post-nav-title-item">自动空值原理（下）</span>
+                                    <span class="post-nav-item">上一篇</span>
+                                </span>
+                            </a>
+                        </div>
                     
                     
                         <div class="article-next">
@@ -678,9 +938,9 @@
             <div class="toc-content-container">
                 <div class="post-toc-wrap">
     <div class="post-toc">
-        <div class="toc-title">此頁目錄</div>
+        <div class="toc-title">此页目录</div>
         <div class="page-title">梳子图像处理</div>
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BB%AA%E8%AE%BA"><span class="nav-number">1.</span> <span class="nav-text">绪论</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A6%82%E5%BF%B5"><span class="nav-number">1.1.</span> <span class="nav-text">概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8E%86%E5%8F%B2"><span class="nav-number">1.2.</span> <span class="nav-text">历史</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BA%94%E7%94%A8%E9%A2%86%E5%9F%9F"><span class="nav-number">1.3.</span> <span class="nav-text">应用领域</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E6%AD%A5%E9%AA%A4"><span class="nav-number">1.4.</span> <span class="nav-text">基本步骤</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%86%E8%A7%89%E6%B5%8B%E9%87%8F%E4%B8%8E%E7%9B%AE%E6%A0%87%E6%A3%80%E6%B5%8B"><span class="nav-number">1.5.</span> <span class="nav-text">视觉测量与目标检测</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%88%90%E5%83%8F%E6%A8%A1%E5%9E%8B%EF%BC%88%E8%AF%A5%E7%AB%A0%E8%BE%83%E5%A4%9A%E5%9C%B0%E6%96%B9%E4%B8%8D%E6%98%8E%EF%BC%8C%E9%9C%80%E8%A6%81%E5%8F%82%E7%85%A7ppt%E4%BF%AE%E6%94%B9%EF%BC%89"><span class="nav-number">2.</span> <span class="nav-text">成像模型（该章较多地方不明，需要参照ppt修改）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%BA%E7%9C%BC%E6%88%90%E5%83%8F%E6%A8%A1%E5%9E%8B"><span class="nav-number">2.1.</span> <span class="nav-text">人眼成像模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%BE%E5%83%8F%E6%84%9F%E7%9F%A5%E4%B8%8E%E8%8E%B7%E5%8F%96"><span class="nav-number">2.2.</span> <span class="nav-text">图像感知与获取</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%95%E4%B8%AA%E6%88%90%E5%83%8F%E4%BC%A0%E6%84%9F%E5%99%A8"><span class="nav-number">2.2.1.</span> <span class="nav-text">单个成像传感器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9D%A1%E5%B8%A6%E6%88%90%E5%83%8F%E4%BC%A0%E6%84%9F%E5%99%A8"><span class="nav-number">2.2.2.</span> <span class="nav-text">条带成像传感器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%98%B5%E5%88%97%E6%88%90%E5%83%8F%E4%BC%A0%E6%84%9F%E5%99%A8"><span class="nav-number">2.2.3.</span> <span class="nav-text">阵列成像传感器</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%88%90%E5%83%8F%E6%A8%A1%E5%9E%8B"><span class="nav-number">2.3.</span> <span class="nav-text">成像模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%BE%E5%83%8F%E5%8F%96%E6%A0%B7%E4%B8%8E%E9%87%8F%E5%8C%96"><span class="nav-number">2.4.</span> <span class="nav-text">图像取样与量化</span></a></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BB%AA%E8%AE%BA"><span class="nav-number">1.</span> <span class="nav-text">绪论</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A6%82%E5%BF%B5"><span class="nav-number">1.1.</span> <span class="nav-text">概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8E%86%E5%8F%B2"><span class="nav-number">1.2.</span> <span class="nav-text">历史</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BA%94%E7%94%A8%E9%A2%86%E5%9F%9F"><span class="nav-number">1.3.</span> <span class="nav-text">应用领域</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E6%AD%A5%E9%AA%A4"><span class="nav-number">1.4.</span> <span class="nav-text">基本步骤</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%95%B0%E5%AD%97%E5%9B%BE%E5%83%8F%E5%9F%BA%E7%A1%80"><span class="nav-number">2.</span> <span class="nav-text">数字图像基础</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%BA%E7%9C%BC%E6%88%90%E5%83%8F%E6%A8%A1%E5%9E%8B"><span class="nav-number">2.1.</span> <span class="nav-text">人眼成像模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%BE%E5%83%8F%E6%84%9F%E7%9F%A5%E4%B8%8E%E8%8E%B7%E5%8F%96"><span class="nav-number">2.2.</span> <span class="nav-text">图像感知与获取</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%95%E4%B8%AA%E6%88%90%E5%83%8F%E4%BC%A0%E6%84%9F%E5%99%A8"><span class="nav-number">2.2.1.</span> <span class="nav-text">单个成像传感器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9D%A1%E5%B8%A6%E6%88%90%E5%83%8F%E4%BC%A0%E6%84%9F%E5%99%A8"><span class="nav-number">2.2.2.</span> <span class="nav-text">条带成像传感器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%98%B5%E5%88%97%E6%88%90%E5%83%8F%E4%BC%A0%E6%84%9F%E5%99%A8"><span class="nav-number">2.2.3.</span> <span class="nav-text">阵列成像传感器</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%88%90%E5%83%8F%E6%A8%A1%E5%9E%8B"><span class="nav-number">2.3.</span> <span class="nav-text">成像模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%BE%E5%83%8F%E5%8F%96%E6%A0%B7%E4%B8%8E%E9%87%8F%E5%8C%96%EF%BC%88%E9%87%8D%E7%82%B9%EF%BC%89"><span class="nav-number">2.4.</span> <span class="nav-text">图像取样与量化（重点）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%BE%E5%83%8F%E9%97%B4%E7%9A%84%E5%9F%BA%E6%9C%AC%E5%85%B3%E7%B3%BB%EF%BC%88%E9%87%8D%E7%82%B9%EF%BC%89"><span class="nav-number">2.5.</span> <span class="nav-text">图像间的基本关系（重点）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E5%AD%97%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E6%89%80%E7%94%A8%E6%95%B0%E5%AD%A6%E7%9F%A5%E8%AF%86"><span class="nav-number">2.6.</span> <span class="nav-text">数字图像处理所用数学知识</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9B%B4%E6%96%B9%E5%9B%BE%E5%A4%84%E7%90%86"><span class="nav-number">2.7.</span> <span class="nav-text">直方图处理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B1%80%E9%83%A8%E7%9B%B4%E6%96%B9%E5%9B%BE"><span class="nav-number">2.7.1.</span> <span class="nav-text">局部直方图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9B%B4%E6%96%B9%E5%9B%BE%E5%A4%84%E7%90%86-1"><span class="nav-number">2.7.2.</span> <span class="nav-text">直方图处理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%BE%E5%83%8F%E5%AF%B9%E6%AF%94%E5%BA%A6%E4%B8%8E%E5%9D%87%E5%80%BC%E3%80%81%E6%A0%87%E5%87%86%E5%B7%AE"><span class="nav-number">2.7.3.</span> <span class="nav-text">图像对比度与均值、标准差</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9B%B4%E6%96%B9%E5%9B%BE%E5%BD%A2%E7%8A%B6%E4%B8%8E%E5%9D%87%E5%80%BC%E3%80%81%E6%96%B9%E5%B7%AE%E3%80%81%E4%B8%89%E9%98%B6%E4%B8%8E%E5%9B%9B%E9%98%B6%E7%9F%A9"><span class="nav-number">2.7.4.</span> <span class="nav-text">直方图形状与均值、方差、三阶与四阶矩</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B1%80%E9%83%A8%E5%9D%87%E5%80%BC%E5%92%8C%E6%96%B9%E5%B7%AE"><span class="nav-number">2.7.5.</span> <span class="nav-text">局部均值和方差</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A9%BA%E9%97%B4%E6%BB%A4%E6%B3%A2"><span class="nav-number">2.8.</span> <span class="nav-text">空间滤波</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B9%B3%E6%BB%91%EF%BC%88%E4%BD%8E%E9%80%9A%EF%BC%89%E7%A9%BA%E9%97%B4%E6%BB%A4%E6%B3%A2%E5%99%A8"><span class="nav-number">2.9.</span> <span class="nav-text">平滑（低通）空间滤波器</span></a></li></ol></li></ol>
 
     </div>
 </div>
@@ -717,9 +977,9 @@
             </div>
         
         <div class="theme-info info-item">
-            <span class="powered-by-container"><?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1rem" height="1rem" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path fill="#0E83CD" d="M256.4,25.8l-200,115.5L56,371.5l199.6,114.7l200-115.5l0.4-230.2L256.4,25.8z M349,354.6l-18.4,10.7l-18.6-11V275H200v79.6l-18.4,10.7l-18.6-11v-197l18.5-10.6l18.5,10.8V237h112v-79.6l18.5-10.6l18.5,10.8V354.6z"/></svg><a target="_blank" href="https://hexo.io">Hexo</a> 框架</span>
+            <span class="powered-by-container">由 <?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1rem" height="1rem" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path fill="#0E83CD" d="M256.4,25.8l-200,115.5L56,371.5l199.6,114.7l200-115.5l0.4-230.2L256.4,25.8z M349,354.6l-18.4,10.7l-18.6-11V275H200v79.6l-18.4,10.7l-18.6-11v-197l18.5-10.6l18.5,10.8V237h112v-79.6l18.5-10.6l18.5,10.8V354.6z"/></svg><a target="_blank" href="https://hexo.io">Hexo</a> 驱动</span>
                 <br>
-            <span class="theme-version-container">主題&nbsp;<a class="theme-version" target="_blank" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine v2.2.1</a>
+            <span class="theme-version-container">主题&nbsp;<a class="theme-version" target="_blank" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine v2.2.1</a>
         </div>
         
         
@@ -815,7 +1075,7 @@
                 <input autocomplete="off"
                        autocorrect="off"
                        autocapitalize="off"
-                       placeholder="搜尋..."
+                       placeholder="搜索..."
                        spellcheck="false"
                        type="search"
                        class="search-input"

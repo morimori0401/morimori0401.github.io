@@ -26,7 +26,7 @@
 <meta property="og:description" content="绪论测量、测试与计量 测量：将被测量与一个作为测量单位的标准量进行比较得出比值的过程  完整的测量过程：被测量+测量单位+测量方法+测量精度  测量分类  直接测量、间接测量 单项测量、综合测量 静态测量、动态测量 等精度测量、不等精度测量（按照测量中测量因素是否变化） 接触、非接触，等等其他分类   测量与测试：  测试：带有试验性质的测量，获取被测对象的信息 测试是测量的一个组成部分   计量">
 <meta property="og:locale">
 <meta property="article:published_time" content="2024-02-29T13:40:52.466Z">
-<meta property="article:modified_time" content="2024-03-08T15:33:33.383Z">
+<meta property="article:modified_time" content="2024-03-30T11:02:58.099Z">
 <meta property="article:author" content="morimori">
 <meta property="article:tag" content="大三下提纲">
 <meta name="twitter:card" content="summary">
@@ -139,7 +139,7 @@
                                         
                                             <i class="fa-solid fa-house"></i>
                                         
-                                        首頁
+                                        首页
                                     
                                 </a>
                                 <!-- Submenu -->
@@ -155,7 +155,7 @@
                                         
                                             <i class="fa-brands fa-docker"></i>
                                         
-                                        歸檔
+                                        归档
                                     
                                 </a>
                                 <!-- Submenu -->
@@ -171,7 +171,7 @@
                                         
                                             <i class="fa-solid fa-sparkles"></i>
                                         
-                                        關於&nbsp;<i class="fa-solid fa-chevron-down"></i>
+                                        关于&nbsp;<i class="fa-solid fa-chevron-down"></i>
                                     
                                 </a>
                                 <!-- Submenu -->
@@ -206,7 +206,7 @@
                                         
                                             <i class="fa-solid fa-link"></i>
                                         
-                                        鏈接&nbsp;<i class="fa-solid fa-chevron-down"></i>
+                                        链接&nbsp;<i class="fa-solid fa-chevron-down"></i>
                                     
                                 </a>
                                 <!-- Submenu -->
@@ -279,7 +279,7 @@
                                 
                                     <i class="fa-solid fa-house"></i>
                                 
-                                首頁
+                                首页
                             
                         </a>
                     </li>
@@ -294,7 +294,7 @@
                                 
                                     <i class="fa-brands fa-docker"></i>
                                 
-                                歸檔
+                                归档
                             
                         </a>
                     </li>
@@ -309,7 +309,7 @@
                                 
                                     <i class="fa-solid fa-sparkles"></i>
                                 
-                                關於&nbsp;<i class="fa-solid fa-chevron-down"></i>
+                                关于&nbsp;<i class="fa-solid fa-chevron-down"></i>
                             
                         </a>
                     </li>
@@ -338,7 +338,7 @@
                                 
                                     <i class="fa-solid fa-link"></i>
                                 
-                                鏈接&nbsp;<i class="fa-solid fa-chevron-down"></i>
+                                链接&nbsp;<i class="fa-solid fa-chevron-down"></i>
                             
                         </a>
                     </li>
@@ -423,13 +423,13 @@
         <i class="fa-regular fa-pen-fancy"></i>&nbsp;
         <span class="desktop">2024-02-29 21:40:52</span>
         <span class="mobile">2024-02-29 21:40</span>
-        <span class="hover-info">撰寫</span>
+        <span class="hover-info">创建</span>
     </span>
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2024-03-08 23:33:33</span>
-            <span class="mobile">2024-03-08 23:33</span>
+            <span class="desktop">2024-03-30 19:02:58</span>
+            <span class="mobile">2024-03-30 19:02</span>
             <span class="hover-info">更新</span>
         </span>
     
@@ -580,10 +580,17 @@
 </ul>
 <h3 id="误差的分类"><a href="#误差的分类" class="headerlink" title="误差的分类"></a>误差的分类</h3><ul>
 <li>表示形式<ul>
-<li>绝对误差&#x3D;<strong>测量值-真值</strong></li>
+<li>绝对误差&#x3D;<strong>测量值-真值</strong><ul>
+<li>衡量测量结果的偏移与方向</li>
+</ul>
+</li>
 <li>修正值&#x3D;真值-测量值</li>
-<li>相对误差&#x3D;绝对误差与真值的比（衡量测量精度）</li>
-<li>引用误差&#x3D;一个量程内的最大绝对误差与测量范围上限或满量程之比<ul>
+<li>相对误差&#x3D;绝对误差与真值的比<ul>
+<li>衡量测量精度</li>
+</ul>
+</li>
+<li>引用误差&#x3D;一个量程内的<strong>最大绝对误差</strong>与测量范围上限或满量程之比<ul>
+<li>被测量一直在变化</li>
 <li>特点<ul>
 <li>绝对误差的最大值与仪表的量程上限成正比</li>
 <li>被测量的值越接近量程上限，测量的<strong>相对误差</strong>越小，测量越精确</li>
@@ -678,6 +685,295 @@
 <li>乘除：以<strong>有效数字</strong>最少的为准，计算时可多取一位，但最终结果应该与最少的有效数字相同</li>
 <li>乘方&#x2F;开方：结果有效数字位数与<strong>底数有效数字位数</strong>相同</li>
 </ul>
+<h1 id="经典误差分析的基本方法"><a href="#经典误差分析的基本方法" class="headerlink" title="经典误差分析的基本方法"></a>经典误差分析的基本方法</h1><h2 id="误差的基本性质与处理方法"><a href="#误差的基本性质与处理方法" class="headerlink" title="误差的基本性质与处理方法"></a>误差的基本性质与处理方法</h2><h3 id="随机误差的概念与处理"><a href="#随机误差的概念与处理" class="headerlink" title="随机误差的概念与处理"></a>随机误差的概念与处理</h3><ul>
+<li><p>重点关注<strong>正态分布</strong>的随机误差</p>
+<p>正态分布的概率密度函数：<br>$$<br>y &#x3D; \frac{1}{σ\sqrt{2π}}e^{-\frac{1}{2}(\frac{x - μ}{σ})^2}<br>$$<br>关注的焦点：被测量的<strong>真值μ</strong>，测量的<strong>标准值σ</strong></p>
+<ul>
+<li>分布特点的物理意义：单峰性，对称性，有界性，抵偿性</li>
+<li>测量结果的期望值：<ul>
+<li>随机误差：数学期望为0的误差分量</li>
+<li>系统误差：数学期望不为0的误差分量</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>标准差</p>
+<ul>
+<li>物理意义：衡量测量列测量结果的<strong>分散性</strong>或<strong>不可靠性</strong></li>
+<li>计算方法：<ul>
+<li>单次测量的标准差：</li>
+<li>算数平均值的标准差</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="系统误差的概念和处理"><a href="#系统误差的概念和处理" class="headerlink" title="系统误差的概念和处理"></a>系统误差的概念和处理</h3><h3 id="粗大误差的概念与处理"><a href="#粗大误差的概念与处理" class="headerlink" title="粗大误差的概念与处理"></a>粗大误差的概念与处理</h3><h2 id="等精度与不等精度测量结果的数据处理方法"><a href="#等精度与不等精度测量结果的数据处理方法" class="headerlink" title="等精度与不等精度测量结果的数据处理方法"></a>等精度与不等精度测量结果的数据处理方法</h2><h2 id="误差的合成"><a href="#误差的合成" class="headerlink" title="误差的合成"></a>误差的合成</h2><h2 id="误差的分配"><a href="#误差的分配" class="headerlink" title="误差的分配"></a>误差的分配</h2><h2 id="微小误差的取舍与最佳测量方案的确定"><a href="#微小误差的取舍与最佳测量方案的确定" class="headerlink" title="微小误差的取舍与最佳测量方案的确定"></a>微小误差的取舍与最佳测量方案的确定</h2><h1 id="现代误差分析的基本方法"><a href="#现代误差分析的基本方法" class="headerlink" title="现代误差分析的基本方法"></a>现代误差分析的基本方法</h1><h2 id="现代误差分析理论概述"><a href="#现代误差分析理论概述" class="headerlink" title="现代误差分析理论概述"></a>现代误差分析理论概述</h2><h3 id="经典误差理论的特点与问题概述"><a href="#经典误差理论的特点与问题概述" class="headerlink" title="经典误差理论的特点与问题概述"></a>经典误差理论的特点与问题概述</h3><ul>
+<li><p>特点：</p>
+<ol>
+<li>对随机误差的研究<ul>
+<li>对正态分布的研究：单峰性，对称性，有界性，抵偿性</li>
+</ul>
+</li>
+<li>对误差的处理</li>
+<li>对被测量</li>
+<li>减小误差的方法</li>
+</ol>
+</li>
+<li><p><strong>问题</strong>：经典误差理论的定义的不完备性（真值永远未知）、系统误差与随机误差的界定、（误差只是针对测量结果，不确定度考虑结果与方法）</p>
+</li>
+</ul>
+<h3 id="现代误差理论的特征与内容"><a href="#现代误差理论的特征与内容" class="headerlink" title="现代误差理论的特征与内容"></a>现代误差理论的特征与内容</h3><ul>
+<li>特征：<ul>
+<li>静态+动态</li>
+<li>随机误差+系统误差</li>
+<li>测量数据+测量方法+仪器</li>
+<li>多种不同误差分布</li>
+</ul>
+</li>
+<li>内容：<ul>
+<li>测量不确定度（最佳值、半宽区间）</li>
+<li>常见误差源的误差性质与分布</li>
+<li>全误差修正技术与应用</li>
+<li>动态测量不确定度分析概述</li>
+</ul>
+</li>
+</ul>
+<h3 id="测量不确定度的概念及其与误差的关系"><a href="#测量不确定度的概念及其与误差的关系" class="headerlink" title="测量不确定度的概念及其与误差的关系"></a>测量不确定度的概念及其与误差的关系</h3><ul>
+<li>概念：测量结果带有的一个参数，用于表征合理地赋予被测量之值的<strong>分散性</strong><ul>
+<li>测量不确定度可以是<strong>标准差或其倍数</strong>，或说明置信水平的<strong>区间半宽度</strong></li>
+<li>一般由若干分量组成，统称为<strong>不确定度分量</strong>。<ul>
+<li>A类评定分量：依据一系列测量数据的<strong>统计分布</strong>得到的实验标准差</li>
+<li>B类评定分量：基于<strong>经验或者其他信息</strong>假定的概率分布得出的标准差</li>
+</ul>
+</li>
+<li>可以通过对所有不确定度分量进行<strong>方差与协方差</strong>合成得到。该参数的<strong>可靠程度</strong>用<strong>自由度的大小</strong>表征，自由度则是通过对每个不确定度分量估计的自由度通过运算得到的。</li>
+<li><strong>不确定度 &#x3D; 最佳估计值+分散性参数</strong></li>
+</ul>
+</li>
+<li>测量不确定度与误差之间的关系（见ppt上p9表）</li>
+</ul>
+<h2 id="测量不确定度的处理方法（重点）"><a href="#测量不确定度的处理方法（重点）" class="headerlink" title="测量不确定度的处理方法（重点）"></a>测量不确定度的处理方法（重点）</h2><h3 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h3><ul>
+<li>被测量值的估计+表征该值分散性的参数 &#x3D; 一个完整的测量结果</li>
+<li>测量结果质量用不确定度来衡量：不确定度越大，<strong>分散性</strong>越大，测量质量越低；反之分散性越小，测量质量越高</li>
+<li>起源：海森堡测不准原理</li>
+<li>不确定度根据方法分类：相对合成标准不确定度、相对扩展不确定度</li>
+</ul>
+<h3 id="来源与分类"><a href="#来源与分类" class="headerlink" title="来源与分类"></a>来源与分类</h3><ul>
+<li>来源<ul>
+<li>被测量的定义不完善：被测量有某种模糊性</li>
+<li>非代表抽样：样本不能完全代表所定义的被测量</li>
+<li>被测量的定义实现不理想：被测量定义的条件的实现不容易或不完全</li>
+<li>测量人员：生理上的分辨力、感知器官的生理变化、反应速度与读数习惯</li>
+<li>测量环境、基本参数、测量仪器、测量方法与程序的近似或者假设</li>
+<li>在相同测量条件下，重复测量中所出现的随机变化</li>
+<li>测量列中的粗大误差因不明显而未被剔除</li>
+<li>赋予测量标准与标准物质的标准值不准确</li>
+</ul>
+</li>
+<li>分类：按照不确定度的统计方法分类<ul>
+<li>（见ppt上p13图）</li>
+<li>根据<strong>计算</strong>不确定度的方法差异进行分类。都是<strong>以某种概率分布为基础</strong>。<ul>
+<li>A类：不能简单归于随机误差导致的不确定度</li>
+<li>B类：不能简单归于系统误差导致的不确定度</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="标准不确定度的评定"><a href="#标准不确定度的评定" class="headerlink" title="标准不确定度的评定"></a>标准不确定度的评定</h3><ol>
+<li><p>A类评定方法（看ppt补充公式）</p>
+<p>A类：<strong>重复性测量</strong>引起的分量，求出最佳统计值、（该分量的）标准不确定度s与自由度v</p>
+<p>定义：可以用<strong>统计分析</strong>的方法进行评定的不确定度。要求给出<strong>标准不确定度分量</strong>与<strong>自由度</strong>（用来算扩展不确定度的包含因子）</p>
+<ul>
+<li><p>贝塞尔法</p>
+<ul>
+<li>计算方法：<ul>
+<li>重复测量（一般不用单次测量），则算出<strong>算数平均值</strong>作为最佳估计值<ul>
+<li>注意：这里算出的算数平均值，要比题目中所给数据的位数多保留一位</li>
+</ul>
+</li>
+<li>算出<strong>单次测量标准差s</strong></li>
+<li>如果是用算数平均值作为x的估计值，用<strong>算数平均值的标准差ux</strong>来作为重复测量的不确定度<ul>
+<li>算数平均值标准差 &#x3D; 单次测量标准差&#x2F;√n</li>
+</ul>
+</li>
+<li><strong>自由度</strong> &#x3D; （总和项数）n - （总合限制条件）1</li>
+</ul>
+</li>
+<li>若为重复测量，则必有重复测量引起的不确定度</li>
+</ul>
+</li>
+<li><p>最大残差法</p>
+<ul>
+<li>绝对值最大的残差为最大残差</li>
+</ul>
+<p>$$<br>s &#x3D; c_{n}max|v|<br>$$</p>
+<p>​	cn可以查表，n不同cn也不同</p>
+</li>
+<li><p>极差法</p>
+<ul>
+<li>选择最大与最小值，两者之差为极差</li>
+<li>s</li>
+</ul>
+</li>
+<li><p>彼得斯法</p>
+</li>
+<li><p>最大误差法</p>
+</li>
+</ul>
+</li>
+</ol>
+<ul>
+<li>总结：以上计算方法可靠性都比贝塞尔公式低。计算结果出现矛盾时，以贝塞尔为准</li>
+</ul>
+<ol start="2">
+<li><p>B类评定方法</p>
+<p>特点：一定有一些已知条件，基于其他方法来估计概率分布。但是<strong>不严谨</strong>，关于分量具体分布的类型的判定是主观的。（首先判断分布类型，然后根据潘顿啊的类型选择计算方法）</p>
+<ul>
+<li>倍数法：</li>
+<li>正态分布法：</li>
+<li>均匀分布法：</li>
+<li>反正弦分布法：</li>
+<li>梯形分布于三角分布法：受到<strong>两个相互独立且服从均匀分布</strong>的误差因素影响时<ol>
+<li>两均匀分布不同</li>
+<li>两均匀分布相同</li>
+</ol>
+</li>
+<li>投影分布法：</li>
+</ul>
+</li>
+<li><p>自由度</p>
+<ul>
+<li><p>性质</p>
+<ol>
+<li>尺度变换的不变性：不确定度分量的自由度并不因为乘上常数而加倍</li>
+<li>自由度的可加性：</li>
+</ol>
+</li>
+<li><p>A类：除了贝塞尔法之外，其他方法都要通过<strong>查表来得到自由度</strong></p>
+</li>
+<li><p>B类：可由估计u的相对标准差计算自由度<br>$$<br>v &#x3D; 1 &#x2F; 2(σu &#x2F; u)^{2}<br>$$</p>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="测量不确定度的合成"><a href="#测量不确定度的合成" class="headerlink" title="测量不确定度的合成"></a>测量不确定度的合成</h3><ul>
+<li><p>标准差</p>
+</li>
+<li><p>r &#x3D; 0，用<strong>方和根法</strong>：每个分量的不确定度×传播系数，平方、加和、开根号</p>
+</li>
+<li><p>r &#x3D; 1，则不能用开方的方法，而要用<strong>代数和的方法</strong>去计算（例：10个1000Ω电阻串联）</p>
+</li>
+<li><p>0 &lt; r &lt;1，计算其相关系数</p>
+<ul>
+<li><p>相关系数的求法</p>
+<ol>
+<li><p>判断法</p>
+<p>ρ &#x3D; 0，两个量可能互相独立，也可能互相影响但是影响程度小</p>
+<p>ρ &#x3D; 1，两个量之间有正相关关系</p>
+</li>
+<li><p>理论计算法</p>
+</li>
+<li><p>简单计算法</p>
+</li>
+</ol>
+</li>
+<li><p>合成不确定度的求法</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="扩展不确定度"><a href="#扩展不确定度" class="headerlink" title="扩展不确定度"></a>扩展不确定度</h3><ul>
+<li>极限误差</li>
+<li>由合成的标准不确定度对应的<strong>自由度</strong>去<strong>查t分布表</strong>，确定包含因子作为合成标准不确定度到扩展不确定度的<strong>系数</strong></li>
+</ul>
+<ol>
+<li><p>自由度法（推荐）</p>
+<ul>
+<li>在可以取得<strong>每一个分量的自由度</strong>时应用此方法</li>
+</ul>
+<p>合成标准不确定度——其对应的有效自由度——选取所需置信概率，查t分布表得到临界值（若有效自由度非整数，可以通过<strong>内插</strong>求出临界值；或者将其<strong>切断至较小的整数</strong>求出临界值）——确定包含因子kp的值——计算扩展不确定度Up</p>
+</li>
+<li><p>简易法</p>
+<p>简单取k &#x3D; 2或者3，用于实在缺少资料的情况</p>
+</li>
+<li><p>超越系数法</p>
+<p>每一个不确定度分量都对称，则可以查出每个分量的超越系数，算出合成标准不确定度，算出合成标准不确定度的超越系数</p>
+</li>
+</ol>
+<h3 id="测量结果用测量不确定度的表达"><a href="#测量结果用测量不确定度的表达" class="headerlink" title="测量结果用测量不确定度的表达"></a>测量结果用测量不确定度的表达</h3><ol>
+<li>测量结果报告的基本内容<ol>
+<li>原始数据</li>
+<li>被测量估计值的方法</li>
+<li>所有不确定度分量、自由度与相关系数</li>
+<li>数据分析的方法</li>
+<li>给出值与来源</li>
+</ol>
+</li>
+<li>结果的表示形式<ol>
+<li>合成标准不确定度：基础计量学研究<ol>
+<li>必要：定义、算合成标准不确定度</li>
+<li>表示：四种形式</li>
+</ol>
+</li>
+<li>扩展不确定度<ol>
+<li>给出获得扩展不确定度所用包含因子k的值；给出合成标准不确定度</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>有效数字的位数：<ul>
+<li>最后报告的合成标准不确定度与扩展不确定度，有效位数一般为<strong>2位</strong></li>
+<li>在报告最终结果时，可以将不确定度的后几位数字进位而不是舍弃（主观判断）</li>
+<li>对于输入、输出的估计值，舍入到与不确定度末位的数字对齐</li>
+</ul>
+</li>
+</ol>
+<h2 id="测量不确定度应用举例"><a href="#测量不确定度应用举例" class="headerlink" title="测量不确定度应用举例"></a>测量不确定度应用举例</h2><ul>
+<li>稳定与否？准不准</li>
+<li>电压测量不确定度</li>
+<li>驻波比测量的不确定度计算</li>
+<li>体积测量的不确定度计算</li>
+</ul>
+<h2 id="动态测量不确定度分析概述"><a href="#动态测量不确定度分析概述" class="headerlink" title="动态测量不确定度分析概述"></a>动态测量不确定度分析概述</h2><ul>
+<li><p>动态测量：被测量随时间变化的速度，快于测量仪器的性能随着时间变化的程度</p>
+<ul>
+<li>动态测量是个<strong>相对概念</strong></li>
+</ul>
+</li>
+<li><p>不确定度分析特点</p>
+<ul>
+<li>时变性、随机性、相关性、动态性</li>
+</ul>
+</li>
+<li><p>不确定度分析基本过程</p>
+<ul>
+<li>来源、主要分量、合成不确定度、自由度</li>
+</ul>
+<ol>
+<li>A类评定：（重复性测量）测量误差为0均值的随机误差的动态测量</li>
+<li>B类评定：（具有先验信息）</li>
+<li>合成：</li>
+<li>扩展不确定度评定：</li>
+</ol>
+</li>
+</ul>
+<h1 id="最小二乘法原理与计算"><a href="#最小二乘法原理与计算" class="headerlink" title="最小二乘法原理与计算"></a>最小二乘法原理与计算</h1><ul>
+<li><p>解决问题：冗余方程组的求解、谷神星轨迹</p>
+</li>
+<li><p>落脚点：参数的最可信赖值估计</p>
+</li>
+<li><p>基本原理：残余误差的平方和最小</p>
+<ul>
+<li>前提：没有系统误差（无偏）、各项正态分布、相互独立</li>
+<li><strong>做法：列出残差平方和，然后对不同变量求偏导，令一阶偏导等于0</strong></li>
+</ul>
+</li>
+</ul>
+<h2 id="线性参数的最小二乘运算"><a href="#线性参数的最小二乘运算" class="headerlink" title="线性参数的最小二乘运算"></a>线性参数的最小二乘运算</h2><h3 id="等精度测量"><a href="#等精度测量" class="headerlink" title="等精度测量"></a>等精度测量</h3><h3 id="不等精度测量"><a href="#不等精度测量" class="headerlink" title="不等精度测量"></a>不等精度测量</h3><h3 id><a href="#" class="headerlink" title></a></h3><h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><ul>
+<li>计算平均值与标准差时，标准差需要保留几位？</li>
+</ul>
 
             </div>
 
@@ -685,19 +981,19 @@
                 <div class="post-copyright-info">
                     <div class="article-copyright-info-container">
     <ul>
-        <li><strong>標題:</strong> 午茶分析与书局处理</li>
+        <li><strong>标题:</strong> 午茶分析与书局处理</li>
         <li><strong>作者:</strong> morimori0401</li>
-        <li><strong>撰寫于:</strong> 2024-02-29 21:40:52</li>
+        <li><strong>创建于:</strong> 2024-02-29 21:40:52</li>
         
             <li>
-                <strong>更新于:</strong> 2024-03-08 23:33:33
+                <strong>更新于:</strong> 2024-03-30 19:02:58
             </li>
         
         <li>
-            <strong>連結:</strong> https://morimori0401.github.io/2024/02/29/午茶分析与书局处理/
+            <strong>链接:</strong> https://morimori0401.github.io/2024/02/29/午茶分析与书局处理/
         </li>
         <li>
-            <strong>版權宣告:</strong> 本作品采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0</a> 进行许可。
+            <strong>版权声明:</strong> 本文章采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0</a> 进行许可。
         </li>
     </ul>
 </div>
@@ -739,10 +1035,10 @@
                         <div class="article-next">
                             <a class="next"
                             rel="next"
-                            href="/2023/12/29/%E8%87%AA%E6%8E%A7%E7%AC%AC%E4%BA%8C%E7%AB%A0%EF%BC%9A%E6%97%B6%E5%9F%9F%E5%88%86%E6%9E%90%E6%B3%95/"
+                            href="/2024/01/05/%E6%B1%A4%E6%B5%85%E6%94%BF%E6%98%8E%E4%B8%B2/"
                             >
                                 <span class="title flex-center">
-                                    <span class="post-nav-title-item">自控第二章：时域分析法</span>
+                                    <span class="post-nav-title-item">汤浅政明串</span>
                                     <span class="post-nav-item">下一篇</span>
                                 </span>
                                 <span class="right arrow-icon flex-center">
@@ -762,9 +1058,9 @@
             <div class="toc-content-container">
                 <div class="post-toc-wrap">
     <div class="post-toc">
-        <div class="toc-title">此頁目錄</div>
+        <div class="toc-title">此页目录</div>
         <div class="page-title">午茶分析与书局处理</div>
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BB%AA%E8%AE%BA"><span class="nav-number">1.</span> <span class="nav-text">绪论</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B5%8B%E9%87%8F%E3%80%81%E6%B5%8B%E8%AF%95%E4%B8%8E%E8%AE%A1%E9%87%8F"><span class="nav-number">1.1.</span> <span class="nav-text">测量、测试与计量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AF%AF%E5%B7%AE%E7%90%86%E8%AE%BA%E4%B8%8E%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E7%9A%84%E5%8F%91%E5%B1%95%E5%8E%86%E7%A8%8B"><span class="nav-number">1.2.</span> <span class="nav-text">误差理论与数据处理的发展历程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AF%BE%E7%A8%8B%E4%BD%93%E7%B3%BB%E6%A6%82%E5%86%B5"><span class="nav-number">1.3.</span> <span class="nav-text">课程体系概况</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AF%AF%E5%B7%AE%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5%E5%92%8C%E6%84%8F%E4%B9%89"><span class="nav-number">1.4.</span> <span class="nav-text">误差的基本概念和意义</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AF%AF%E5%B7%AE%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="nav-number">1.4.1.</span> <span class="nav-text">误差的定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AF%AF%E5%B7%AE%E7%9A%84%E5%88%86%E7%B1%BB"><span class="nav-number">1.4.2.</span> <span class="nav-text">误差的分类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AF%AF%E5%B7%AE%E7%9A%84%E6%9D%A5%E6%BA%90"><span class="nav-number">1.4.3.</span> <span class="nav-text">误差的来源</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AF%AF%E5%B7%AE%E5%88%86%E6%9E%90%E7%9A%84%E7%9B%AE%E7%9A%84%E5%92%8C%E6%84%8F%E4%B9%89"><span class="nav-number">1.4.4.</span> <span class="nav-text">误差分析的目的和意义</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B5%8B%E9%87%8F%E7%BB%93%E6%9E%9C%E7%9A%84%E5%A4%84%E7%90%86%E4%B8%8E%E8%AF%84%E4%BB%B7"><span class="nav-number">1.5.</span> <span class="nav-text">测量结果的处理与评价</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B5%8B%E9%87%8F%E7%BB%93%E6%9E%9C%E7%9A%84%E5%A4%84%E7%90%86"><span class="nav-number">1.5.1.</span> <span class="nav-text">测量结果的处理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B5%8B%E9%87%8F%E7%BB%93%E6%9E%9C%E7%9A%84%E8%AF%84%E4%BB%B7"><span class="nav-number">1.5.2.</span> <span class="nav-text">测量结果的评价</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%84%E7%90%86%E4%B8%8E%E8%AF%84%E4%BB%B7"><span class="nav-number">1.5.3.</span> <span class="nav-text">处理与评价</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%89%E6%95%88%E6%95%B0%E5%AD%97%E4%B8%8E%E6%95%B0%E5%80%BC%E8%BF%90%E7%AE%97"><span class="nav-number">1.6.</span> <span class="nav-text">有效数字与数值运算</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%89%E6%95%88%E6%95%B0%E5%AD%97%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="nav-number">1.6.1.</span> <span class="nav-text">有效数字的概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E5%AD%97%E8%88%8D%E5%85%A5%E7%9A%84%E8%A7%84%E5%88%99"><span class="nav-number">1.6.2.</span> <span class="nav-text">数字舍入的规则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E8%BF%90%E7%AE%97%E8%A7%84%E5%88%99"><span class="nav-number">1.6.3.</span> <span class="nav-text">数据运算规则</span></a></li></ol></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BB%AA%E8%AE%BA"><span class="nav-number">1.</span> <span class="nav-text">绪论</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B5%8B%E9%87%8F%E3%80%81%E6%B5%8B%E8%AF%95%E4%B8%8E%E8%AE%A1%E9%87%8F"><span class="nav-number">1.1.</span> <span class="nav-text">测量、测试与计量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AF%AF%E5%B7%AE%E7%90%86%E8%AE%BA%E4%B8%8E%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E7%9A%84%E5%8F%91%E5%B1%95%E5%8E%86%E7%A8%8B"><span class="nav-number">1.2.</span> <span class="nav-text">误差理论与数据处理的发展历程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AF%BE%E7%A8%8B%E4%BD%93%E7%B3%BB%E6%A6%82%E5%86%B5"><span class="nav-number">1.3.</span> <span class="nav-text">课程体系概况</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AF%AF%E5%B7%AE%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5%E5%92%8C%E6%84%8F%E4%B9%89"><span class="nav-number">1.4.</span> <span class="nav-text">误差的基本概念和意义</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AF%AF%E5%B7%AE%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="nav-number">1.4.1.</span> <span class="nav-text">误差的定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AF%AF%E5%B7%AE%E7%9A%84%E5%88%86%E7%B1%BB"><span class="nav-number">1.4.2.</span> <span class="nav-text">误差的分类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AF%AF%E5%B7%AE%E7%9A%84%E6%9D%A5%E6%BA%90"><span class="nav-number">1.4.3.</span> <span class="nav-text">误差的来源</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AF%AF%E5%B7%AE%E5%88%86%E6%9E%90%E7%9A%84%E7%9B%AE%E7%9A%84%E5%92%8C%E6%84%8F%E4%B9%89"><span class="nav-number">1.4.4.</span> <span class="nav-text">误差分析的目的和意义</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B5%8B%E9%87%8F%E7%BB%93%E6%9E%9C%E7%9A%84%E5%A4%84%E7%90%86%E4%B8%8E%E8%AF%84%E4%BB%B7"><span class="nav-number">1.5.</span> <span class="nav-text">测量结果的处理与评价</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B5%8B%E9%87%8F%E7%BB%93%E6%9E%9C%E7%9A%84%E5%A4%84%E7%90%86"><span class="nav-number">1.5.1.</span> <span class="nav-text">测量结果的处理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B5%8B%E9%87%8F%E7%BB%93%E6%9E%9C%E7%9A%84%E8%AF%84%E4%BB%B7"><span class="nav-number">1.5.2.</span> <span class="nav-text">测量结果的评价</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%84%E7%90%86%E4%B8%8E%E8%AF%84%E4%BB%B7"><span class="nav-number">1.5.3.</span> <span class="nav-text">处理与评价</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%89%E6%95%88%E6%95%B0%E5%AD%97%E4%B8%8E%E6%95%B0%E5%80%BC%E8%BF%90%E7%AE%97"><span class="nav-number">1.6.</span> <span class="nav-text">有效数字与数值运算</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%89%E6%95%88%E6%95%B0%E5%AD%97%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="nav-number">1.6.1.</span> <span class="nav-text">有效数字的概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E5%AD%97%E8%88%8D%E5%85%A5%E7%9A%84%E8%A7%84%E5%88%99"><span class="nav-number">1.6.2.</span> <span class="nav-text">数字舍入的规则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E8%BF%90%E7%AE%97%E8%A7%84%E5%88%99"><span class="nav-number">1.6.3.</span> <span class="nav-text">数据运算规则</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BB%8F%E5%85%B8%E8%AF%AF%E5%B7%AE%E5%88%86%E6%9E%90%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%96%B9%E6%B3%95"><span class="nav-number">2.</span> <span class="nav-text">经典误差分析的基本方法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AF%AF%E5%B7%AE%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%80%A7%E8%B4%A8%E4%B8%8E%E5%A4%84%E7%90%86%E6%96%B9%E6%B3%95"><span class="nav-number">2.1.</span> <span class="nav-text">误差的基本性质与处理方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9A%8F%E6%9C%BA%E8%AF%AF%E5%B7%AE%E7%9A%84%E6%A6%82%E5%BF%B5%E4%B8%8E%E5%A4%84%E7%90%86"><span class="nav-number">2.1.1.</span> <span class="nav-text">随机误差的概念与处理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%B3%BB%E7%BB%9F%E8%AF%AF%E5%B7%AE%E7%9A%84%E6%A6%82%E5%BF%B5%E5%92%8C%E5%A4%84%E7%90%86"><span class="nav-number">2.1.2.</span> <span class="nav-text">系统误差的概念和处理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%B2%97%E5%A4%A7%E8%AF%AF%E5%B7%AE%E7%9A%84%E6%A6%82%E5%BF%B5%E4%B8%8E%E5%A4%84%E7%90%86"><span class="nav-number">2.1.3.</span> <span class="nav-text">粗大误差的概念与处理</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AD%89%E7%B2%BE%E5%BA%A6%E4%B8%8E%E4%B8%8D%E7%AD%89%E7%B2%BE%E5%BA%A6%E6%B5%8B%E9%87%8F%E7%BB%93%E6%9E%9C%E7%9A%84%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E6%96%B9%E6%B3%95"><span class="nav-number">2.2.</span> <span class="nav-text">等精度与不等精度测量结果的数据处理方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AF%AF%E5%B7%AE%E7%9A%84%E5%90%88%E6%88%90"><span class="nav-number">2.3.</span> <span class="nav-text">误差的合成</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AF%AF%E5%B7%AE%E7%9A%84%E5%88%86%E9%85%8D"><span class="nav-number">2.4.</span> <span class="nav-text">误差的分配</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BE%AE%E5%B0%8F%E8%AF%AF%E5%B7%AE%E7%9A%84%E5%8F%96%E8%88%8D%E4%B8%8E%E6%9C%80%E4%BD%B3%E6%B5%8B%E9%87%8F%E6%96%B9%E6%A1%88%E7%9A%84%E7%A1%AE%E5%AE%9A"><span class="nav-number">2.5.</span> <span class="nav-text">微小误差的取舍与最佳测量方案的确定</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%8E%B0%E4%BB%A3%E8%AF%AF%E5%B7%AE%E5%88%86%E6%9E%90%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%96%B9%E6%B3%95"><span class="nav-number">3.</span> <span class="nav-text">现代误差分析的基本方法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%8E%B0%E4%BB%A3%E8%AF%AF%E5%B7%AE%E5%88%86%E6%9E%90%E7%90%86%E8%AE%BA%E6%A6%82%E8%BF%B0"><span class="nav-number">3.1.</span> <span class="nav-text">现代误差分析理论概述</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%8F%E5%85%B8%E8%AF%AF%E5%B7%AE%E7%90%86%E8%AE%BA%E7%9A%84%E7%89%B9%E7%82%B9%E4%B8%8E%E9%97%AE%E9%A2%98%E6%A6%82%E8%BF%B0"><span class="nav-number">3.1.1.</span> <span class="nav-text">经典误差理论的特点与问题概述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%8E%B0%E4%BB%A3%E8%AF%AF%E5%B7%AE%E7%90%86%E8%AE%BA%E7%9A%84%E7%89%B9%E5%BE%81%E4%B8%8E%E5%86%85%E5%AE%B9"><span class="nav-number">3.1.2.</span> <span class="nav-text">现代误差理论的特征与内容</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B5%8B%E9%87%8F%E4%B8%8D%E7%A1%AE%E5%AE%9A%E5%BA%A6%E7%9A%84%E6%A6%82%E5%BF%B5%E5%8F%8A%E5%85%B6%E4%B8%8E%E8%AF%AF%E5%B7%AE%E7%9A%84%E5%85%B3%E7%B3%BB"><span class="nav-number">3.1.3.</span> <span class="nav-text">测量不确定度的概念及其与误差的关系</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B5%8B%E9%87%8F%E4%B8%8D%E7%A1%AE%E5%AE%9A%E5%BA%A6%E7%9A%84%E5%A4%84%E7%90%86%E6%96%B9%E6%B3%95%EF%BC%88%E9%87%8D%E7%82%B9%EF%BC%89"><span class="nav-number">3.2.</span> <span class="nav-text">测量不确定度的处理方法（重点）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="nav-number">3.2.1.</span> <span class="nav-text">基本概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9D%A5%E6%BA%90%E4%B8%8E%E5%88%86%E7%B1%BB"><span class="nav-number">3.2.2.</span> <span class="nav-text">来源与分类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%87%E5%87%86%E4%B8%8D%E7%A1%AE%E5%AE%9A%E5%BA%A6%E7%9A%84%E8%AF%84%E5%AE%9A"><span class="nav-number">3.2.3.</span> <span class="nav-text">标准不确定度的评定</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B5%8B%E9%87%8F%E4%B8%8D%E7%A1%AE%E5%AE%9A%E5%BA%A6%E7%9A%84%E5%90%88%E6%88%90"><span class="nav-number">3.2.4.</span> <span class="nav-text">测量不确定度的合成</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%89%A9%E5%B1%95%E4%B8%8D%E7%A1%AE%E5%AE%9A%E5%BA%A6"><span class="nav-number">3.2.5.</span> <span class="nav-text">扩展不确定度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B5%8B%E9%87%8F%E7%BB%93%E6%9E%9C%E7%94%A8%E6%B5%8B%E9%87%8F%E4%B8%8D%E7%A1%AE%E5%AE%9A%E5%BA%A6%E7%9A%84%E8%A1%A8%E8%BE%BE"><span class="nav-number">3.2.6.</span> <span class="nav-text">测量结果用测量不确定度的表达</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B5%8B%E9%87%8F%E4%B8%8D%E7%A1%AE%E5%AE%9A%E5%BA%A6%E5%BA%94%E7%94%A8%E4%B8%BE%E4%BE%8B"><span class="nav-number">3.3.</span> <span class="nav-text">测量不确定度应用举例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8A%A8%E6%80%81%E6%B5%8B%E9%87%8F%E4%B8%8D%E7%A1%AE%E5%AE%9A%E5%BA%A6%E5%88%86%E6%9E%90%E6%A6%82%E8%BF%B0"><span class="nav-number">3.4.</span> <span class="nav-text">动态测量不确定度分析概述</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%9C%80%E5%B0%8F%E4%BA%8C%E4%B9%98%E6%B3%95%E5%8E%9F%E7%90%86%E4%B8%8E%E8%AE%A1%E7%AE%97"><span class="nav-number">4.</span> <span class="nav-text">最小二乘法原理与计算</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BA%BF%E6%80%A7%E5%8F%82%E6%95%B0%E7%9A%84%E6%9C%80%E5%B0%8F%E4%BA%8C%E4%B9%98%E8%BF%90%E7%AE%97"><span class="nav-number">4.1.</span> <span class="nav-text">线性参数的最小二乘运算</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AD%89%E7%B2%BE%E5%BA%A6%E6%B5%8B%E9%87%8F"><span class="nav-number">4.1.1.</span> <span class="nav-text">等精度测量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%8D%E7%AD%89%E7%B2%BE%E5%BA%A6%E6%B5%8B%E9%87%8F"><span class="nav-number">4.1.2.</span> <span class="nav-text">不等精度测量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">4.1.3.</span> <span class="nav-text"></span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%97%AE%E9%A2%98"><span class="nav-number">5.</span> <span class="nav-text">问题</span></a></li></ol>
 
     </div>
 </div>
@@ -801,9 +1097,9 @@
             </div>
         
         <div class="theme-info info-item">
-            <span class="powered-by-container"><?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1rem" height="1rem" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path fill="#0E83CD" d="M256.4,25.8l-200,115.5L56,371.5l199.6,114.7l200-115.5l0.4-230.2L256.4,25.8z M349,354.6l-18.4,10.7l-18.6-11V275H200v79.6l-18.4,10.7l-18.6-11v-197l18.5-10.6l18.5,10.8V237h112v-79.6l18.5-10.6l18.5,10.8V354.6z"/></svg><a target="_blank" href="https://hexo.io">Hexo</a> 框架</span>
+            <span class="powered-by-container">由 <?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1rem" height="1rem" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path fill="#0E83CD" d="M256.4,25.8l-200,115.5L56,371.5l199.6,114.7l200-115.5l0.4-230.2L256.4,25.8z M349,354.6l-18.4,10.7l-18.6-11V275H200v79.6l-18.4,10.7l-18.6-11v-197l18.5-10.6l18.5,10.8V237h112v-79.6l18.5-10.6l18.5,10.8V354.6z"/></svg><a target="_blank" href="https://hexo.io">Hexo</a> 驱动</span>
                 <br>
-            <span class="theme-version-container">主題&nbsp;<a class="theme-version" target="_blank" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine v2.2.1</a>
+            <span class="theme-version-container">主题&nbsp;<a class="theme-version" target="_blank" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine v2.2.1</a>
         </div>
         
         
@@ -899,7 +1195,7 @@
                 <input autocomplete="off"
                        autocorrect="off"
                        autocapitalize="off"
-                       placeholder="搜尋..."
+                       placeholder="搜索..."
                        spellcheck="false"
                        type="search"
                        class="search-input"
