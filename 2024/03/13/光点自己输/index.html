@@ -27,7 +27,7 @@
 <meta property="og:locale">
 <meta property="og:image" content="https://morimori0401.github.io/pictures/gdzjs1.png">
 <meta property="article:published_time" content="2024-03-13T07:59:00.023Z">
-<meta property="article:modified_time" content="2024-03-29T10:18:49.518Z">
+<meta property="article:modified_time" content="2024-04-20T13:38:25.420Z">
 <meta property="article:author" content="morimori">
 <meta property="article:tag" content="大三下提纲">
 <meta name="twitter:card" content="summary">
@@ -430,8 +430,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2024-03-29 18:18:49</span>
-            <span class="mobile">2024-03-29 18:18</span>
+            <span class="desktop">2024-04-20 21:38:25</span>
+            <span class="mobile">2024-04-20 21:38</span>
             <span class="hover-info">更新</span>
         </span>
     
@@ -1262,6 +1262,292 @@
 <li>短态前历效应：无光照条件下，放3min，在1lx下测不同阻值</li>
 <li>中态前历效应：无光照条件下，放24h，在100lx下测不同阻值；再在1000lx下放置15min，继续在100lx下测量阻值</li>
 </ul>
+<h1 id="光伏探测器"><a href="#光伏探测器" class="headerlink" title="光伏探测器"></a>光伏探测器</h1><ul>
+<li><p>主要特点：</p>
+<ol>
+<li><p>结型器件，只有到达<strong>结区附近</strong>的光才会产生光电效应</p>
+<p>结型场效应管特点：阻抗高、噪声小</p>
+<p>光电导：均值型</p>
+</li>
+<li><p>有确定的极性，<strong>不需</strong>外加电压也可以把光信号变为电信号</p>
+<p>光电导：工作时<strong>必须</strong>外加电压</p>
+</li>
+<li><p>光伏效应主要依赖于结区非平衡载流子中的<strong>少子</strong>漂移运动，弛豫效应小，响应速度快，频率效应好</p>
+<p>光电导主要是<strong>多子</strong>的产生</p>
+<p>特例：光电三极管</p>
+<p>弛豫效应：光照射与光电流产生的时间差</p>
+</li>
+</ol>
+</li>
+<li><p>光生伏特效应：光照使不均匀半导体或均匀半导体中光生电子与空穴在空间分开而产生电位差的现象</p>
+<ol>
+<li>不均匀半导体（PN结等）<ol>
+<li>光</li>
+</ol>
+</li>
+<li>均匀半导体（体积光生伏特效应）<ol>
+<li>没有内电场：光照在半导体的一部分上，丹倍效应</li>
+<li>存在外加磁场：光磁电效应</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p>由势垒效应产生的光生伏特效应</p>
+<ul>
+<li>PN结与外电路相连，起到电池作用</li>
+</ul>
+</li>
+<li><p>短路电流的光电流</p>
+<p>【前提条件：弱电流】</p>
+<p>PN结伏安特性在V &#x3D; 0时的动态电阻（在一定温度下，动态电阻是一个固定的值）：<br>$$<br>R_0 &#x3D; \frac{kT}{qI_{sr}}<br>$$<br>光生电压：<br>$$<br>V &#x3D; R_0qη\frac{P}{hγ}<br>$$<br>电压响应率：<br>$$<br>R_V &#x3D;qη\frac{R_0}{hγ} &#x3D; \frac{V_S}{P}<br>$$</p>
+</li>
+<li></li>
+<li><p>光伏探测器工作电流的方向：从N到P</p>
+</li>
+<li><p>光电二极管工作外电压偏置状态：反向电压偏置</p>
+</li>
+</ul>
+<h2 id="光照下理想PN结方程及特性曲线"><a href="#光照下理想PN结方程及特性曲线" class="headerlink" title="光照下理想PN结方程及特性曲线"></a>光照下理想PN结方程及特性曲线</h2><ol>
+<li><p>第一象限：PN结加正偏压</p>
+<p>此时PN结的暗电流远大于PN结的正向电流，非工作区</p>
+</li>
+<li><p>第三象限：PN结反偏</p>
+<p>暗电流等于反向饱和电流，远小于工作电流；是工作区，用于光导工作模式，用作探测器</p>
+<ul>
+<li>注意：负载电阻不可过小，外电路电压不可过大，以免造成反向击穿</li>
+</ul>
+</li>
+<li><p>第四象限：PN结零偏</p>
+<p>I<del>s0</del>存在。光功率不同，输出的电压与电流会发生变化，非线性。</p>
+<p>开路电压：<br>$$<br>V &#x3D; \frac{kT}{q}ln(\frac{I_s + I}{I_{s0}} + 1)<br>$$<br>工作模式：光伏工作模式，用作微型光电池</p>
+</li>
+<li><p>DN值（digital number，描述灰度）：黑则DN小，白则DN大</p>
+</li>
+</ol>
+<ul>
+<li><p>光伏模式：内阻远低于负载，恒压源</p>
+</li>
+<li><p>光导模式：内阻远大于负载，恒流源</p>
+<p>R<del>d</del>的大小变化大，</p>
+</li>
+</ul>
+<h2 id="光伏探测器的性能参数"><a href="#光伏探测器的性能参数" class="headerlink" title="光伏探测器的性能参数"></a>光伏探测器的性能参数</h2><ol>
+<li><p>响应率</p>
+<p>与器件的工作温度、少数载流子的浓度和扩散、探测器面积有关，与器件的偏压无关<br>$$<br>R_V &#x3D; \frac{kTη}{I_{s0}h\nu}<br>$$</p>
+</li>
+<li><p>噪声</p>
+<p>散粒噪声、暗电流噪声、热噪声</p>
+<p>器件的零偏电阻R<del>0</del>越大，暗电流越小，对散粒噪声贡献越小</p>
+</li>
+<li><p>比探测率</p>
+<p>以散粒噪声为主时：</p>
+<ol>
+<li>零偏压工作：</li>
+<li>反偏压工作：</li>
+</ol>
+</li>
+<li><p>光谱特性曲线</p>
+</li>
+<li><p>频率响应与响应时间</p>
+</li>
+<li><p>温度特性：</p>
+<p>对温度进行标定，在使用时进行温度控制</p>
+</li>
+</ol>
+<h2 id="光电池和光电二极管"><a href="#光电池和光电二极管" class="headerlink" title="光电池和光电二极管"></a>光电池和光电二极管</h2><h3 id="光电池"><a href="#光电池" class="headerlink" title="光电池"></a>光电池</h3><ul>
+<li>光生伏特效应，不需要偏压</li>
+</ul>
+<ol>
+<li><p>光电池结构</p>
+<ul>
+<li>p^+^n：地面</li>
+<li>n^+^p：空间</li>
+</ul>
+<p>硅光电池：电极梳齿状，便于透光，减小串联电阻</p>
+<p>光敏面上涂一层二氧化硅透明层：起到保护作用</p>
+<p>作用：光电探测器件、太阳能转化为电能</p>
+</li>
+<li><p>光电池特性</p>
+<ol>
+<li>光照特性</li>
+</ol>
+</li>
+</ol>
+<h3 id="光电二极管"><a href="#光电二极管" class="headerlink" title="光电二极管"></a>光电二极管</h3><ul>
+<li>作为光伏探测器，具有方向性</li>
+</ul>
+<ol>
+<li><p>主要噪声：散粒噪声、热噪声</p>
+<ol>
+<li>弱光：散&lt;热</li>
+<li>强光：散&gt;热</li>
+</ol>
+</li>
+<li><p>频率特性：加大反向电压；减小结电容；改变结构</p>
+</li>
+<li><p>伏安特性</p>
+</li>
+</ol>
+<ul>
+<li>雪崩光电二极管（APD）<ol>
+<li>工作原理：雪崩效应，外加反偏电压（N正P负），非常大</li>
+<li>在高频电路中工作，需要屏蔽噪声</li>
+<li>特征参数<ol>
+<li>散粒噪声</li>
+</ol>
+</li>
+</ol>
+</li>
+</ul>
+<h3 id="光电三极管"><a href="#光电三极管" class="headerlink" title="光电三极管"></a>光电三极管</h3><ol>
+<li>结构与工作原理</li>
+</ol>
+<h1 id="热探测器-1"><a href="#热探测器-1" class="headerlink" title="热探测器"></a>热探测器</h1><ul>
+<li><p>定义：基于光辐射与物质相互作用的热效应制成的器件</p>
+</li>
+<li><p>分类：热电偶、热敏电阻、热释电探测器</p>
+</li>
+<li><p>特点：不需制冷；响应时间长</p>
+</li>
+<li><p>热释电探测器：灵敏度，波长范围的提高，可到14微米，可和光子探测器比拟</p>
+</li>
+</ul>
+<h2 id="热探测器的一般原理"><a href="#热探测器的一般原理" class="headerlink" title="热探测器的一般原理"></a>热探测器的一般原理</h2><ul>
+<li><p>过程：</p>
+<ol>
+<li>吸收光辐射能量后，探测器温度升高</li>
+<li>温度升高</li>
+</ol>
+</li>
+<li><p>吸收的热回路</p>
+<ul>
+<li><p>P是经过调制的量：<br>$$<br>P &#x3D; P_0+P_ωexp(iωt)<br>$$</p>
+</li>
+<li><p>温度的变化也包含两个部分：（T越大，G越小，灵敏度越高）<br>$$<br>ΔT &#x3D; ΔT_0 + ΔT_ω<br>$$<br>热时间常数：（调节时只能降低H，不能增大G，G大探测器温度降低）<br>$$<br>\tau_H &#x3D; \frac{H}{G}&#x3D;\frac{c’A_dd}{4A_dσT^3}<br>$$<br>α越高越好，因此会做出表面黑化</p>
+</li>
+</ul>
+</li>
+<li><p>热探测器的极限探测率</p>
+<ol>
+<li>温度噪声（主要）</li>
+</ol>
+<ul>
+<li><p>探测器与周围环境的热交换：辐射，对流，传导</p>
+<ul>
+<li><p>对流抑制：真空</p>
+</li>
+<li><p>传导抑制：细杆</p>
+</li>
+<li><p>辐射热导：G<del>R</del>只与温度有关，与波长无关；是T的三次方<br>$$<br>G_R &#x3D; 4A_dσT^3<br>$$</p>
+</li>
+<li><p>温度噪声功率的均方值：<br>$$<br>Δω_T^2 &#x3D; 4G_RkT^2Δf &#x3D; 16A_dσkT^5Δf<br>$$<br>此式的平方根为对应的等效噪声输入。其中玻尔兹曼常数k&#x3D;1.38×10^-23^J&#x2F;K，σ&#x3D;5.67×10^-12^W&#x2F;cm^2^·K^4^</p>
+</li>
+<li><p>比探测率：10^10^量级</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="热释电探测器"><a href="#热释电探测器" class="headerlink" title="热释电探测器"></a>热释电探测器</h2><h3 id="热释电效应"><a href="#热释电效应" class="headerlink" title="热释电效应"></a>热释电效应</h3><ol>
+<li>定义：光——热——晶体温度——间距</li>
+<li>响应速度：10^-4^量级</li>
+<li>优势：光谱响应范围宽，不需制冷，不需偏压</li>
+</ol>
+<h3 id="极性晶体"><a href="#极性晶体" class="headerlink" title="极性晶体"></a>极性晶体</h3><ol>
+<li><p>外加电场与应力都是0时，晶体内部正负电荷中心不重合，有一定电矩——自发极化——单位面积的总电矩不为0</p>
+</li>
+<li><p>与自发极化强度垂直的两个晶面上有大小相等、符号相反的<strong>面束缚电荷</strong></p>
+</li>
+<li><p>极化大小：与由此引起的补偿电荷的多少，与温度有关</p>
+</li>
+<li><p>晶体自发极化弛豫时间：10^-12^s；自由电荷对面电荷的中和作用时间：s——h</p>
+</li>
+<li><p>热释电效应：自由电荷来不及中和变化的面束缚电荷，晶体表面就会呈现出相应于温度变化的面电流变化</p>
+<p>因此热释电探测器只工作于<strong>交变辐射功率</strong>下。</p>
+</li>
+<li><p>铁电体与非~</p>
+<ol>
+<li>铁电体：极性</li>
+<li></li>
+</ol>
+</li>
+<li><p>热电晶体：选取有效工作区，温度升高</p>
+</li>
+</ol>
+<h3 id="热释电探测器工作原理"><a href="#热释电探测器工作原理" class="headerlink" title="热释电探测器工作原理"></a>热释电探测器工作原理</h3><ol>
+<li><p>产生电流<br>$$<br>i_d&#x3D;A_dγ\frac{dT}{dt}\<br>&#x3D;A_dγω\frac{αP_{ω}}{G(1+ω^2\tau_H^2)^{\frac{1}{2}}}\<br>&#x3D;γω\frac{αP_{ω}}{4σT^3(1+ω^2\tau_H^2)^{\frac{1}{2}}}<br>$$</p>
+<ol>
+<li>V与晶体与入射辐射达到平衡的时间无关</li>
+<li>γ取决于材料自身性质</li>
+<li>T变化率与α与H有关</li>
+<li>电极结构：面电极，不适合高速，C<del>d</del>大；边电极，灵敏度低，适合高速测量</li>
+</ol>
+</li>
+</ol>
+<h2 id="热敏电阻"><a href="#热敏电阻" class="headerlink" title="热敏电阻"></a>热敏电阻</h2><ul>
+<li><p>原理：吸收光辐射升温引起电阻的变化</p>
+<ul>
+<li>开路且没有温度辐射时，环境温度T<del>0</del></li>
+<li>闭路，有焦耳热，热敏电阻的温度T<del>1</del><ul>
+<li>当有交变的辐射到热敏电阻</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>热敏电阻的特性</p>
+<ol>
+<li>响应率</li>
+</ol>
+</li>
+<li><p>热平衡方程：求温差、电阻、电势差、极化R<del>B</del>（电阻值的该变量）</p>
+<ul>
+<li><p>特性参数</p>
+<ol>
+<li><p>响应率<br>$$<br>R_V &#x3D; \frac{|V_{12}|}{P} &#x3D; \frac{\alpha_{12}\alpha}{G_t(1+\omega^2\tau_T^2)^{\frac{1}{2}}}<br>$$</p>
+<ol>
+<li><p>低频时，<br>$$<br>R_V &#x3D; \frac{\alpha_{12}\alpha}{G_t}<br>$$</p>
+<ul>
+<li>响应率与塞贝克系数成正比</li>
+</ul>
+</li>
+<li><p>高频时，<br>$$<br>R_V &#x3D; \frac{\alpha_{12}\alpha}{\omega H}<br>$$</p>
+<ul>
+<li>响应率高与响应时间短矛盾</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><p>噪声</p>
+<ol>
+<li>热噪声</li>
+<li>温度噪声</li>
+</ol>
+<ul>
+<li>热电偶的P<del>min</del>在10^-10^与10^-11^之间<br>$$<br>P_{min}^{2} &#x3D; \frac{1}{D}&#x3D;\frac{V_N^2}{R_V^2}&#x3D;\frac{\sqrt{A_dΔf}}{D^{*}}<br>$$</li>
+</ul>
+</li>
+<li><p>电阻</p>
+<ol>
+<li>阻值一半不大</li>
+</ol>
+</li>
+<li><p>响应时间</p>
+<p>一般为几十ms到1s</p>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="测辐射热电堆"><a href="#测辐射热电堆" class="headerlink" title="测辐射热电堆"></a>测辐射热电堆</h2><ul>
+<li>定义：若干测辐射热电偶串联，构成测辐射热电堆<ul>
+<li>输出电压增高</li>
+<li>阻值↑</li>
+<li>响应时间↓</li>
+</ul>
+</li>
+</ul>
 
             </div>
 
@@ -1274,7 +1560,7 @@
         <li><strong>创建于:</strong> 2024-03-13 15:59:00</li>
         
             <li>
-                <strong>更新于:</strong> 2024-03-29 18:18:49
+                <strong>更新于:</strong> 2024-04-20 21:38:25
             </li>
         
         <li>
@@ -1348,7 +1634,7 @@
     <div class="post-toc">
         <div class="toc-title">此页目录</div>
         <div class="page-title">光点自己输</div>
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%89%E8%BE%90%E5%B0%84%E4%B8%8E%E5%85%89%E6%BA%90"><span class="nav-number">1.</span> <span class="nav-text">光辐射与光源</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%89%E7%94%B5%E6%8E%A2%E6%B5%8B%E5%99%A8"><span class="nav-number">2.</span> <span class="nav-text">光电探测器</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%89%E5%AD%90%E6%8E%A2%E6%B5%8B%E5%99%A8"><span class="nav-number">2.1.</span> <span class="nav-text">光子探测器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%83%AD%E6%8E%A2%E6%B5%8B%E5%99%A8"><span class="nav-number">2.2.</span> <span class="nav-text">热探测器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%89%E7%94%B5%E6%8E%A2%E6%B5%8B%E5%99%A8%E7%9A%84%E6%80%A7%E8%83%BD%E5%8F%82%E6%95%B0"><span class="nav-number">2.3.</span> <span class="nav-text">光电探测器的性能参数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B7%A5%E4%BD%9C%E6%9D%A1%E4%BB%B6"><span class="nav-number">2.3.1.</span> <span class="nav-text">工作条件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%89%E5%85%B3%E5%93%8D%E5%BA%94%E6%96%B9%E9%9D%A2%E7%9A%84%E6%80%A7%E8%83%BD%E5%8F%82%E6%95%B0"><span class="nav-number">2.3.2.</span> <span class="nav-text">有关响应方面的性能参数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%89%E5%85%B3%E5%99%AA%E5%A3%B0%E6%96%B9%E9%9D%A2%E7%9A%84%E5%8F%82%E6%95%B0"><span class="nav-number">2.3.3.</span> <span class="nav-text">有关噪声方面的参数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B6%E4%BB%96%E5%8F%82%E6%95%B0"><span class="nav-number">2.3.4.</span> <span class="nav-text">其他参数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%99%AA%E5%A3%B0%E7%9A%84%E7%BB%9F%E8%AE%A1%E7%89%B9%E6%80%A7"><span class="nav-number">2.4.</span> <span class="nav-text">噪声的统计特性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%99%AA%E5%A3%B0%E7%9A%84%E6%A6%82%E7%8E%87%E5%88%86%E5%B8%83"><span class="nav-number">2.4.1.</span> <span class="nav-text">噪声的概率分布</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%99%AA%E5%A3%B0%E7%9A%84%E5%8A%9F%E7%8E%87%E8%B0%B1%E5%AF%86%E5%BA%A6"><span class="nav-number">2.4.2.</span> <span class="nav-text">噪声的功率谱密度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%99%AA%E5%A3%B0%E7%9A%84%E7%9B%B8%E5%85%B3%E5%87%BD%E6%95%B0"><span class="nav-number">2.4.3.</span> <span class="nav-text">噪声的相关函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E5%99%AA%E5%A3%B0%E7%9A%84%E7%BB%9F%E8%AE%A1%E7%89%B9%E6%80%A7"><span class="nav-number">2.4.4.</span> <span class="nav-text">常见噪声的统计特性</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%89%E7%94%B5%E6%8E%A2%E6%B5%8B%E5%99%A8%E7%9A%84%E5%99%AA%E5%A3%B0"><span class="nav-number">2.5.</span> <span class="nav-text">光电探测器的噪声</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%A3%E7%B2%92%E5%99%AA%E5%A3%B0"><span class="nav-number">2.5.1.</span> <span class="nav-text">散粒噪声</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%83%AD%E5%99%AA%E5%A3%B0"><span class="nav-number">2.5.2.</span> <span class="nav-text">热噪声</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%A7%E7%94%9F%E5%A4%8D%E5%90%88%E5%99%AA%E5%A3%B0"><span class="nav-number">2.5.3.</span> <span class="nav-text">产生复合噪声</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B8%A9%E5%BA%A6%E5%99%AA%E5%A3%B0"><span class="nav-number">2.5.4.</span> <span class="nav-text">温度噪声</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-f%E5%99%AA%E5%A3%B0"><span class="nav-number">2.5.5.</span> <span class="nav-text">1&#x2F;f噪声</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%89%E7%94%B5%E5%AD%90%E5%8F%91%E5%B0%84%E6%8E%A2%E6%B5%8B%E5%99%A8"><span class="nav-number">3.</span> <span class="nav-text">光电子发射探测器</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%87%91%E5%B1%9E%E7%9A%84%E5%85%89%E7%94%B5%E5%AD%90%E5%8F%91%E5%B0%84"><span class="nav-number">3.1.</span> <span class="nav-text">金属的光电子发射</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8D%8A%E5%AF%BC%E4%BD%93%E7%9A%84%E5%85%89%E7%94%B5%E5%AD%90%E5%8F%91%E5%B0%84"><span class="nav-number">3.2.</span> <span class="nav-text">半导体的光电子发射</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%89%E7%94%B5%E5%AD%90%E5%8F%91%E5%B0%84%E6%9D%90%E6%96%99"><span class="nav-number">3.3.</span> <span class="nav-text">光电子发射材料</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%89%E7%94%B5%E9%98%B4%E6%9E%81%E7%9A%84%E4%B8%BB%E8%A6%81%E5%8F%82%E6%95%B0"><span class="nav-number">3.3.1.</span> <span class="nav-text">光电阴极的主要参数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%B8%E7%94%A8%E5%85%89%E7%94%B5%E5%8F%91%E5%B0%84%E6%9D%90%E6%96%99"><span class="nav-number">3.3.2.</span> <span class="nav-text">常用光电发射材料</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%89%E7%94%B5%E5%80%8D%E5%A2%9E%E7%AE%A1"><span class="nav-number">3.3.3.</span> <span class="nav-text">光电倍增管</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%89%E7%94%B5%E5%80%8D%E5%A2%9E%E6%9E%81"><span class="nav-number">3.3.4.</span> <span class="nav-text">光电倍增极</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%89%E7%94%B5%E5%80%8D%E5%A2%9E%E7%AE%A1%E7%9A%84%E7%AD%89%E6%95%88%E7%94%B5%E8%B7%AF"><span class="nav-number">3.3.5.</span> <span class="nav-text">光电倍增管的等效电路</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%89%E7%94%B5%E5%AF%BC%E6%8E%A2%E6%B5%8B%E5%99%A8"><span class="nav-number">4.</span> <span class="nav-text">光电导探测器</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%89%E7%94%B5%E5%AF%BC%E6%8E%A2%E6%B5%8B%E5%99%A8%E7%9A%84%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86"><span class="nav-number">4.1.</span> <span class="nav-text">光电导探测器的工作原理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%89%E7%94%B5%E5%AF%BC%E6%95%88%E5%BA%94"><span class="nav-number">4.1.1.</span> <span class="nav-text">光电导效应</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A1%A8%E5%BE%81%E5%85%89%E7%94%B5%E5%AF%BC%E6%95%88%E5%BA%94%E7%9A%84%E4%B8%BB%E8%A6%81%E5%8F%82%E6%95%B0"><span class="nav-number">4.1.2.</span> <span class="nav-text">表征光电导效应的主要参数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%89%E7%94%B5%E5%AF%BC%E6%8E%A2%E6%B5%8B%E5%99%A8%E7%9A%84%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86-1"><span class="nav-number">4.1.3.</span> <span class="nav-text">光电导探测器的工作原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%89%E7%94%B5%E5%AF%BC%E6%8E%A2%E6%B5%8B%E5%99%A8%E7%9A%84%E6%80%A7%E8%83%BD%E5%8F%82%E6%95%B0"><span class="nav-number">4.1.4.</span> <span class="nav-text">光电导探测器的性能参数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%83%BD%E5%B8%A6%E8%A7%82%E7%82%B9"><span class="nav-number">4.1.5.</span> <span class="nav-text">能带观点</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%89%E7%94%B5%E6%8E%A2%E6%B5%8B%E5%99%A8%E7%9A%84%E5%99%AA%E5%A3%B0-1"><span class="nav-number">4.2.</span> <span class="nav-text">光电探测器的噪声</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%93%8D%E5%BA%94%E7%8E%87"><span class="nav-number">4.3.</span> <span class="nav-text">响应率</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%AF%94%E6%8E%A2%E6%B5%8B%E7%8E%87"><span class="nav-number">4.4.</span> <span class="nav-text">比探测率</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B8%A9%E5%BA%A6%E7%89%B9%E6%80%A7"><span class="nav-number">4.5.</span> <span class="nav-text">温度特性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E5%8E%86%E6%95%88%E5%BA%94"><span class="nav-number">4.6.</span> <span class="nav-text">前历效应</span></a></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%89%E8%BE%90%E5%B0%84%E4%B8%8E%E5%85%89%E6%BA%90"><span class="nav-number">1.</span> <span class="nav-text">光辐射与光源</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%89%E7%94%B5%E6%8E%A2%E6%B5%8B%E5%99%A8"><span class="nav-number">2.</span> <span class="nav-text">光电探测器</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%89%E5%AD%90%E6%8E%A2%E6%B5%8B%E5%99%A8"><span class="nav-number">2.1.</span> <span class="nav-text">光子探测器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%83%AD%E6%8E%A2%E6%B5%8B%E5%99%A8"><span class="nav-number">2.2.</span> <span class="nav-text">热探测器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%89%E7%94%B5%E6%8E%A2%E6%B5%8B%E5%99%A8%E7%9A%84%E6%80%A7%E8%83%BD%E5%8F%82%E6%95%B0"><span class="nav-number">2.3.</span> <span class="nav-text">光电探测器的性能参数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B7%A5%E4%BD%9C%E6%9D%A1%E4%BB%B6"><span class="nav-number">2.3.1.</span> <span class="nav-text">工作条件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%89%E5%85%B3%E5%93%8D%E5%BA%94%E6%96%B9%E9%9D%A2%E7%9A%84%E6%80%A7%E8%83%BD%E5%8F%82%E6%95%B0"><span class="nav-number">2.3.2.</span> <span class="nav-text">有关响应方面的性能参数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%89%E5%85%B3%E5%99%AA%E5%A3%B0%E6%96%B9%E9%9D%A2%E7%9A%84%E5%8F%82%E6%95%B0"><span class="nav-number">2.3.3.</span> <span class="nav-text">有关噪声方面的参数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B6%E4%BB%96%E5%8F%82%E6%95%B0"><span class="nav-number">2.3.4.</span> <span class="nav-text">其他参数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%99%AA%E5%A3%B0%E7%9A%84%E7%BB%9F%E8%AE%A1%E7%89%B9%E6%80%A7"><span class="nav-number">2.4.</span> <span class="nav-text">噪声的统计特性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%99%AA%E5%A3%B0%E7%9A%84%E6%A6%82%E7%8E%87%E5%88%86%E5%B8%83"><span class="nav-number">2.4.1.</span> <span class="nav-text">噪声的概率分布</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%99%AA%E5%A3%B0%E7%9A%84%E5%8A%9F%E7%8E%87%E8%B0%B1%E5%AF%86%E5%BA%A6"><span class="nav-number">2.4.2.</span> <span class="nav-text">噪声的功率谱密度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%99%AA%E5%A3%B0%E7%9A%84%E7%9B%B8%E5%85%B3%E5%87%BD%E6%95%B0"><span class="nav-number">2.4.3.</span> <span class="nav-text">噪声的相关函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E5%99%AA%E5%A3%B0%E7%9A%84%E7%BB%9F%E8%AE%A1%E7%89%B9%E6%80%A7"><span class="nav-number">2.4.4.</span> <span class="nav-text">常见噪声的统计特性</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%89%E7%94%B5%E6%8E%A2%E6%B5%8B%E5%99%A8%E7%9A%84%E5%99%AA%E5%A3%B0"><span class="nav-number">2.5.</span> <span class="nav-text">光电探测器的噪声</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%A3%E7%B2%92%E5%99%AA%E5%A3%B0"><span class="nav-number">2.5.1.</span> <span class="nav-text">散粒噪声</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%83%AD%E5%99%AA%E5%A3%B0"><span class="nav-number">2.5.2.</span> <span class="nav-text">热噪声</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%A7%E7%94%9F%E5%A4%8D%E5%90%88%E5%99%AA%E5%A3%B0"><span class="nav-number">2.5.3.</span> <span class="nav-text">产生复合噪声</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B8%A9%E5%BA%A6%E5%99%AA%E5%A3%B0"><span class="nav-number">2.5.4.</span> <span class="nav-text">温度噪声</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-f%E5%99%AA%E5%A3%B0"><span class="nav-number">2.5.5.</span> <span class="nav-text">1&#x2F;f噪声</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%89%E7%94%B5%E5%AD%90%E5%8F%91%E5%B0%84%E6%8E%A2%E6%B5%8B%E5%99%A8"><span class="nav-number">3.</span> <span class="nav-text">光电子发射探测器</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%87%91%E5%B1%9E%E7%9A%84%E5%85%89%E7%94%B5%E5%AD%90%E5%8F%91%E5%B0%84"><span class="nav-number">3.1.</span> <span class="nav-text">金属的光电子发射</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8D%8A%E5%AF%BC%E4%BD%93%E7%9A%84%E5%85%89%E7%94%B5%E5%AD%90%E5%8F%91%E5%B0%84"><span class="nav-number">3.2.</span> <span class="nav-text">半导体的光电子发射</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%89%E7%94%B5%E5%AD%90%E5%8F%91%E5%B0%84%E6%9D%90%E6%96%99"><span class="nav-number">3.3.</span> <span class="nav-text">光电子发射材料</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%89%E7%94%B5%E9%98%B4%E6%9E%81%E7%9A%84%E4%B8%BB%E8%A6%81%E5%8F%82%E6%95%B0"><span class="nav-number">3.3.1.</span> <span class="nav-text">光电阴极的主要参数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%B8%E7%94%A8%E5%85%89%E7%94%B5%E5%8F%91%E5%B0%84%E6%9D%90%E6%96%99"><span class="nav-number">3.3.2.</span> <span class="nav-text">常用光电发射材料</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%89%E7%94%B5%E5%80%8D%E5%A2%9E%E7%AE%A1"><span class="nav-number">3.3.3.</span> <span class="nav-text">光电倍增管</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%89%E7%94%B5%E5%80%8D%E5%A2%9E%E6%9E%81"><span class="nav-number">3.3.4.</span> <span class="nav-text">光电倍增极</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%89%E7%94%B5%E5%80%8D%E5%A2%9E%E7%AE%A1%E7%9A%84%E7%AD%89%E6%95%88%E7%94%B5%E8%B7%AF"><span class="nav-number">3.3.5.</span> <span class="nav-text">光电倍增管的等效电路</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%89%E7%94%B5%E5%AF%BC%E6%8E%A2%E6%B5%8B%E5%99%A8"><span class="nav-number">4.</span> <span class="nav-text">光电导探测器</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%89%E7%94%B5%E5%AF%BC%E6%8E%A2%E6%B5%8B%E5%99%A8%E7%9A%84%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86"><span class="nav-number">4.1.</span> <span class="nav-text">光电导探测器的工作原理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%89%E7%94%B5%E5%AF%BC%E6%95%88%E5%BA%94"><span class="nav-number">4.1.1.</span> <span class="nav-text">光电导效应</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A1%A8%E5%BE%81%E5%85%89%E7%94%B5%E5%AF%BC%E6%95%88%E5%BA%94%E7%9A%84%E4%B8%BB%E8%A6%81%E5%8F%82%E6%95%B0"><span class="nav-number">4.1.2.</span> <span class="nav-text">表征光电导效应的主要参数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%89%E7%94%B5%E5%AF%BC%E6%8E%A2%E6%B5%8B%E5%99%A8%E7%9A%84%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86-1"><span class="nav-number">4.1.3.</span> <span class="nav-text">光电导探测器的工作原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%89%E7%94%B5%E5%AF%BC%E6%8E%A2%E6%B5%8B%E5%99%A8%E7%9A%84%E6%80%A7%E8%83%BD%E5%8F%82%E6%95%B0"><span class="nav-number">4.1.4.</span> <span class="nav-text">光电导探测器的性能参数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%83%BD%E5%B8%A6%E8%A7%82%E7%82%B9"><span class="nav-number">4.1.5.</span> <span class="nav-text">能带观点</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%89%E7%94%B5%E6%8E%A2%E6%B5%8B%E5%99%A8%E7%9A%84%E5%99%AA%E5%A3%B0-1"><span class="nav-number">4.2.</span> <span class="nav-text">光电探测器的噪声</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%93%8D%E5%BA%94%E7%8E%87"><span class="nav-number">4.3.</span> <span class="nav-text">响应率</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%AF%94%E6%8E%A2%E6%B5%8B%E7%8E%87"><span class="nav-number">4.4.</span> <span class="nav-text">比探测率</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B8%A9%E5%BA%A6%E7%89%B9%E6%80%A7"><span class="nav-number">4.5.</span> <span class="nav-text">温度特性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E5%8E%86%E6%95%88%E5%BA%94"><span class="nav-number">4.6.</span> <span class="nav-text">前历效应</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%89%E4%BC%8F%E6%8E%A2%E6%B5%8B%E5%99%A8"><span class="nav-number">5.</span> <span class="nav-text">光伏探测器</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%89%E7%85%A7%E4%B8%8B%E7%90%86%E6%83%B3PN%E7%BB%93%E6%96%B9%E7%A8%8B%E5%8F%8A%E7%89%B9%E6%80%A7%E6%9B%B2%E7%BA%BF"><span class="nav-number">5.1.</span> <span class="nav-text">光照下理想PN结方程及特性曲线</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%89%E4%BC%8F%E6%8E%A2%E6%B5%8B%E5%99%A8%E7%9A%84%E6%80%A7%E8%83%BD%E5%8F%82%E6%95%B0"><span class="nav-number">5.2.</span> <span class="nav-text">光伏探测器的性能参数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%89%E7%94%B5%E6%B1%A0%E5%92%8C%E5%85%89%E7%94%B5%E4%BA%8C%E6%9E%81%E7%AE%A1"><span class="nav-number">5.3.</span> <span class="nav-text">光电池和光电二极管</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%89%E7%94%B5%E6%B1%A0"><span class="nav-number">5.3.1.</span> <span class="nav-text">光电池</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%89%E7%94%B5%E4%BA%8C%E6%9E%81%E7%AE%A1"><span class="nav-number">5.3.2.</span> <span class="nav-text">光电二极管</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%89%E7%94%B5%E4%B8%89%E6%9E%81%E7%AE%A1"><span class="nav-number">5.3.3.</span> <span class="nav-text">光电三极管</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%83%AD%E6%8E%A2%E6%B5%8B%E5%99%A8-1"><span class="nav-number">6.</span> <span class="nav-text">热探测器</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%83%AD%E6%8E%A2%E6%B5%8B%E5%99%A8%E7%9A%84%E4%B8%80%E8%88%AC%E5%8E%9F%E7%90%86"><span class="nav-number">6.1.</span> <span class="nav-text">热探测器的一般原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%83%AD%E9%87%8A%E7%94%B5%E6%8E%A2%E6%B5%8B%E5%99%A8"><span class="nav-number">6.2.</span> <span class="nav-text">热释电探测器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%83%AD%E9%87%8A%E7%94%B5%E6%95%88%E5%BA%94"><span class="nav-number">6.2.1.</span> <span class="nav-text">热释电效应</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9E%81%E6%80%A7%E6%99%B6%E4%BD%93"><span class="nav-number">6.2.2.</span> <span class="nav-text">极性晶体</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%83%AD%E9%87%8A%E7%94%B5%E6%8E%A2%E6%B5%8B%E5%99%A8%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86"><span class="nav-number">6.2.3.</span> <span class="nav-text">热释电探测器工作原理</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%83%AD%E6%95%8F%E7%94%B5%E9%98%BB"><span class="nav-number">6.3.</span> <span class="nav-text">热敏电阻</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B5%8B%E8%BE%90%E5%B0%84%E7%83%AD%E7%94%B5%E5%A0%86"><span class="nav-number">6.4.</span> <span class="nav-text">测辐射热电堆</span></a></li></ol></li></ol>
 
     </div>
 </div>

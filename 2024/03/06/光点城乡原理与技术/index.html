@@ -18,18 +18,18 @@
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     
-        <meta name="description" content="绪论 时间节点 适用范围：200nm~0.1mm  光电成像系统构成与分类构成 L(x0, y0)-&gt;E(x0, y0)-&gt;i-&gt;记录，存储，处理，重现  分类 辐射波段：紫外，可见光（380nm~760nm），红外，远波红外 全色（全收集，用灰度呈现），彩色（RGB三通道），光谱（几十几百通道），激光   工作方式：主动，被动 成像方式：快照式，扫描式 扫描式：挥扫（点探测器）">
+        <meta name="description" content="绪论 时间节点 适用范围：200nm~0.1mm 对人眼视觉进行拓展：时、空、谱；探测灵敏度  光电成像系统构成与分类构成 L(x0, y0)-&gt;E(x0, y0)-&gt;i-&gt;记录，存储，处理，重现  分类 辐射波段：紫外，可见光（380nm~760nm），红外，远波红外 全色（全收集，用灰度呈现），彩色（RGB三通道），光谱（几十几百通道），激光   工作方式：主动，被动 成像方">
 <meta property="og:type" content="article">
 <meta property="og:title" content="光点城乡原理与技术">
 <meta property="og:url" content="https://morimori0401.github.io/2024/03/06/%E5%85%89%E7%82%B9%E5%9F%8E%E4%B9%A1%E5%8E%9F%E7%90%86%E4%B8%8E%E6%8A%80%E6%9C%AF/index.html">
 <meta property="og:site_name" content="梦的化石与现实记录">
-<meta property="og:description" content="绪论 时间节点 适用范围：200nm~0.1mm  光电成像系统构成与分类构成 L(x0, y0)-&gt;E(x0, y0)-&gt;i-&gt;记录，存储，处理，重现  分类 辐射波段：紫外，可见光（380nm~760nm），红外，远波红外 全色（全收集，用灰度呈现），彩色（RGB三通道），光谱（几十几百通道），激光   工作方式：主动，被动 成像方式：快照式，扫描式 扫描式：挥扫（点探测器）">
+<meta property="og:description" content="绪论 时间节点 适用范围：200nm~0.1mm 对人眼视觉进行拓展：时、空、谱；探测灵敏度  光电成像系统构成与分类构成 L(x0, y0)-&gt;E(x0, y0)-&gt;i-&gt;记录，存储，处理，重现  分类 辐射波段：紫外，可见光（380nm~760nm），红外，远波红外 全色（全收集，用灰度呈现），彩色（RGB三通道），光谱（几十几百通道），激光   工作方式：主动，被动 成像方">
 <meta property="og:locale">
 <meta property="og:image" content="https://morimori0401.github.io/pictures/gdcx1.png">
 <meta property="og:image" content="https://morimori0401.github.io/pictures/gdcx2.png">
 <meta property="og:image" content="https://morimori0401.github.io/pictures/gdcx3.png">
 <meta property="article:published_time" content="2024-03-06T10:17:25.192Z">
-<meta property="article:modified_time" content="2024-03-17T08:44:35.108Z">
+<meta property="article:modified_time" content="2024-04-25T09:41:12.483Z">
 <meta property="article:author" content="morimori">
 <meta property="article:tag" content="大三下提纲">
 <meta name="twitter:card" content="summary">
@@ -432,8 +432,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2024-03-17 16:44:35</span>
-            <span class="mobile">2024-03-17 16:44</span>
+            <span class="desktop">2024-04-25 17:41:12</span>
+            <span class="mobile">2024-04-25 17:41</span>
             <span class="hover-info">更新</span>
         </span>
     
@@ -471,6 +471,7 @@
                 <h1 id="绪论"><a href="#绪论" class="headerlink" title="绪论"></a>绪论</h1><ul>
 <li>时间节点</li>
 <li>适用范围：200nm~0.1mm</li>
+<li>对人眼视觉进行拓展：时、空、谱；探测灵敏度</li>
 </ul>
 <h2 id="光电成像系统构成与分类"><a href="#光电成像系统构成与分类" class="headerlink" title="光电成像系统构成与分类"></a>光电成像系统构成与分类</h2><h3 id="构成"><a href="#构成" class="headerlink" title="构成"></a>构成</h3><ul>
 <li>L(x0, y0)-&gt;E(x0, y0)-&gt;i-&gt;记录，存储，处理，重现</li>
@@ -490,7 +491,7 @@
 </ul>
 </li>
 <li>应用目的<ol>
-<li>直视型：人眼视觉观察</li>
+<li>直视型（像管）：人眼视觉观察</li>
 <li>电视型：影像数据记录、存储、处理……<ul>
 <li>光学成像是光电成像中的部分，光电成像系统还包括信号处理等后续部分。</li>
 </ul>
@@ -769,6 +770,415 @@
 </ul>
 </li>
 </ol>
+<h1 id="光电成像器件及其特性"><a href="#光电成像器件及其特性" class="headerlink" title="光电成像器件及其特性"></a>光电成像器件及其特性</h1><h2 id="光电成像器件特性"><a href="#光电成像器件特性" class="headerlink" title="光电成像器件特性"></a>光电成像器件特性</h2><ul>
+<li><p>噪声影响的定量评价</p>
+<ol>
+<li><p>信噪比（SNR）：有用信号&#x2F;噪声信号</p>
+<ul>
+<li>在<strong>输出端</strong>评价探测性能的指标<br>$$<br>SNR &#x3D; \frac{I_{s}}{I_{n}}<br>$$</li>
+</ul>
+</li>
+<li><p>噪声等效功率（NEP）</p>
+<ul>
+<li><p>在输入端评价</p>
+</li>
+<li><p>条件：SNR &#x3D; 1时，器件的输入功率为多少<br>$$<br>NEP(T, f, Δf) &#x3D; \frac{P}{SNR}<br>$$<br>NEP越大，性能越差</p>
+</li>
+<li><p>NEP与面积A与带宽Δf有关，而且</p>
+</li>
+</ul>
+</li>
+<li><p>探测率和比探测率</p>
+<ul>
+<li>探测率（D）：NEP的倒数</li>
+<li>比探测率（D*）：对于同类的器件，消除A与Δf对于探测能力对比的影响</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><p>图像传递特性</p>
+<ul>
+<li><p>分辨<strong>力</strong>（Resolving Power）</p>
+<ul>
+<li><p>以人眼作为接收器所判定的极限分辨能力：能够被人眼分辨的相邻两点之间的距离Δ，或者这两点对人眼所张的角度δ</p>
+</li>
+<li><p>距离越小，则分辨力越强，所以取分辨<strong>率</strong>（Resolution），为分辨力的两倍的倒数：分辨率越大，分辨能力越高</p>
+<ul>
+<li><p>单位：lp&#x2F;mm</p>
+</li>
+<li><p>fh为行扫描频率，宽高比是a，n是电视线数（高度）<br>$$<br>Δf_{V} &#x3D; \frac{1}{2} anf_{h}<br>$$</p>
+</li>
+</ul>
+</li>
+<li><p>在器件的<strong>输出端</strong>进行考量</p>
+</li>
+</ul>
+</li>
+<li><p>点扩散函数（PSF）</p>
+<ul>
+<li><strong>空间域</strong>定量描述方法</li>
+<li>前提：线性、空不变系统</li>
+<li>输入δ(x, y)函数分布的图像，通过光电成像器件得到的输出图像分布即为器件的点扩散函数<strong>h(u, v;x, y)</strong></li>
+</ul>
+</li>
+<li><p>光学传递函数（OTF）</p>
+<ul>
+<li><p>点扩散函数的<strong>傅里叶变换</strong></p>
+</li>
+<li><p>为复函数：调制传递函数*exp[-j相位传递函数]</p>
+<ol>
+<li><p>这里的调制传递函数|M(fx,fy)|（二维）体现出<strong>能量的分布</strong>，与|T(f)|不同</p>
+<p>后来在计算能量时，后者需要平方但前者不用</p>
+</li>
+<li><p>整个过程中的MTF为不同的MTF的乘积</p>
+</li>
+<li><p>MTF的确定：<br>$$<br>MTF &#x3D; \frac{C_{out}}{C_{in}}<br>$$</p>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="人眼视觉与图像探测"><a href="#人眼视觉与图像探测" class="headerlink" title="人眼视觉与图像探测"></a>人眼视觉与图像探测</h1><h2 id="人眼及其视觉"><a href="#人眼及其视觉" class="headerlink" title="人眼及其视觉"></a>人眼及其视觉</h2><h3 id="模型"><a href="#模型" class="headerlink" title="模型"></a>模型</h3><ul>
+<li>视细胞：锥状细胞（大，中心凹，高分辨率）、杆状细胞（小，总是合并的，不在中心凹，分辨率较低）</li>
+<li>中心凹不在光轴上，中心凹与结点的连线为视轴，视轴与光轴的夹角大概5°</li>
+<li>大致建模，测物理参数</li>
+</ul>
+<h3 id="视觉特性"><a href="#视觉特性" class="headerlink" title="视觉特性"></a>视觉特性</h3><ul>
+<li><p>视觉响应</p>
+<ul>
+<li>人眼观察的视场亮度范围：10的-5~4cd&#x2F;m^2</li>
+<li>分类（随着视场亮度不同）：<ul>
+<li>明视觉响应：锥</li>
+<li>暗视觉响应：杆</li>
+<li>中间视觉响应</li>
+</ul>
+</li>
+<li>光谱响应：人眼视觉的能动性，在不同的视场亮度范围时响应不一样</li>
+</ul>
+</li>
+<li><p>视觉适应</p>
+<ul>
+<li>适应：在亮度发生突变时，人眼要稳定到突变后的正常视觉状态需要经历一段时间，这种特性称为<strong>适应</strong>。</li>
+<li>分类：<ul>
+<li>亮适应：由暗到亮，2-3min</li>
+<li>暗适应：40-60min</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>视觉阈值</p>
+<ul>
+<li><p>人眼视觉的探测极限</p>
+<p>【很少去考虑人眼视觉的噪声】</p>
+</li>
+<li><p>分类：</p>
+<ul>
+<li><p>绝对视觉阈值：全黑视场中，人眼完全暗适应情况下，能够感受到的最小光阈值，以入射到瞳孔中的最小照度值表示，大约10^(-9)lx数量级</p>
+<ul>
+<li><p>在暗黑背景亮度下，人眼可以观察到的最小照度值：<br>$$<br>E_{min} &#x3D; 3.5×10^{-5}\sqrt{L_{b}}<br>$$<br>当Lb到达一定程度时，其继续变化，人眼是无法察觉的——眩目效应</p>
+</li>
+<li><p>人眼视觉敏锐程度（<strong>目标对比度</strong>）与背景亮度与环境在背景中的衬度有关<br>$$<br>C &#x3D; \frac{L_{t} - L_{b}}{L_{b}}<br>$$</p>
+</li>
+</ul>
+</li>
+<li><p>阈值对比度</p>
+<ul>
+<li><p>背景亮度、对比度、目标张角之间的关系</p>
+</li>
+<li><p>Wald定律</p>
+</li>
+<li><p><strong>Rose定律</strong>（需记）<br>$$<br>L_{b} * α^{2}*C^{2} &#x3D; const<br>$$</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>分辨力</p>
+<ul>
+<li>视觉锐度：分辨成像于视网膜上的物体形状与位置的能力</li>
+<li>视觉分辨力：区分两发光点的最小角距离为<strong>极限分辨角θ</strong></li>
+<li>视觉分辨力与人眼构造有关：视角、瞳孔直径</li>
+</ul>
+</li>
+<li><p>调制传递函数MTF</p>
+<ul>
+<li>视网膜的MTF</li>
+<li>四种典型人眼视觉模型<ol>
+<li>高斯型：主要对应光学系统，</li>
+<li>指数型：主要对应探测器</li>
+<li>Barten模型</li>
+<li>复合模型</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="图像探测理论"><a href="#图像探测理论" class="headerlink" title="图像探测理论"></a>图像探测理论</h2><ul>
+<li><p>图像信号S &#x3D; n1（均值） - n2（均值）</p>
+</li>
+<li><p>图像噪声N &#x3D; √(n1（均值） + n2（均值）)</p>
+</li>
+<li><p>图像信噪比SNR</p>
+</li>
+<li><p>假设光电成像系统有一定成像特性与图像参数，可分别算出S、N、SNR</p>
+</li>
+<li><p>光电成像图像的<strong>探测方程</strong>（重要）：光电成像输出图像的信噪比高于探测要求的阈值信噪比<br>$$<br>L_{m}α^{2}C^{2} ≥const<br>$$<br>方程左侧是表征<strong>目标属性</strong>的物理参量，右侧是表征光电成像<strong>系统属性</strong>的物理参量</p>
+<ul>
+<li>与Rose定律中定义不一样，C代表图像对比度，α代表目标的尺寸</li>
+</ul>
+<p>取&#x3D;的时候，可以测出<strong>极限探测灵敏阈</strong></p>
+<ul>
+<li>斜线下方可探测</li>
+<li>如果考虑系统，则位于斜线与红线的下方</li>
+</ul>
+</li>
+</ul>
+<h2 id="目标探测与识别"><a href="#目标探测与识别" class="headerlink" title="目标探测与识别"></a>目标探测与识别</h2><h3 id="人眼视觉对于特定目标的探测过程"><a href="#人眼视觉对于特定目标的探测过程" class="headerlink" title="人眼视觉对于特定目标的探测过程"></a>人眼视觉对于特定目标的探测过程</h3><ul>
+<li><p>搜索、探测、分类、识别、辨别</p>
+<ul>
+<li>探测识别的效果评估采用<strong>捕获概率</strong>来表达，捕获概率为前过程的概率相乘</li>
+</ul>
+</li>
+<li><p>目标探测与识别视觉模型</p>
+<ol>
+<li><p>美国Rand模型<br>$$<br>P_{R} &#x3D; P_{1}P_{2}P_{3}η<br>$$<br>P1：搜索一个确定的面积，<strong>扫视</strong>到目标的<strong>概率</strong></p>
+<p>P2：扫视到的目标被<strong>探测</strong>的<strong>概率</strong>，基于视觉对比度探测<br>$$<br>(lgC_{T} + 2)(lgα + 0.5) &#x3D; 1<br>$$<br>基于对比度探测的概率密度函数</p>
+<p>表观对比度：C</p>
+<p>极值对比度：CT</p>
+<p>P3：探测到的目标被<strong>识别</strong>的<strong>概率</strong>，要求目标有足够多的细节</p>
+<p>η：<strong>噪声</strong>引起的<strong>衰减</strong>因子</p>
+<p>​	信噪比≥1时η不为0，其余为0</p>
+</li>
+</ol>
+</li>
+<li><p>成像系统的目标探测与识别</p>
+<ul>
+<li>Johnson准则：依据人眼视觉分辨力，建立等效条带图案，采用目标等效条带图案可分辨力来评价成像系统对目标的识别能力</li>
+</ul>
+</li>
+</ul>
+<h1 id="直视型光电成像器件及成像系统"><a href="#直视型光电成像器件及成像系统" class="headerlink" title="直视型光电成像器件及成像系统"></a>直视型光电成像器件及成像系统</h1><h2 id="像管结构类型与性能参数"><a href="#像管结构类型与性能参数" class="headerlink" title="像管结构类型与性能参数"></a>像管结构类型与性能参数</h2><h3 id="像管概述"><a href="#像管概述" class="headerlink" title="像管概述"></a>像管概述</h3><ul>
+<li>像管分类<ul>
+<li>作用目的：像增强器，变像管</li>
+<li>工作方式：连续工作，选通工作，变倍工作</li>
+<li>结构形式：近贴式、倒像式、静电聚焦、电磁复合聚焦</li>
+<li>技术发展水平：一代、二代、三代</li>
+</ul>
+</li>
+</ul>
+<h3 id="像管结构类型"><a href="#像管结构类型" class="headerlink" title="像管结构类型"></a>像管结构类型</h3><ul>
+<li>光阴极（光敏元件）</li>
+<li>电子透镜（电子光学系统，电场、磁场）</li>
+<li>荧光屏（图像显示）</li>
+</ul>
+<h3 id="像增强器（需要补充）"><a href="#像增强器（需要补充）" class="headerlink" title="像增强器（需要补充）"></a>像增强器（需要补充）</h3><ol>
+<li><p>一代像管</p>
+<ol>
+<li>近贴式像增强器</li>
+<li>倒像式</li>
+<li>电磁复合聚焦式像增强器</li>
+</ol>
+</li>
+<li><p>二代像管（与一代像管的差异：电子倍增的方式不一样）</p>
+<p>带有MCP的像增强器</p>
+</li>
+<li><p>负电子亲和势光阴极像增强器（三代像增强器）</p>
+<ol>
+<li></li>
+</ol>
+</li>
+</ol>
+<h3 id="像管性能参数"><a href="#像管性能参数" class="headerlink" title="像管性能参数"></a>像管性能参数</h3><ul>
+<li><p>光电转换特性：光增益（待补充）<br>$$<br>G &#x3D; \frac{M_s}{E_c} &#x3D; η\tau UR\frac{A_C}{A_S}<br>$$<br>不特别说明，下标C表示光阴极，下标S表示荧光屏；τ是透过率，U为加在两端的电压，η是荧光屏的发光效率，R是光阴极的光电响应率</p>
+<ul>
+<li>提升G：<ol>
+<li>提高电压。但是电压太高的话，器件安全性差</li>
+<li>级联。总增益为各部分增益乘积，但器件会变得</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p>时间响应特性</p>
+<p>光阴极：无惰性</p>
+<p>荧光屏发光衰减延迟：有惰性，余辉</p>
+<p>复指数函数：<br>$$<br>I &#x3D; I_0E^{-pt}<br>$$<br>其中p为时间常数倒数<br>$$<br>p &#x3D; \frac{1}{\tau}<br>$$</p>
+</li>
+<li><p>噪声特性：背景噪声</p>
+<ol>
+<li>主要类别：<strong>散粒噪声</strong>（来自载流子的起伏，不可忽略）、热噪声（来自载流子的热运动，可以忽略）、低频噪声（来自半导体材料&#x2F;复合材料界面的缺陷，可以忽略）</li>
+<li>背景噪声</li>
+<li>来源分析</li>
+</ol>
+<ul>
+<li><p>暗背景噪声（器件自身，下标db）：无光照情况下，光阴极的热电子发射和场致发射造成</p>
+</li>
+<li><p>光致背景噪声（输入信号，下标sb）：入射信号产生的杂散光、光反馈、离子反馈等造成</p>
+</li>
+<li><p>最终噪声：<br>$$<br>L_n &#x3D; \sqrt{L^2_{db} + L^2_{sb}}<br>$$</p>
+</li>
+</ul>
+<ol start="4">
+<li>影响评价</li>
+</ol>
+<ul>
+<li><p>等效背景亮度E<del>be</del>：使荧光屏亮度等于暗背景亮度时的光阴极面上的入射照度<br>$$<br>G &#x3D; \frac{\pi (L - L_{db})}{E} &#x3D; \frac{\pi L_{db}}{E_{be}}<br>$$<br>则实际测试时：<br>$$<br>E_{be} &#x3D; \frac{L_{db}}{L - L_{db}}E<br>$$</p>
+</li>
+<li><p>对比恶化系数γ^-1^：表征背景使图像对比度下降的程度<br>$$<br>γ^{-1} &#x3D; \frac{C_b}{C_0} &#x3D; (1 + \gamma_{db} + \gamma_{sb})^{-1}<br>$$<br>与大气传递函数表示形式相似。</p>
+<p>其中<br>$$<br>C &#x3D; \frac{L_{max} - L_{min}}{L_{max} + L_{min}}<br>$$</p>
+</li>
+</ul>
+</li>
+<li><p>成像特性：像管输出图像与输入图像之间物理量的关系</p>
+<ol>
+<li><p>放大率m：像高&#x2F;物高<br>$$<br>m &#x3D; \frac{l_S}{l_C}<br>$$<br>理想成像时，成像放大率处处相同</p>
+<p>对像增强器：</p>
+</li>
+</ol>
+<p>$$<br>m^2 &#x3D; \frac{A_C}{A_S}<br>$$</p>
+<ol start="2">
+<li><p>畸变D：像面不同位置的放大率不同，导致图像发生集合变形<br>$$<br>D &#x3D; \frac{m_r}{m_0} - 1<br>$$<br>多级级联管的畸变：<br>$$<br>D &#x3D; (D_1 + 1)(D_2 + 1)…(D_n + 1) - 1<br>$$<br>大多数的成像系统中，m<del>r</del>是单增的，产生<strong>整型畸变</strong>（还有桶形畸变）</p>
+</li>
+<li><p>分辨力和调制传递函数</p>
+<p>像管分辨率（单位：lp&#x2F;mm）：人眼目视可以分清荧光屏图像中相邻目标的极限分辨能力</p>
+<p>调制传递函数（MTF）：<br>$$<br>MTF(f) &#x3D; e^{-(\frac{f}{f_c})^n}<br>$$<br>可以利用其下降到37%（1&#x2F;e）时f &#x3D; f<del>c</del>，确定f<del>c</del>的值</p>
+<p>对于未知的器件，可以用MTF(f<del>1</del>)与MTF(f<del>2</del>)联立，来求出f<del>c</del>与n</p>
+</li>
+</ol>
+</li>
+</ul>
+<h2 id="像管成像物理过程"><a href="#像管成像物理过程" class="headerlink" title="像管成像物理过程"></a>像管成像物理过程</h2><h3 id="光电发射效应"><a href="#光电发射效应" class="headerlink" title="光电发射效应"></a>光电发射效应</h3><ul>
+<li>物体受到光照后向外发射电子的现象称为<strong>外光电效应&#x2F;光电发射效应</strong></li>
+</ul>
+<h3 id="光电发射基本规律（补充）"><a href="#光电发射基本规律（补充）" class="headerlink" title="光电发射基本规律（补充）"></a>光电发射基本规律（补充）</h3><ul>
+<li><p>阈值波长定律：光电发射的阈值波长取决于光电发射体的光电逸出功。在阈值波长处，光电子逸出的初速度为0<br>$$<br>E_k &#x3D; h\gamma - Eφ<br>$$</p>
+</li>
+<li><p>光电发射过程</p>
+<ol>
+<li>光电发射体内的电子被入射光子激发到高能态</li>
+<li>受激电子向表面运动，在运动过程中因碰撞损失部分能量，变成<strong>冷电子</strong></li>
+<li>到达表面的受激电子克服<strong>表面电子亲和势</strong>逸出</li>
+</ol>
+</li>
+<li><p>电子受激跃迁</p>
+<p>入射光子和体内电子相互作用，看作<strong>光辐射电磁场</strong>对电子状态的扰动</p>
+</li>
+<li><p>受激电子向表面迁移</p>
+<ul>
+<li>晶格散射</li>
+<li>激子散射</li>
+<li>受激电子表面迁移概率与光吸收系数与逸出深度正相关（书p145）</li>
+</ul>
+</li>
+<li><p>电子从表面逸出：取决于光电发射体的能带分布</p>
+<ul>
+<li><p>半导体材料光电逸出功<br>$$<br>E_{φ} &#x3D; E_g +\chi<br>$$</p>
+<ul>
+<li>认为χ决定于表面吸附，有额外能级</li>
+<li>P型半导体附有N型表面<ul>
+<li>P型半导体的费米能级靠下，N靠上</li>
+<li>判断是否稳定：两个材料的费米能级要在一条水平线上</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>光电发射长波限</p>
+</li>
+<li><p>热电子：光电发射体内电子接受光子能量</p>
+</li>
+</ul>
+</li>
+<li><p>光电阴极：反射式、透射式</p>
+<ul>
+<li>半导体材料优于金属材料，基于波段与反射系数的考虑</li>
+</ul>
+</li>
+</ul>
+<h3 id="电子束汇聚成像"><a href="#电子束汇聚成像" class="headerlink" title="电子束汇聚成像"></a>电子束汇聚成像</h3><ul>
+<li><p>电子光学中的场</p>
+<ul>
+<li><p>假定：无源场、静场、真空、旋转对称</p>
+</li>
+<li><p>电子光学中场需满足的条件：<br>$$<br>\nabla^2φ &#x3D; 0\<br>\nabla\vec{A} &#x3D; 0<br>$$<br>举例：</p>
+<ol>
+<li>旋转对称静电场</li>
+<li>旋转对称静磁场</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p>场作用下的电子运动轨迹</p>
+<ol>
+<li><p>电子在电磁场中的动力学方程</p>
+</li>
+<li><p>直角坐标系下，电子运动轨迹方程</p>
+</li>
+<li><p>柱坐标系下，电子运动轨迹方程</p>
+<p>【书5-168有问题】</p>
+</li>
+</ol>
+</li>
+<li><p>电子光学</p>
+<ol>
+<li><p>旋转对称静电场</p>
+<p>r(z<del>i</del>)&#x3D;r(z<del>0</del>)r<del>1</del>(z<del>i</del>)+r’(z<del>0</del>)r<del>2</del>(z<del>i</del>)</p>
+<p>其中r<del>1</del>(z)是轴外单位距离处出射的电子轨迹，r<del>2</del>(z)是轴上45°出射的电子轨迹</p>
+</li>
+<li><p>验证理想成像条件（前提：静电场）</p>
+<ol>
+<li>轴上电子：无论发射方向如何，最终一定在轴上</li>
+<li>轴外电子：无论发射方向如何，最终都会在成像平面上</li>
+</ol>
+<p>结论：像管光学系统可以理想成像</p>
+</li>
+<li><p>电子光学系统的折射率<br>$$<br>n_e&#x3D;\sqrt{φ^{*}}-\sqrt{\frac{η}{2}}(\vec{S_0}·\vec{A})<br>$$</p>
+</li>
+</ol>
+</li>
+<li><p>典型电子光学系统成像特点</p>
+<ol>
+<li>双面近贴系统（平行静电场）</li>
+<li>电磁复合聚焦系统<ol>
+<li>光阴极上一点发出的光电子，无论初速度与出射角如何，轴向初速度相同的话，经过时间T后都会汇聚到距离光阴极为d的一点——<strong>轴向均匀电磁场具有聚焦特性</strong></li>
+<li>聚焦像差：高斯像点的偏离量</li>
+<li>球差：初动能相同，不同出射角</li>
+<li>位置色差：出射角相同，初动能不同（波长不同）</li>
+</ol>
+</li>
+</ol>
+</li>
+</ul>
+<h3 id="电子图像发光显示过程"><a href="#电子图像发光显示过程" class="headerlink" title="电子图像发光显示过程"></a>电子图像发光显示过程</h3><ul>
+<li>荧光材料受高能电子轰击发光，形成可见光图像</li>
+</ul>
+<ol>
+<li>荧光屏发光机理与特性<ul>
+<li>晶态磷光体：粉末状晶体在适当掺杂后具有受激发光的特性</li>
+<li>能带模型理论：由于正离子的存在，发光中心存在</li>
+<li>主要发出可见光</li>
+</ul>
+</li>
+<li>荧光屏发光时间响应<ul>
+<li>上升延迟不明显，衰减延迟严重<ul>
+<li>复指数</li>
+<li>双曲线</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>典型荧光材料及光谱特性<ul>
+<li>蓝光波段：与胶片匹配</li>
+<li>黄绿光波段：与人眼视觉观察有光谱匹配（相当于<strong>光阴极</strong>的光谱匹配）</li>
+</ul>
+</li>
+</ol>
+<h2 id="直视光电成像原理和成像系统"><a href="#直视光电成像原理和成像系统" class="headerlink" title="直视光电成像原理和成像系统"></a>直视光电成像原理和成像系统</h2><h3 id><a href="#" class="headerlink" title></a></h3><h1 id="作业"><a href="#作业" class="headerlink" title="作业"></a>作业</h1><ul>
+<li>影响光电成像系统分辨景物细节的主要因素：</li>
+</ul>
 
             </div>
 
@@ -781,7 +1191,7 @@
         <li><strong>创建于:</strong> 2024-03-06 18:17:25</li>
         
             <li>
-                <strong>更新于:</strong> 2024-03-17 16:44:35
+                <strong>更新于:</strong> 2024-04-25 17:41:12
             </li>
         
         <li>
@@ -855,7 +1265,7 @@
     <div class="post-toc">
         <div class="toc-title">此页目录</div>
         <div class="page-title">光点城乡原理与技术</div>
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BB%AA%E8%AE%BA"><span class="nav-number">1.</span> <span class="nav-text">绪论</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%89%E7%94%B5%E6%88%90%E5%83%8F%E7%B3%BB%E7%BB%9F%E6%9E%84%E6%88%90%E4%B8%8E%E5%88%86%E7%B1%BB"><span class="nav-number">1.1.</span> <span class="nav-text">光电成像系统构成与分类</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9E%84%E6%88%90"><span class="nav-number">1.1.1.</span> <span class="nav-text">构成</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%86%E7%B1%BB"><span class="nav-number">1.1.2.</span> <span class="nav-text">分类</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%9B%AE%E6%A0%87%E8%BE%90%E5%B0%84%E4%B8%8E%E4%BC%A0%E8%BE%93"><span class="nav-number">2.</span> <span class="nav-text">目标辐射与传输</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%94%B5%E7%A3%81%E6%B3%A2%E8%BE%90%E5%B0%84%E5%BA%A6%E9%87%8F%E4%BD%93%E7%B3%BB"><span class="nav-number">2.1.</span> <span class="nav-text">电磁波辐射度量体系</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BE%90%E5%B0%84%E4%BD%93%E4%B8%8E%E5%85%B6%E8%BE%90%E5%B0%84%E7%89%B9%E6%80%A7"><span class="nav-number">2.2.</span> <span class="nav-text">辐射体与其辐射特性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%97%E4%BC%AF%E8%BE%90%E5%B0%84%E4%BD%93%E5%8F%8A%E5%85%B6%E8%BE%90%E5%B0%84%E7%89%B9%E6%80%A7"><span class="nav-number">2.2.1.</span> <span class="nav-text">朗伯辐射体及其辐射特性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%BB%91%E4%BD%93%E5%8F%8A%E5%85%B6%E8%BE%90%E5%B0%84%E5%AE%9A%E5%BE%8B"><span class="nav-number">2.2.2.</span> <span class="nav-text">黑体及其辐射定律</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B8%E5%9E%8B%E8%BE%90%E5%B0%84%E6%BA%90"><span class="nav-number">2.2.3.</span> <span class="nav-text">典型辐射源</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BE%90%E5%B0%84%E5%9C%A8%E5%A4%A7%E6%B0%94%E4%B8%AD%E7%9A%84%E4%BC%A0%E8%BE%93"><span class="nav-number">2.3.</span> <span class="nav-text">辐射在大气中的传输</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%A7%E6%B0%94%E6%88%90%E5%88%86%E4%B8%8E%E5%A4%A7%E6%B0%94%E5%B1%82%E7%BB%93%E6%9E%84"><span class="nav-number">2.3.1.</span> <span class="nav-text">大气成分与大气层结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%A7%E6%B0%94%E6%B6%88%E5%85%89%E4%B8%8E%E5%A4%A7%E6%B0%94%E7%AA%97%E5%8F%A3"><span class="nav-number">2.3.2.</span> <span class="nav-text">大气消光与大气窗口</span></a></li></ol></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BB%AA%E8%AE%BA"><span class="nav-number">1.</span> <span class="nav-text">绪论</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%89%E7%94%B5%E6%88%90%E5%83%8F%E7%B3%BB%E7%BB%9F%E6%9E%84%E6%88%90%E4%B8%8E%E5%88%86%E7%B1%BB"><span class="nav-number">1.1.</span> <span class="nav-text">光电成像系统构成与分类</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9E%84%E6%88%90"><span class="nav-number">1.1.1.</span> <span class="nav-text">构成</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%86%E7%B1%BB"><span class="nav-number">1.1.2.</span> <span class="nav-text">分类</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%9B%AE%E6%A0%87%E8%BE%90%E5%B0%84%E4%B8%8E%E4%BC%A0%E8%BE%93"><span class="nav-number">2.</span> <span class="nav-text">目标辐射与传输</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%94%B5%E7%A3%81%E6%B3%A2%E8%BE%90%E5%B0%84%E5%BA%A6%E9%87%8F%E4%BD%93%E7%B3%BB"><span class="nav-number">2.1.</span> <span class="nav-text">电磁波辐射度量体系</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BE%90%E5%B0%84%E4%BD%93%E4%B8%8E%E5%85%B6%E8%BE%90%E5%B0%84%E7%89%B9%E6%80%A7"><span class="nav-number">2.2.</span> <span class="nav-text">辐射体与其辐射特性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%97%E4%BC%AF%E8%BE%90%E5%B0%84%E4%BD%93%E5%8F%8A%E5%85%B6%E8%BE%90%E5%B0%84%E7%89%B9%E6%80%A7"><span class="nav-number">2.2.1.</span> <span class="nav-text">朗伯辐射体及其辐射特性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%BB%91%E4%BD%93%E5%8F%8A%E5%85%B6%E8%BE%90%E5%B0%84%E5%AE%9A%E5%BE%8B"><span class="nav-number">2.2.2.</span> <span class="nav-text">黑体及其辐射定律</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B8%E5%9E%8B%E8%BE%90%E5%B0%84%E6%BA%90"><span class="nav-number">2.2.3.</span> <span class="nav-text">典型辐射源</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BE%90%E5%B0%84%E5%9C%A8%E5%A4%A7%E6%B0%94%E4%B8%AD%E7%9A%84%E4%BC%A0%E8%BE%93"><span class="nav-number">2.3.</span> <span class="nav-text">辐射在大气中的传输</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%A7%E6%B0%94%E6%88%90%E5%88%86%E4%B8%8E%E5%A4%A7%E6%B0%94%E5%B1%82%E7%BB%93%E6%9E%84"><span class="nav-number">2.3.1.</span> <span class="nav-text">大气成分与大气层结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%A7%E6%B0%94%E6%B6%88%E5%85%89%E4%B8%8E%E5%A4%A7%E6%B0%94%E7%AA%97%E5%8F%A3"><span class="nav-number">2.3.2.</span> <span class="nav-text">大气消光与大气窗口</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%89%E7%94%B5%E6%88%90%E5%83%8F%E5%99%A8%E4%BB%B6%E5%8F%8A%E5%85%B6%E7%89%B9%E6%80%A7"><span class="nav-number">3.</span> <span class="nav-text">光电成像器件及其特性</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%89%E7%94%B5%E6%88%90%E5%83%8F%E5%99%A8%E4%BB%B6%E7%89%B9%E6%80%A7"><span class="nav-number">3.1.</span> <span class="nav-text">光电成像器件特性</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%BA%E7%9C%BC%E8%A7%86%E8%A7%89%E4%B8%8E%E5%9B%BE%E5%83%8F%E6%8E%A2%E6%B5%8B"><span class="nav-number">4.</span> <span class="nav-text">人眼视觉与图像探测</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%BA%E7%9C%BC%E5%8F%8A%E5%85%B6%E8%A7%86%E8%A7%89"><span class="nav-number">4.1.</span> <span class="nav-text">人眼及其视觉</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A8%A1%E5%9E%8B"><span class="nav-number">4.1.1.</span> <span class="nav-text">模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A7%86%E8%A7%89%E7%89%B9%E6%80%A7"><span class="nav-number">4.1.2.</span> <span class="nav-text">视觉特性</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%BE%E5%83%8F%E6%8E%A2%E6%B5%8B%E7%90%86%E8%AE%BA"><span class="nav-number">4.2.</span> <span class="nav-text">图像探测理论</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9B%AE%E6%A0%87%E6%8E%A2%E6%B5%8B%E4%B8%8E%E8%AF%86%E5%88%AB"><span class="nav-number">4.3.</span> <span class="nav-text">目标探测与识别</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%BA%E7%9C%BC%E8%A7%86%E8%A7%89%E5%AF%B9%E4%BA%8E%E7%89%B9%E5%AE%9A%E7%9B%AE%E6%A0%87%E7%9A%84%E6%8E%A2%E6%B5%8B%E8%BF%87%E7%A8%8B"><span class="nav-number">4.3.1.</span> <span class="nav-text">人眼视觉对于特定目标的探测过程</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%9B%B4%E8%A7%86%E5%9E%8B%E5%85%89%E7%94%B5%E6%88%90%E5%83%8F%E5%99%A8%E4%BB%B6%E5%8F%8A%E6%88%90%E5%83%8F%E7%B3%BB%E7%BB%9F"><span class="nav-number">5.</span> <span class="nav-text">直视型光电成像器件及成像系统</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%83%8F%E7%AE%A1%E7%BB%93%E6%9E%84%E7%B1%BB%E5%9E%8B%E4%B8%8E%E6%80%A7%E8%83%BD%E5%8F%82%E6%95%B0"><span class="nav-number">5.1.</span> <span class="nav-text">像管结构类型与性能参数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%83%8F%E7%AE%A1%E6%A6%82%E8%BF%B0"><span class="nav-number">5.1.1.</span> <span class="nav-text">像管概述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%83%8F%E7%AE%A1%E7%BB%93%E6%9E%84%E7%B1%BB%E5%9E%8B"><span class="nav-number">5.1.2.</span> <span class="nav-text">像管结构类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%83%8F%E5%A2%9E%E5%BC%BA%E5%99%A8%EF%BC%88%E9%9C%80%E8%A6%81%E8%A1%A5%E5%85%85%EF%BC%89"><span class="nav-number">5.1.3.</span> <span class="nav-text">像增强器（需要补充）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%83%8F%E7%AE%A1%E6%80%A7%E8%83%BD%E5%8F%82%E6%95%B0"><span class="nav-number">5.1.4.</span> <span class="nav-text">像管性能参数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%83%8F%E7%AE%A1%E6%88%90%E5%83%8F%E7%89%A9%E7%90%86%E8%BF%87%E7%A8%8B"><span class="nav-number">5.2.</span> <span class="nav-text">像管成像物理过程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%89%E7%94%B5%E5%8F%91%E5%B0%84%E6%95%88%E5%BA%94"><span class="nav-number">5.2.1.</span> <span class="nav-text">光电发射效应</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%89%E7%94%B5%E5%8F%91%E5%B0%84%E5%9F%BA%E6%9C%AC%E8%A7%84%E5%BE%8B%EF%BC%88%E8%A1%A5%E5%85%85%EF%BC%89"><span class="nav-number">5.2.2.</span> <span class="nav-text">光电发射基本规律（补充）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%B5%E5%AD%90%E6%9D%9F%E6%B1%87%E8%81%9A%E6%88%90%E5%83%8F"><span class="nav-number">5.2.3.</span> <span class="nav-text">电子束汇聚成像</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%B5%E5%AD%90%E5%9B%BE%E5%83%8F%E5%8F%91%E5%85%89%E6%98%BE%E7%A4%BA%E8%BF%87%E7%A8%8B"><span class="nav-number">5.2.4.</span> <span class="nav-text">电子图像发光显示过程</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9B%B4%E8%A7%86%E5%85%89%E7%94%B5%E6%88%90%E5%83%8F%E5%8E%9F%E7%90%86%E5%92%8C%E6%88%90%E5%83%8F%E7%B3%BB%E7%BB%9F"><span class="nav-number">5.3.</span> <span class="nav-text">直视光电成像原理和成像系统</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">5.3.1.</span> <span class="nav-text"></span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BD%9C%E4%B8%9A"><span class="nav-number">6.</span> <span class="nav-text">作业</span></a></li></ol>
 
     </div>
 </div>

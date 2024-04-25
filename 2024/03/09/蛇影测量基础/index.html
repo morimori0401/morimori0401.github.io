@@ -35,8 +35,9 @@
 <meta property="og:image" content="https://morimori0401.github.io/pictures/sycl8.png">
 <meta property="og:image" content="https://morimori0401.github.io/pictures/sycl9.png">
 <meta property="og:image" content="https://morimori0401.github.io/pictures/sycl10.png">
+<meta property="og:image" content="https://morimori0401.github.io/pictures/sycl11.png">
 <meta property="article:published_time" content="2024-03-09T15:45:26.539Z">
-<meta property="article:modified_time" content="2024-03-28T13:30:17.148Z">
+<meta property="article:modified_time" content="2024-04-25T12:33:08.630Z">
 <meta property="article:author" content="morimori">
 <meta property="article:tag" content="大三下提纲">
 <meta name="twitter:card" content="summary">
@@ -439,8 +440,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2024-03-28 21:30:17</span>
-            <span class="mobile">2024-03-28 21:30</span>
+            <span class="desktop">2024-04-25 20:33:08</span>
+            <span class="mobile">2024-04-25 20:33</span>
             <span class="hover-info">更新</span>
         </span>
     
@@ -534,6 +535,8 @@
 </tr>
 </tbody></table>
 </li>
+<li><p>数字摄影测量与传统摄影测量的根本区别：引入计算机等自动处理方式</p>
+</li>
 </ul>
 <h2 id="Classification"><a href="#Classification" class="headerlink" title="Classification"></a>Classification</h2><ol>
 <li>根据数据处理的原理：模拟、解析、数字</li>
@@ -541,12 +544,16 @@
 <li>根据应用领域：地形、非地形</li>
 </ol>
 <h2 id="Working-flow-products-and-application"><a href="#Working-flow-products-and-application" class="headerlink" title="Working flow,products,and application"></a>Working flow,products,and application</h2><ul>
-<li>工作过程：各种类型传感器——被摄物体影像——通过量测和解译过程——自然物体与环境的可靠信息</li>
-<li>products<ul>
+<li><p>工作过程：各种类型传感器——被摄物体影像——通过量测和解译过程——自然物体与环境的可靠信息</p>
+</li>
+<li><p>products</p>
+<ul>
 <li>image products</li>
 <li>point products: each individual point is given by 3 coordinates</li>
 <li>vector products: natural terrain or human-made infrastructure objects</li>
 </ul>
+</li>
+<li><p>摄影机：镜头、感光芯片、框标、压片机、减震系统</p>
 </li>
 </ul>
 <h1 id="坐标系"><a href="#坐标系" class="headerlink" title="坐标系"></a>坐标系</h1><h2 id="成像模型"><a href="#成像模型" class="headerlink" title="成像模型"></a>成像模型</h2><ul>
@@ -559,6 +566,7 @@
 <h2 id="投影（Projections）"><a href="#投影（Projections）" class="headerlink" title="投影（Projections）"></a>投影（Projections）</h2><ul>
 <li>小孔成像模型：透视投影</li>
 <li>投影：用一组假想的直线（投影射线）将物体向几何面（投影平面）投射<ul>
+<li>信息丢失过程，因此单张像片不能研究物体空间位置</li>
 <li>平行投影（画面中不同的位置比例尺相同）<ul>
 <li>正射投影：向某个平面垂直（正交）投射，损失高度信息</li>
 <li>斜射投影</li>
@@ -587,12 +595,12 @@
 <h2 id="像片重叠（Image-Overlap）"><a href="#像片重叠（Image-Overlap）" class="headerlink" title="像片重叠（Image Overlap）"></a>像片重叠（Image Overlap）</h2><ul>
 <li><p>航向重叠（forward overlap）</p>
 <ul>
-<li>明确的航向重叠度规定：<br>$$<br>p_{x} &#x3D; p_{x} &#x2F; L_{x}<br>$$<br>一般为60%。</li>
+<li>明确的航向重叠度规定：<br>$$<br>p_{x} &#x3D; \frac{p_{x}}  {L_{x}}<br>$$<br>一般为60%。</li>
 </ul>
 </li>
 <li><p>旁向重叠（side overlap）</p>
 <ul>
-<li><p>明确的旁向重叠度规定：<br>$$<br>p_{y} &#x3D; p_{y} &#x2F; L_{y}<br>$$<br>一般为30%。</p>
+<li><p>明确的旁向重叠度规定：<br>$$<br>p_{y} &#x3D; \frac{p_{y}}  {L_{y}}<br>$$<br>一般为30%。（待续</p>
 </li>
 <li><p>航向重叠与旁向重叠的规定，是为了确保航程中拍摄到的每一个点，至少都会出现2次、至多出现6次</p>
 </li>
@@ -616,7 +624,10 @@
 </ul>
 </li>
 </ul>
-<h2 id="像点位移（Image-Displacement）"><a href="#像点位移（Image-Displacement）" class="headerlink" title="像点位移（Image Displacement）"></a>像点位移（Image Displacement）</h2><h3 id="几何因素"><a href="#几何因素" class="headerlink" title="几何因素"></a>几何因素</h3><ul>
+<h2 id="像点位移（Image-Displacement）"><a href="#像点位移（Image-Displacement）" class="headerlink" title="像点位移（Image Displacement）"></a>像点位移（Image Displacement）</h2><ul>
+<li>像片影像误差</li>
+</ul>
+<h3 id="几何因素"><a href="#几何因素" class="headerlink" title="几何因素"></a>几何因素</h3><ul>
 <li><p>像片倾斜（tilt displacement）</p>
 </li>
 <li><p>地形起伏（relief displacement）</p>
@@ -832,7 +843,7 @@
 </ul>
 <h1 id="双像解析摄影测量"><a href="#双像解析摄影测量" class="headerlink" title="双像解析摄影测量"></a>双像解析摄影测量</h1><ul>
 <li>问题：用数学的方法，建立被测对象（地面）的立体模型，获取表面点的（物方）空间坐标</li>
-<li><strong>立体模型</strong>是双向解析摄影测量的基础</li>
+<li><strong>立体模型</strong>是双像解析摄影测量的基础</li>
 </ul>
 <h2 id="双像几何——核面与核线（Epipolar-plane-and-lines）"><a href="#双像几何——核面与核线（Epipolar-plane-and-lines）" class="headerlink" title="双像几何——核面与核线（Epipolar plane and lines）"></a>双像几何——核面与核线（Epipolar plane and lines）</h2><ul>
 <li>摄影基线：相邻两个摄站之间的连线</li>
@@ -859,16 +870,38 @@
 </ul>
 </li>
 </ul>
-<h2 id="空间前方交会方法（Intersection）"><a href="#空间前方交会方法（Intersection）" class="headerlink" title="空间前方交会方法（Intersection）"></a>空间前方交会方法（Intersection）</h2><ul>
-<li>双像解析摄影测量：用数学的办法建立起地面（物方）的<strong>立体模型</strong>，获取地面（物方）点的<strong>空间坐标</strong></li>
-<li>通过两张照片的外方位元素可以确定地面点坐标</li>
+<h2 id="空间后交—前交方法（Resection-Intersection）"><a href="#空间后交—前交方法（Resection-Intersection）" class="headerlink" title="空间后交—前交方法（Resection-Intersection）"></a>空间后交—前交方法（Resection-Intersection）</h2><ul>
+<li>解析摄影测量处理立体像对的三种方法：<ol>
+<li>像片的空间：后方交会—前方交会</li>
+<li>立体像对的几何关系：进行相对定向—绝对定向</li>
+<li>光束法</li>
+</ol>
+</li>
+</ul>
+<ol>
+<li><p>任务：利用解析计算方法处理立体像对，获取地面点的三维空间信息</p>
+</li>
+<li><p>原理：<strong>外业</strong>控制点测量、<strong>内业</strong>像点测量。</p>
+<ol>
+<li>后方交会：<strong>计算外方位元素</strong></li>
+<li>前方交会：<strong>计算地面点坐标</strong></li>
+</ol>
+</li>
+<li><p>步骤</p>
+</li>
+</ol>
+<h3 id="空间前方交会方法（Intersection）"><a href="#空间前方交会方法（Intersection）" class="headerlink" title="空间前方交会方法（Intersection）"></a>空间前方交会方法（Intersection）</h3><ul>
+<li><p>双像解析摄影测量：用数学的办法建立起地面（物方）的<strong>立体模型</strong>，获取地面（物方）点的<strong>空间坐标</strong></p>
+</li>
+<li><p>通过两张照片的外方位元素可以确定地面点坐标</p>
+</li>
 </ul>
 <ol>
 <li><p>前方交会问题</p>
 </li>
 <li><p>公式</p>
 <ol>
-<li><p>点投影系数法</p>
+<li><p>点投影系数法（不需要控制点）</p>
 <p>已知：</p>
 <ul>
 <li>两张像片的外方位元素要：φ-ω-κ，Xs，Ys，Zs；</li>
@@ -884,19 +917,6 @@
 </ol>
 </li>
 </ol>
-<h2 id="空间后交—前交方法（Resection-Intersection）"><a href="#空间后交—前交方法（Resection-Intersection）" class="headerlink" title="空间后交—前交方法（Resection-Intersection）"></a>空间后交—前交方法（Resection-Intersection）</h2><ul>
-<li>解析摄影测量处理立体像对的三种方法：<ol>
-<li>像片的空间：后方交会—前方交会</li>
-<li>立体像对的几何关系：进行相对定向—绝对定向</li>
-<li>光束法</li>
-</ol>
-</li>
-</ul>
-<ol>
-<li>任务：利用解析计算方法处理立体像对，获取地面点的三维空间信息</li>
-<li>原理：<strong>外业</strong>控制点测量、<strong>内业</strong>像点测量、空间后交计算外方位元素、前交计算地面点坐标</li>
-<li>步骤</li>
-</ol>
 <h2 id="相对定向—绝对定向（Relative-Absolute-Orientation）"><a href="#相对定向—绝对定向（Relative-Absolute-Orientation）" class="headerlink" title="相对定向—绝对定向（Relative &amp; Absolute Orientation）"></a>相对定向—绝对定向（Relative &amp; Absolute Orientation）</h2><ul>
 <li>测量——建立地面模型<ol>
 <li>绝对立体模型</li>
@@ -906,9 +926,12 @@
 </ul>
 <h3 id="相对定向元素"><a href="#相对定向元素" class="headerlink" title="相对定向元素"></a>相对定向元素</h3><ul>
 <li>相对定向元素：描述像对中两张像片的相对位置和姿态关系的参数<ul>
-<li>仿照外方位元素（像片相对于地面的位置与姿态）去理解</li>
+<li>仿照外方位元素（像片相对于地面的位置与姿态）去定义<ul>
+<li>相对方位元素（12个）：像片在选定的（同一个）像空间辅助坐标系中的位置和姿态</li>
+</ul>
+</li>
 <li>解析法相对定向：用解析法求解相对定向元素</li>
-<li><strong>不需要地面控制点</strong>，只利用像对内在几何关系实现</li>
+<li>不涉及像片的绝对位置，<strong>不需要地面控制点</strong>，只利用像对内在几何关系实现</li>
 <li>两个点相对于同一参考系的对应位置和姿态<ul>
 <li>相对定向元素是相对方位元素的一个子集</li>
 </ul>
@@ -934,16 +957,131 @@
 <li>单独法相对定向元素：φ1，κ1，φ2，ω2，κ2</li>
 </ul>
 <h3 id="解析相对定向原理"><a href="#解析相对定向原理" class="headerlink" title="解析相对定向原理"></a>解析相对定向原理</h3><ul>
-<li>依据摄影基线、同名光线都在同一个面内得出<ol>
-<li>连续法解析相对定向定理</li>
+<li><p>共面条件：像对中同名光线相交于核面内<br>$$<br>\vec{S_1S_2} *(\vec{S_1a_1} ×\vec{S_2a_2}) &#x3D; 0<br>$$</p>
+</li>
+<li><p>依据摄影基线、同名光线都在同一个面内得出</p>
+<ol>
+<li>连续法解析<strong>相对定向</strong>定理</li>
 </ol>
 </li>
 </ul>
-<h1 id="作业"><a href="#作业" class="headerlink" title="作业"></a>作业</h1><p>三个角度初值：都取0</p>
-<p>Xx0，Yx0：物方点的均值在<strong>飞机的正下方</strong>，因此先在平面中画出来，然后取中心</p>
-<p>Zx0：不同的两个影像坐标、不同的两个地面坐标可以算得比例尺。算出了H之后，加上给出的Z的值的平均值</p>
-<p>找求解逆矩阵的函数</p>
-<p>在输出R矩阵的时候顺便把φ、ω跟κ输出</p>
+<h3 id="单元模型的空间相似变换"><a href="#单元模型的空间相似变换" class="headerlink" title="单元模型的空间相似变换"></a>单元模型的空间相似变换</h3><ul>
+<li>旋转平移</li>
+</ul>
+<h3 id="模型点坐标计算"><a href="#模型点坐标计算" class="headerlink" title="模型点坐标计算"></a>模型点坐标计算</h3><ul>
+<li>确定相对定向元素后，可用<strong>空间前方交会</strong>计算<strong>像空间辅助坐标系</strong>下模型点坐标。进一步可算出摄影测量坐标系下坐标。<ul>
+<li>以连续法为例：建立摄影测量坐标系、计算点的摄影测量坐标</li>
+</ul>
+</li>
+</ul>
+<h3 id="绝对定向"><a href="#绝对定向" class="headerlink" title="绝对定向"></a>绝对定向</h3><ul>
+<li>将模型点的<strong>摄影测量坐标</strong>，变换为<strong>地面（摄影）测量坐标</strong></li>
+<li>立体模型的<strong>绝对定向</strong>：要确定模型在地面测量坐标系中的位置，需要利用<strong>地面控制点</strong>（平高点&#x2F;高程点）的信息</li>
+<li>3个控制点</li>
+</ul>
+<h3 id="绝对定向元素"><a href="#绝对定向元素" class="headerlink" title="绝对定向元素"></a>绝对定向元素</h3><ul>
+<li><p>描述立体<strong>像对</strong>在摄影瞬间的<strong>绝对</strong>位置跟姿态</p>
+</li>
+<li><p>将相对定向建立的立体模型进行<strong>缩放、旋转、平移</strong>，使其达到绝对位置</p>
+</li>
+<li><p>不共原点的三维空间相似变换</p>
+</li>
+<li><p>绝对定向元素（7个）：<br>$$<br>\lambda,X_0,Y_0,Z_0，Φ，Ω，K<br>$$</p>
+<ul>
+<li>比例尺（平移，旋转）</li>
+<li>绝对定向元素 + 相对定向元素 &#x3D; 12个</li>
+</ul>
+</li>
+</ul>
+<h3 id="三维空间相似变换"><a href="#三维空间相似变换" class="headerlink" title="三维空间相似变换"></a>三维空间相似变换</h3><ul>
+<li><p>法方程的建立和求解（最小二乘法）：2个平高控制点+1个高程控制点</p>
+</li>
+<li><p>相似变换参数计算</p>
+<ul>
+<li>获取控制点的两组坐标</li>
+<li>给定相似变换参数的初值</li>
+<li>计算重心化坐标</li>
+</ul>
+</li>
+<li><p>地面坐标计算</p>
+</li>
+</ul>
+<h3 id="内定向"><a href="#内定向" class="headerlink" title="内定向"></a>内定向</h3><ul>
+<li>目的：将像片架坐标下的像点坐标或者将扫描坐标下的</li>
+</ul>
+<h2 id="光束法"><a href="#光束法" class="headerlink" title="光束法"></a>光束法</h2><ul>
+<li>同时求解像片外方位元素和待定点坐标</li>
+<li>先求外方位元素——求物方点坐标</li>
+<li>3n+12（12为两张像片的外方位元素）</li>
+</ul>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p><img lazyload src="/images/loading.svg" data-src="/pictures/sycl11.png"></p>
+<h2 id="解析法空中三角测量（Aerial-triangulation-AT）"><a href="#解析法空中三角测量（Aerial-triangulation-AT）" class="headerlink" title="解析法空中三角测量（Aerial triangulation&#x3D;AT）"></a>解析法空中三角测量（Aerial triangulation&#x3D;AT）</h2><h3 id="AT"><a href="#AT" class="headerlink" title="AT"></a>AT</h3><ul>
+<li>应用计算的方法，根据航片上量测的像点坐标以及<strong>很少</strong>的地面控制点求出地面<strong>加密点</strong>的物方空间坐标，称为<strong>解析空中三角测量</strong>，又称为<strong>摄影测量加密</strong></li>
+<li>100张像片构成99个像对</li>
+<li>分类：（双向测量的推广）<ul>
+<li>按照平差的数学模型<ul>
+<li>航带法<ul>
+<li>立体模型连接，构建航带网</li>
+<li>航带网绝对定向：航带内、相邻航带公共点</li>
+<li>航带或区域网的<strong>非线性校正</strong></li>
+<li>以第一个像对右像片的相对角元素作为第二个像对的左像片的相对方位角元素</li>
+</ul>
+</li>
+<li>独立模型法</li>
+<li>光束法</li>
+</ul>
+</li>
+<li>按照平差范围</li>
+</ul>
+</li>
+</ul>
+<h3 id="GPS与AT"><a href="#GPS与AT" class="headerlink" title="GPS与AT"></a>GPS与AT</h3><ul>
+<li>惯导系统（INS）+GPS&#x3D;POS</li>
+</ul>
+<h1 id="数字摄影测量基础"><a href="#数字摄影测量基础" class="headerlink" title="数字摄影测量基础"></a>数字摄影测量基础</h1><h2 id="数字影像"><a href="#数字影像" class="headerlink" title="数字影像"></a>数字影像</h2><ul>
+<li>模拟→数字；采样→量化</li>
+</ul>
+<h2 id="采样与重采样"><a href="#采样与重采样" class="headerlink" title="采样与重采样"></a>采样与重采样</h2><ul>
+<li>重采样：想知道不在采样点上的原始函数的值，需要进行<strong>内插</strong>，称为重采样</li>
+<li>不同的方法之间计算量与精度之间有区别</li>
+</ul>
+<ol>
+<li><p>最邻近（像元）法：取与该点最近像元的灰度值</p>
+<p>最简单，误差最大</p>
+</li>
+<li><p>双线性插值法：分别认为两个轴方向的灰度变化是线性的，然后分别利用线性算出两个方向的灰度值</p>
+<p>先算x或者y方向的结果都一样，比较适宜</p>
+</li>
+<li><p>双三次插值</p>
+<p>先横算插值算出一轮，再将算出的值，精度大但耗时</p>
+</li>
+</ol>
+<h2 id="相关"><a href="#相关" class="headerlink" title="相关"></a>相关</h2><h3 id="影像相关"><a href="#影像相关" class="headerlink" title="影像相关"></a>影像相关</h3><ul>
+<li>相关函数衡量相似性</li>
+</ul>
+<h2 id="基于灰度的匹配"><a href="#基于灰度的匹配" class="headerlink" title="基于灰度的匹配"></a>基于灰度的匹配</h2><h3 id="基于区域的匹配方法"><a href="#基于区域的匹配方法" class="headerlink" title="基于区域的匹配方法"></a>基于区域的匹配方法</h3><ol>
+<li>相关函数（矢量数积）</li>
+</ol>
+<p>​	在图像出现明显偏亮时匹配效果不佳</p>
+<ol start="2">
+<li>协方差函数（矢量投影）</li>
+</ol>
+<p>​	将图像整体都有的部分减掉，只剩下波动的部分</p>
+<ol start="3">
+<li><p>相关系数（矢量夹角）<br>$$<br>ρ(p,q)&#x3D;\frac{C(p,q)}{\sqrt{C_{gg}C_{g’g’}}}<br>$$<br>最小二乘匹配下最优匹配点</p>
+</li>
+<li><p>差平方和（差矢量模）</p>
+<p>离散图像内两个区域对应像素值相减</p>
+</li>
+<li><p>差绝对值和（差矢量分量绝对值和）</p>
+</li>
+</ol>
+<h3 id="基于特征的匹配方法"><a href="#基于特征的匹配方法" class="headerlink" title="基于特征的匹配方法"></a>基于特征的匹配方法</h3><h2 id="匹配精度"><a href="#匹配精度" class="headerlink" title="匹配精度"></a>匹配精度</h2><ul>
+<li>认为图像相似性的评价函数是一个二次函数</li>
+</ul>
+<h3 id="最小二乘影像匹配"><a href="#最小二乘影像匹配" class="headerlink" title="最小二乘影像匹配"></a>最小二乘影像匹配</h3><ul>
+<li>仅考虑<strong>辐射线性畸变</strong>的最小二乘匹配</li>
+</ul>
 
             </div>
 
@@ -956,7 +1094,7 @@
         <li><strong>创建于:</strong> 2024-03-09 23:45:26</li>
         
             <li>
-                <strong>更新于:</strong> 2024-03-28 21:30:17
+                <strong>更新于:</strong> 2024-04-25 20:33:08
             </li>
         
         <li>
@@ -1030,7 +1168,7 @@
     <div class="post-toc">
         <div class="toc-title">此页目录</div>
         <div class="page-title">蛇影测量基础</div>
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BB%AA%E8%AE%BA"><span class="nav-number">1.</span> <span class="nav-text">绪论</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Concept"><span class="nav-number">1.1.</span> <span class="nav-text">Concept</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#History"><span class="nav-number">1.2.</span> <span class="nav-text">History</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Classification"><span class="nav-number">1.3.</span> <span class="nav-text">Classification</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Working-flow-products-and-application"><span class="nav-number">1.4.</span> <span class="nav-text">Working flow,products,and application</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9D%90%E6%A0%87%E7%B3%BB"><span class="nav-number">2.</span> <span class="nav-text">坐标系</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%88%90%E5%83%8F%E6%A8%A1%E5%9E%8B"><span class="nav-number">2.1.</span> <span class="nav-text">成像模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8A%95%E5%BD%B1%EF%BC%88Projections%EF%BC%89"><span class="nav-number">2.2.</span> <span class="nav-text">投影（Projections）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%91%84%E5%BD%B1%E6%AF%94%E4%BE%8B%E5%B0%BA%EF%BC%88Scale-and-Coverage%EF%BC%89"><span class="nav-number">2.3.</span> <span class="nav-text">摄影比例尺（Scale and Coverage）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%83%8F%E7%89%87%E9%87%8D%E5%8F%A0%EF%BC%88Image-Overlap%EF%BC%89"><span class="nav-number">2.4.</span> <span class="nav-text">像片重叠（Image Overlap）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%83%8F%E7%82%B9%E4%BD%8D%E7%A7%BB%EF%BC%88Image-Displacement%EF%BC%89"><span class="nav-number">2.5.</span> <span class="nav-text">像点位移（Image Displacement）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%87%A0%E4%BD%95%E5%9B%A0%E7%B4%A0"><span class="nav-number">2.5.1.</span> <span class="nav-text">几何因素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%89%A9%E7%90%86%E5%9B%A0%E7%B4%A0"><span class="nav-number">2.5.2.</span> <span class="nav-text">物理因素</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%B8%E7%94%A8%E5%9D%90%E6%A0%87%E7%B3%BB"><span class="nav-number">2.6.</span> <span class="nav-text">常用坐标系</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%83%8F%E6%96%B9%E7%A9%BA%E9%97%B4%E5%9D%90%E6%A0%87%E7%B3%BB%EF%BC%88Image-Space-Coordinate-System%EF%BC%89"><span class="nav-number">2.6.1.</span> <span class="nav-text">像方空间坐标系（Image Space Coordinate System）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%89%A9%E6%96%B9%E7%A9%BA%E9%97%B4%E5%9D%90%E6%A0%87%E7%B3%BB%EF%BC%88Object-Space-Coordinate-System%EF%BC%89"><span class="nav-number">2.6.2.</span> <span class="nav-text">物方空间坐标系（Object Space Coordinate System）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%83%8F%E7%89%87%E7%9A%84%E6%96%B9%E4%BD%8D%E5%85%83%E7%B4%A0"><span class="nav-number">2.7.</span> <span class="nav-text">像片的方位元素</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%86%85%E6%96%B9%E4%BD%8D%E5%85%83%E7%B4%A0"><span class="nav-number">2.7.1.</span> <span class="nav-text">内方位元素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%96%E6%96%B9%E4%BD%8D%E5%85%83%E7%B4%A0"><span class="nav-number">2.7.2.</span> <span class="nav-text">外方位元素</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%88%90%E5%83%8F%E4%B8%AD%E7%9A%84%E5%87%A0%E4%BD%95%E8%A6%81%E7%B4%A0"><span class="nav-number">2.8.</span> <span class="nav-text">成像中的几何要素</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%88%AA%E6%91%84%E5%83%8F%E7%89%87%E4%B8%AD%E7%9A%84%E7%82%B9%E7%BA%BF%E9%9D%A2"><span class="nav-number">2.8.1.</span> <span class="nav-text">航摄像片中的点线面</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9D%90%E6%A0%87%E5%8F%98%E6%8D%A2%E3%80%81%E5%85%B1%E7%BA%BF%E6%96%B9%E7%A8%8B"><span class="nav-number">3.</span> <span class="nav-text">坐标变换、共线方程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9D%90%E6%A0%87%E5%8F%98%E6%8D%A2"><span class="nav-number">3.1.</span> <span class="nav-text">坐标变换</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B1%E7%BA%BF%E6%96%B9%E7%A8%8B"><span class="nav-number">3.2.</span> <span class="nav-text">共线方程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B1%E7%BA%BF%E6%9D%A1%E4%BB%B6%EF%BC%88%E9%9D%9E%E5%B8%B8%E9%87%8D%E8%A6%81%EF%BC%89"><span class="nav-number">3.2.1.</span> <span class="nav-text">共线条件（非常重要）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BA%94%E7%94%A8"><span class="nav-number">3.2.2.</span> <span class="nav-text">应用</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8D%95%E5%83%8F%EF%BC%88%E7%A9%BA%E9%97%B4%EF%BC%89%E5%90%8E%E6%96%B9%E4%BA%A4%E4%BC%9A%EF%BC%88resection%EF%BC%89"><span class="nav-number">4.</span> <span class="nav-text">单像（空间）后方交会（resection）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B1%E7%BA%BF%E6%96%B9%E7%A8%8B%E7%BA%BF%E6%80%A7%E5%8C%96"><span class="nav-number">4.1.</span> <span class="nav-text">共线方程线性化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8D%95%E5%83%8F%E7%A9%BA%E9%97%B4%E5%90%8E%E6%96%B9%E4%BA%A4%E4%BC%9A"><span class="nav-number">4.2.</span> <span class="nav-text">单像空间后方交会</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B9%E6%B3%95"><span class="nav-number">4.2.1.</span> <span class="nav-text">方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%A1%E7%AE%97%E8%BF%87%E7%A8%8B"><span class="nav-number">4.2.2.</span> <span class="nav-text">计算过程</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%8C%E5%83%8F%E8%A7%A3%E6%9E%90%E6%91%84%E5%BD%B1%E6%B5%8B%E9%87%8F"><span class="nav-number">5.</span> <span class="nav-text">双像解析摄影测量</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%8C%E5%83%8F%E5%87%A0%E4%BD%95%E2%80%94%E2%80%94%E6%A0%B8%E9%9D%A2%E4%B8%8E%E6%A0%B8%E7%BA%BF%EF%BC%88Epipolar-plane-and-lines%EF%BC%89"><span class="nav-number">5.1.</span> <span class="nav-text">双像几何——核面与核线（Epipolar plane and lines）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A9%BA%E9%97%B4%E5%89%8D%E6%96%B9%E4%BA%A4%E4%BC%9A%E6%96%B9%E6%B3%95%EF%BC%88Intersection%EF%BC%89"><span class="nav-number">5.2.</span> <span class="nav-text">空间前方交会方法（Intersection）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A9%BA%E9%97%B4%E5%90%8E%E4%BA%A4%E2%80%94%E5%89%8D%E4%BA%A4%E6%96%B9%E6%B3%95%EF%BC%88Resection-Intersection%EF%BC%89"><span class="nav-number">5.3.</span> <span class="nav-text">空间后交—前交方法（Resection-Intersection）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9B%B8%E5%AF%B9%E5%AE%9A%E5%90%91%E2%80%94%E7%BB%9D%E5%AF%B9%E5%AE%9A%E5%90%91%EF%BC%88Relative-Absolute-Orientation%EF%BC%89"><span class="nav-number">5.4.</span> <span class="nav-text">相对定向—绝对定向（Relative &amp; Absolute Orientation）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9B%B8%E5%AF%B9%E5%AE%9A%E5%90%91%E5%85%83%E7%B4%A0"><span class="nav-number">5.4.1.</span> <span class="nav-text">相对定向元素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%9E%E7%BB%AD%E6%B3%95"><span class="nav-number">5.4.2.</span> <span class="nav-text">连续法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%95%E7%8B%AC%E6%B3%95"><span class="nav-number">5.4.3.</span> <span class="nav-text">单独法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A7%A3%E6%9E%90%E7%9B%B8%E5%AF%B9%E5%AE%9A%E5%90%91%E5%8E%9F%E7%90%86"><span class="nav-number">5.4.4.</span> <span class="nav-text">解析相对定向原理</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BD%9C%E4%B8%9A"><span class="nav-number">6.</span> <span class="nav-text">作业</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BB%AA%E8%AE%BA"><span class="nav-number">1.</span> <span class="nav-text">绪论</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Concept"><span class="nav-number">1.1.</span> <span class="nav-text">Concept</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#History"><span class="nav-number">1.2.</span> <span class="nav-text">History</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Classification"><span class="nav-number">1.3.</span> <span class="nav-text">Classification</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Working-flow-products-and-application"><span class="nav-number">1.4.</span> <span class="nav-text">Working flow,products,and application</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9D%90%E6%A0%87%E7%B3%BB"><span class="nav-number">2.</span> <span class="nav-text">坐标系</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%88%90%E5%83%8F%E6%A8%A1%E5%9E%8B"><span class="nav-number">2.1.</span> <span class="nav-text">成像模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8A%95%E5%BD%B1%EF%BC%88Projections%EF%BC%89"><span class="nav-number">2.2.</span> <span class="nav-text">投影（Projections）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%91%84%E5%BD%B1%E6%AF%94%E4%BE%8B%E5%B0%BA%EF%BC%88Scale-and-Coverage%EF%BC%89"><span class="nav-number">2.3.</span> <span class="nav-text">摄影比例尺（Scale and Coverage）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%83%8F%E7%89%87%E9%87%8D%E5%8F%A0%EF%BC%88Image-Overlap%EF%BC%89"><span class="nav-number">2.4.</span> <span class="nav-text">像片重叠（Image Overlap）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%83%8F%E7%82%B9%E4%BD%8D%E7%A7%BB%EF%BC%88Image-Displacement%EF%BC%89"><span class="nav-number">2.5.</span> <span class="nav-text">像点位移（Image Displacement）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%87%A0%E4%BD%95%E5%9B%A0%E7%B4%A0"><span class="nav-number">2.5.1.</span> <span class="nav-text">几何因素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%89%A9%E7%90%86%E5%9B%A0%E7%B4%A0"><span class="nav-number">2.5.2.</span> <span class="nav-text">物理因素</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%B8%E7%94%A8%E5%9D%90%E6%A0%87%E7%B3%BB"><span class="nav-number">2.6.</span> <span class="nav-text">常用坐标系</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%83%8F%E6%96%B9%E7%A9%BA%E9%97%B4%E5%9D%90%E6%A0%87%E7%B3%BB%EF%BC%88Image-Space-Coordinate-System%EF%BC%89"><span class="nav-number">2.6.1.</span> <span class="nav-text">像方空间坐标系（Image Space Coordinate System）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%89%A9%E6%96%B9%E7%A9%BA%E9%97%B4%E5%9D%90%E6%A0%87%E7%B3%BB%EF%BC%88Object-Space-Coordinate-System%EF%BC%89"><span class="nav-number">2.6.2.</span> <span class="nav-text">物方空间坐标系（Object Space Coordinate System）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%83%8F%E7%89%87%E7%9A%84%E6%96%B9%E4%BD%8D%E5%85%83%E7%B4%A0"><span class="nav-number">2.7.</span> <span class="nav-text">像片的方位元素</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%86%85%E6%96%B9%E4%BD%8D%E5%85%83%E7%B4%A0"><span class="nav-number">2.7.1.</span> <span class="nav-text">内方位元素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%96%E6%96%B9%E4%BD%8D%E5%85%83%E7%B4%A0"><span class="nav-number">2.7.2.</span> <span class="nav-text">外方位元素</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%88%90%E5%83%8F%E4%B8%AD%E7%9A%84%E5%87%A0%E4%BD%95%E8%A6%81%E7%B4%A0"><span class="nav-number">2.8.</span> <span class="nav-text">成像中的几何要素</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%88%AA%E6%91%84%E5%83%8F%E7%89%87%E4%B8%AD%E7%9A%84%E7%82%B9%E7%BA%BF%E9%9D%A2"><span class="nav-number">2.8.1.</span> <span class="nav-text">航摄像片中的点线面</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9D%90%E6%A0%87%E5%8F%98%E6%8D%A2%E3%80%81%E5%85%B1%E7%BA%BF%E6%96%B9%E7%A8%8B"><span class="nav-number">3.</span> <span class="nav-text">坐标变换、共线方程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9D%90%E6%A0%87%E5%8F%98%E6%8D%A2"><span class="nav-number">3.1.</span> <span class="nav-text">坐标变换</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B1%E7%BA%BF%E6%96%B9%E7%A8%8B"><span class="nav-number">3.2.</span> <span class="nav-text">共线方程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B1%E7%BA%BF%E6%9D%A1%E4%BB%B6%EF%BC%88%E9%9D%9E%E5%B8%B8%E9%87%8D%E8%A6%81%EF%BC%89"><span class="nav-number">3.2.1.</span> <span class="nav-text">共线条件（非常重要）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BA%94%E7%94%A8"><span class="nav-number">3.2.2.</span> <span class="nav-text">应用</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8D%95%E5%83%8F%EF%BC%88%E7%A9%BA%E9%97%B4%EF%BC%89%E5%90%8E%E6%96%B9%E4%BA%A4%E4%BC%9A%EF%BC%88resection%EF%BC%89"><span class="nav-number">4.</span> <span class="nav-text">单像（空间）后方交会（resection）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B1%E7%BA%BF%E6%96%B9%E7%A8%8B%E7%BA%BF%E6%80%A7%E5%8C%96"><span class="nav-number">4.1.</span> <span class="nav-text">共线方程线性化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8D%95%E5%83%8F%E7%A9%BA%E9%97%B4%E5%90%8E%E6%96%B9%E4%BA%A4%E4%BC%9A"><span class="nav-number">4.2.</span> <span class="nav-text">单像空间后方交会</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B9%E6%B3%95"><span class="nav-number">4.2.1.</span> <span class="nav-text">方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%A1%E7%AE%97%E8%BF%87%E7%A8%8B"><span class="nav-number">4.2.2.</span> <span class="nav-text">计算过程</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%8C%E5%83%8F%E8%A7%A3%E6%9E%90%E6%91%84%E5%BD%B1%E6%B5%8B%E9%87%8F"><span class="nav-number">5.</span> <span class="nav-text">双像解析摄影测量</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%8C%E5%83%8F%E5%87%A0%E4%BD%95%E2%80%94%E2%80%94%E6%A0%B8%E9%9D%A2%E4%B8%8E%E6%A0%B8%E7%BA%BF%EF%BC%88Epipolar-plane-and-lines%EF%BC%89"><span class="nav-number">5.1.</span> <span class="nav-text">双像几何——核面与核线（Epipolar plane and lines）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A9%BA%E9%97%B4%E5%90%8E%E4%BA%A4%E2%80%94%E5%89%8D%E4%BA%A4%E6%96%B9%E6%B3%95%EF%BC%88Resection-Intersection%EF%BC%89"><span class="nav-number">5.2.</span> <span class="nav-text">空间后交—前交方法（Resection-Intersection）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A9%BA%E9%97%B4%E5%89%8D%E6%96%B9%E4%BA%A4%E4%BC%9A%E6%96%B9%E6%B3%95%EF%BC%88Intersection%EF%BC%89"><span class="nav-number">5.2.1.</span> <span class="nav-text">空间前方交会方法（Intersection）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9B%B8%E5%AF%B9%E5%AE%9A%E5%90%91%E2%80%94%E7%BB%9D%E5%AF%B9%E5%AE%9A%E5%90%91%EF%BC%88Relative-Absolute-Orientation%EF%BC%89"><span class="nav-number">5.3.</span> <span class="nav-text">相对定向—绝对定向（Relative &amp; Absolute Orientation）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9B%B8%E5%AF%B9%E5%AE%9A%E5%90%91%E5%85%83%E7%B4%A0"><span class="nav-number">5.3.1.</span> <span class="nav-text">相对定向元素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%9E%E7%BB%AD%E6%B3%95"><span class="nav-number">5.3.2.</span> <span class="nav-text">连续法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%95%E7%8B%AC%E6%B3%95"><span class="nav-number">5.3.3.</span> <span class="nav-text">单独法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A7%A3%E6%9E%90%E7%9B%B8%E5%AF%B9%E5%AE%9A%E5%90%91%E5%8E%9F%E7%90%86"><span class="nav-number">5.3.4.</span> <span class="nav-text">解析相对定向原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%95%E5%85%83%E6%A8%A1%E5%9E%8B%E7%9A%84%E7%A9%BA%E9%97%B4%E7%9B%B8%E4%BC%BC%E5%8F%98%E6%8D%A2"><span class="nav-number">5.3.5.</span> <span class="nav-text">单元模型的空间相似变换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A8%A1%E5%9E%8B%E7%82%B9%E5%9D%90%E6%A0%87%E8%AE%A1%E7%AE%97"><span class="nav-number">5.3.6.</span> <span class="nav-text">模型点坐标计算</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%9D%E5%AF%B9%E5%AE%9A%E5%90%91"><span class="nav-number">5.3.7.</span> <span class="nav-text">绝对定向</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%9D%E5%AF%B9%E5%AE%9A%E5%90%91%E5%85%83%E7%B4%A0"><span class="nav-number">5.3.8.</span> <span class="nav-text">绝对定向元素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%89%E7%BB%B4%E7%A9%BA%E9%97%B4%E7%9B%B8%E4%BC%BC%E5%8F%98%E6%8D%A2"><span class="nav-number">5.3.9.</span> <span class="nav-text">三维空间相似变换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%86%85%E5%AE%9A%E5%90%91"><span class="nav-number">5.3.10.</span> <span class="nav-text">内定向</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%89%E6%9D%9F%E6%B3%95"><span class="nav-number">5.4.</span> <span class="nav-text">光束法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-number">5.5.</span> <span class="nav-text">总结</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%9E%90%E6%B3%95%E7%A9%BA%E4%B8%AD%E4%B8%89%E8%A7%92%E6%B5%8B%E9%87%8F%EF%BC%88Aerial-triangulation-AT%EF%BC%89"><span class="nav-number">5.6.</span> <span class="nav-text">解析法空中三角测量（Aerial triangulation&#x3D;AT）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#AT"><span class="nav-number">5.6.1.</span> <span class="nav-text">AT</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#GPS%E4%B8%8EAT"><span class="nav-number">5.6.2.</span> <span class="nav-text">GPS与AT</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%95%B0%E5%AD%97%E6%91%84%E5%BD%B1%E6%B5%8B%E9%87%8F%E5%9F%BA%E7%A1%80"><span class="nav-number">6.</span> <span class="nav-text">数字摄影测量基础</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E5%AD%97%E5%BD%B1%E5%83%8F"><span class="nav-number">6.1.</span> <span class="nav-text">数字影像</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%87%87%E6%A0%B7%E4%B8%8E%E9%87%8D%E9%87%87%E6%A0%B7"><span class="nav-number">6.2.</span> <span class="nav-text">采样与重采样</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9B%B8%E5%85%B3"><span class="nav-number">6.3.</span> <span class="nav-text">相关</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BD%B1%E5%83%8F%E7%9B%B8%E5%85%B3"><span class="nav-number">6.3.1.</span> <span class="nav-text">影像相关</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E4%BA%8E%E7%81%B0%E5%BA%A6%E7%9A%84%E5%8C%B9%E9%85%8D"><span class="nav-number">6.4.</span> <span class="nav-text">基于灰度的匹配</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E4%BA%8E%E5%8C%BA%E5%9F%9F%E7%9A%84%E5%8C%B9%E9%85%8D%E6%96%B9%E6%B3%95"><span class="nav-number">6.4.1.</span> <span class="nav-text">基于区域的匹配方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E4%BA%8E%E7%89%B9%E5%BE%81%E7%9A%84%E5%8C%B9%E9%85%8D%E6%96%B9%E6%B3%95"><span class="nav-number">6.4.2.</span> <span class="nav-text">基于特征的匹配方法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8C%B9%E9%85%8D%E7%B2%BE%E5%BA%A6"><span class="nav-number">6.5.</span> <span class="nav-text">匹配精度</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%80%E5%B0%8F%E4%BA%8C%E4%B9%98%E5%BD%B1%E5%83%8F%E5%8C%B9%E9%85%8D"><span class="nav-number">6.5.1.</span> <span class="nav-text">最小二乘影像匹配</span></a></li></ol></li></ol></li></ol>
 
     </div>
 </div>
