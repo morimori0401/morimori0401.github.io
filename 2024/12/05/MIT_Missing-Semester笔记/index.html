@@ -26,7 +26,7 @@
 <meta property="og:description" content="Shell：单一程序 打开终端，常用函数：  date，echo（后面加空格加参数，如果参数中有空格则用双引号括起来、或者用转义字符（加\）   环境变量：面向终端的应用程序的位置  shell是一门编程语言，也可以用来编写脚本  查找搜索路径：%PATH  文件夹以冒号分隔；在实行查找时，会按照所提及的文件夹一个个查下去 如果需要知道某个程序的绝对位置，用which 比如想知道echo的位置，用">
 <meta property="og:locale">
 <meta property="article:published_time" content="2024-12-05T14:05:40.139Z">
-<meta property="article:modified_time" content="2024-12-06T12:15:36.939Z">
+<meta property="article:modified_time" content="2024-12-13T14:17:06.395Z">
 <meta property="article:author" content="morimori">
 <meta property="article:tag" content="tec">
 <meta name="twitter:card" content="summary">
@@ -540,8 +540,8 @@ mjx-container[display="true"] + br {
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2024-12-06 20:15:36</span>
-            <span class="mobile">2024-12-06 20:15</span>
+            <span class="desktop">2024-12-13 22:17:06</span>
+            <span class="mobile">2024-12-13 22:17</span>
             <span class="hover-info">Updated</span>
         </span>
     
@@ -677,9 +677,51 @@ mjx-container[display="true"] + br {
 </ul>
 <h1 id="shell：多程序"><a href="#shell：多程序" class="headerlink" title="shell：多程序"></a>shell：多程序</h1><ul>
 <li>流（stream）：input stream(keyboard,terminal)+output stream(terminal)<ul>
-<li>重定向（rewire）：“&lt;”或者“&gt;”</li>
+<li><p>重定向（rewire）：改变输入/输出。“&lt;”（表示将输入重定向为&lt;后面的内容）或者“&gt;”（将输出重定向为&gt;后面的内容）</p>
+<ul>
+<li><p>cat：打印文件内容；将输入/输出混合。举例：</p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat &lt; hello.txt &gt; hello2.txt</span><br></pre></td></tr></table></figure></div>
+
+<p>hello.txt里是hello。这种情况下继续命令行输入：</p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat hello2.txt</span><br></pre></td></tr></table></figure></div>
+
+<p>输出hello。</p>
+</li>
 </ul>
 </li>
+<li><p>追加：&gt;&gt;。举例：</p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat &lt; hello.txt &gt;&gt; hello2.txt</span><br></pre></td></tr></table></figure></div>
+
+<p>hello.txt里是hello。这种情况下继续命令行输入：</p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat hello2.txt</span><br></pre></td></tr></table></figure></div>
+
+<p>输出：</p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hello</span><br><span class="line">hello</span><br></pre></td></tr></table></figure></div>
+</li>
+<li><p>管道符（pipe）：|。将左边程序的输出作为右边程序的输入</p>
+<ul>
+<li><p>tail：打印最后n行。举例：</p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">tail -n1</span><br><span class="line">tail --line=1</span><br></pre></td></tr></table></figure></div>
+
+<p>两个命令都是打印倒数第一行。</p>
+</li>
+<li><p>举例：</p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls -l / | tail -n1</span><br></pre></td></tr></table></figure></div>
+
+<p>这样程序就可以打印ls -l /的最后一行，即使pipe两端的程序可能并不彼此兼容。</p>
+<p><strong>管道不仅可以用于文本，还可以用于图片甚至视频。</strong></p>
+</li>
+<li><p>curl –head –silent google.com：给出所有访问google.com的http头</p>
+</li>
+<li><p>grep：在输入流中搜索指定的关键字</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="root"><a href="#root" class="headerlink" title="root"></a>root</h1><ul>
+<li>在Linux与mac系统中的概念，有点像是Windows的管理员用户，用户ID是0</li>
 </ul>
 
             </div>
@@ -693,7 +735,7 @@ mjx-container[display="true"] + br {
         <li><strong>Created at:</strong> 2024-12-05 22:05:40</li>
         
             <li>
-                <strong>Updated at:</strong> 2024-12-06 20:15:36
+                <strong>Updated at:</strong> 2024-12-13 22:17:06
             </li>
         
         <li>
@@ -767,7 +809,7 @@ mjx-container[display="true"] + br {
     <div class="post-toc">
         <div class="toc-title">On this page</div>
         <div class="page-title">MIT_Missing-Semester笔记</div>
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Shell%EF%BC%9A%E5%8D%95%E4%B8%80%E7%A8%8B%E5%BA%8F"><span class="nav-number">1.</span> <span class="nav-text">Shell：单一程序</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#shell%EF%BC%9A%E5%A4%9A%E7%A8%8B%E5%BA%8F"><span class="nav-number">2.</span> <span class="nav-text">shell：多程序</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Shell%EF%BC%9A%E5%8D%95%E4%B8%80%E7%A8%8B%E5%BA%8F"><span class="nav-number">1.</span> <span class="nav-text">Shell：单一程序</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#shell%EF%BC%9A%E5%A4%9A%E7%A8%8B%E5%BA%8F"><span class="nav-number">2.</span> <span class="nav-text">shell：多程序</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#root"><span class="nav-number">3.</span> <span class="nav-text">root</span></a></li></ol>
 
     </div>
 </div>
