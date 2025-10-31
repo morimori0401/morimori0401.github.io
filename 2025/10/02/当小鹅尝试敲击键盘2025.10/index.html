@@ -13,27 +13,23 @@
     
     <!--- Seo Part-->
     
-    <link rel="canonical" href="https://morimori0401.github.io/2025/08/06/从零开始搭建vpn实录/"/>
+    <link rel="canonical" href="https://morimori0401.github.io/2025/10/02/当小鹅尝试敲击键盘2025.10/"/>
     <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     
-        <meta name="description" content="写在前面八月的开头，即使还有一堆事要做，但突然还是在想：现在的VPN不太好用，搭一个给自己用吧！ 说干就干，所以开始着手找教程…之前完全没有相关的知识储备，所以每个不懂的点都是现查的。在这里记录一下搭建过程中一些觉得值得记录的点。 虚拟机如何联网？要搭建VPN，需要两台互相连接的虚拟机。按照教程 下载VMware并初步设置好两台虚拟机，这里不详述。 搭建好虚拟机之后，需要连接外部网络来下载对应的包">
+        <meta name="description" content="2025.10.2最近好像摄入的信息中碎片化信息占比又有抬头趋势，感觉像是睡眠不足的副作用。一整天脑子也乱乱的，好像法国人的咖啡馆，稍不留意就一位新的有志之士上台发表演说。 边吃薄荷味道巧克力碎冰淇淋，边打字。   我领了今年动画周翻译的活，准备负责五个片子的翻译工作。很巧的是这些片子的创作者来自五个不同的国家。有些片子有很长的对白，有些并没有。主办方要求尽量在国庆假期的最后一天之前翻译打轴完成，">
 <meta property="og:type" content="article">
-<meta property="og:title" content="从零开始搭建VPN实录">
-<meta property="og:url" content="https://morimori0401.github.io/2025/08/06/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BAVPN%E5%AE%9E%E5%BD%95/index.html">
+<meta property="og:title" content="当小鹅尝试敲击键盘|2025.10">
+<meta property="og:url" content="https://morimori0401.github.io/2025/10/02/%E5%BD%93%E5%B0%8F%E9%B9%85%E5%B0%9D%E8%AF%95%E6%95%B2%E5%87%BB%E9%94%AE%E7%9B%982025.10/index.html">
 <meta property="og:site_name" content="梦的化石与现实记录">
-<meta property="og:description" content="写在前面八月的开头，即使还有一堆事要做，但突然还是在想：现在的VPN不太好用，搭一个给自己用吧！ 说干就干，所以开始着手找教程…之前完全没有相关的知识储备，所以每个不懂的点都是现查的。在这里记录一下搭建过程中一些觉得值得记录的点。 虚拟机如何联网？要搭建VPN，需要两台互相连接的虚拟机。按照教程 下载VMware并初步设置好两台虚拟机，这里不详述。 搭建好虚拟机之后，需要连接外部网络来下载对应的包">
+<meta property="og:description" content="2025.10.2最近好像摄入的信息中碎片化信息占比又有抬头趋势，感觉像是睡眠不足的副作用。一整天脑子也乱乱的，好像法国人的咖啡馆，稍不留意就一位新的有志之士上台发表演说。 边吃薄荷味道巧克力碎冰淇淋，边打字。   我领了今年动画周翻译的活，准备负责五个片子的翻译工作。很巧的是这些片子的创作者来自五个不同的国家。有些片子有很长的对白，有些并没有。主办方要求尽量在国庆假期的最后一天之前翻译打轴完成，">
 <meta property="og:locale">
-<meta property="og:image" content="c:\Users\86150\AppData\Roaming\Typora\typora-user-images\image-20250806111118561.png">
-<meta property="og:image" content="c:\Users\86150\AppData\Roaming\Typora\typora-user-images\image-20250806111342249.png">
-<meta property="og:image" content="c:\Users\86150\AppData\Roaming\Typora\typora-user-images\image-20250807094309912.png">
-<meta property="article:published_time" content="2025-08-06T02:51:59.280Z">
-<meta property="article:modified_time" content="2025-08-10T12:58:30.024Z">
+<meta property="article:published_time" content="2025-10-02T10:26:10.821Z">
+<meta property="article:modified_time" content="2025-10-31T22:58:27.188Z">
 <meta property="article:author" content="morimori">
-<meta property="article:tag" content="tech">
+<meta property="article:tag" content="在大家面前我写的只是小鹅而已">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="c:\Users\86150\AppData\Roaming\Typora\typora-user-images\image-20250806111118561.png">
     
     
     <!--- Icon Part-->
@@ -45,7 +41,7 @@
     
     <title>
         
-            从零开始搭建VPN实录 -
+            当小鹅尝试敲击键盘|2025.10 -
         
         第四十四个宇宙的兔子洞
     </title>
@@ -403,7 +399,7 @@
             
             
                 <div class="article-title">
-                    <h1 class="article-title-regular">从零开始搭建VPN实录</h1>
+                    <h1 class="article-title-regular">当小鹅尝试敲击键盘|2025.10</h1>
                 </div>
             
                 
@@ -425,15 +421,15 @@
                             <div class="article-meta-info">
     <span class="article-date article-meta-item">
         <i class="fa-regular fa-pen-fancy"></i>&nbsp;
-        <span class="desktop">2025-08-06 12:51:59</span>
-        <span class="mobile">2025-08-06 12:51</span>
+        <span class="desktop">2025-10-02 20:26:10</span>
+        <span class="mobile">2025-10-02 20:26</span>
         <span class="hover-info">撰寫</span>
     </span>
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2025-08-10 22:58:30</span>
-            <span class="mobile">2025-08-10 22:58</span>
+            <span class="desktop">2025-11-01 09:58:27</span>
+            <span class="mobile">2025-11-01 09:58</span>
             <span class="hover-info">更新</span>
         </span>
     
@@ -445,7 +441,7 @@
             <ul>
                 
                     <li>
-                        <a href="/tags/tech/">tech</a>&nbsp;
+                        <a href="/tags/%E5%9C%A8%E5%A4%A7%E5%AE%B6%E9%9D%A2%E5%89%8D%E6%88%91%E5%86%99%E7%9A%84%E5%8F%AA%E6%98%AF%E5%B0%8F%E9%B9%85%E8%80%8C%E5%B7%B2/">在大家面前我写的只是小鹅而已</a>&nbsp;
                     </li>
                 
             </ul>
@@ -468,54 +464,123 @@
             
 
             <div class="article-content markdown-body">
-                <h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><p>八月的开头，即使还有一堆事要做，但突然还是在想：现在的VPN不太好用，搭一个给自己用吧！</p>
-<p>说干就干，所以开始着手找教程…之前完全没有相关的知识储备，所以每个不懂的点都是现查的。在这里记录一下搭建过程中一些觉得值得记录的点。</p>
-<h2 id="虚拟机如何联网？"><a href="#虚拟机如何联网？" class="headerlink" title="虚拟机如何联网？"></a>虚拟机如何联网？</h2><p>要搭建VPN，需要两台互相连接的虚拟机。按照<a class="link" target="_blank" rel="noopener" href="https://blog.csdn.net/2301_76506730/article/details/148253079?ops_request_misc=%7B%22request_id%22:%22ca9474a2806175470647527ad989b732%22,%22scm%22:%2220140713.130102334..%22%7D&request_id=ca9474a2806175470647527ad989b732&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~baidu_landing_v2~default-1-148253079-null-null.142%5Ev102%5Epc_search_result_base7&utm_term=%E8%99%9A%E6%8B%9F%E6%9C%BA%E8%AE%BE%E7%BD%AE&spm=1018.2226.3001.4187">教程 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>下载VMware并初步设置好两台虚拟机，这里不详述。</p>
-<p>搭建好虚拟机之后，需要连接外部网络来下载对应的包，让查询ip指令可用。虚拟机有以下三种网络模式。</p>
-<h3 id="桥接模式（Bridged）"><a href="#桥接模式（Bridged）" class="headerlink" title="桥接模式（Bridged）"></a>桥接模式（Bridged）</h3><ul>
-<li>只要跟主机在同一网络下，别的主机可以与虚拟机连接</li>
-<li>虚拟机可以联网</li>
-</ul>
-<h3 id="网络转换模式（NAT）"><a href="#网络转换模式（NAT）" class="headerlink" title="网络转换模式（NAT）"></a>网络转换模式（NAT）</h3><ul>
-<li>VMnet8</li>
-<li>只能主机与虚拟机连接</li>
-<li>虚拟机可以联网</li>
-</ul>
-<h3 id="仅主机模式（Host-Only）"><a href="#仅主机模式（Host-Only）" class="headerlink" title="仅主机模式（Host-Only）"></a>仅主机模式（Host-Only）</h3><ul>
-<li><p>VMnet1</p>
-</li>
-<li><p>只能主机与虚拟机连接</p>
-</li>
-<li><p>虚拟机不能联网</p>
-</li>
-</ul>
-<p>前一天晚上卡了好久不知道如何联网，所以一直没法把工具包完整地下载下来。今天早上再找教程的时候看到了<a class="link" target="_blank" rel="noopener" href="https://blog.csdn.net/2301_79385221/article/details/137372109?ops_request_misc=&request_id=&biz_id=102&utm_term=%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%A6%82%E4%BD%95%E8%81%94%E7%BD%91&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduweb~default-0-137372109.142%5Ev102%5Epc_search_result_base7&spm=1018.2226.3001.4187">这篇 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>，总算是明白过来…</p>
-<p><figure class="image-caption"><img lazyload src="/images/loading.svg" data-src="C:\Users\86150\AppData\Roaming\Typora\typora-user-images\image-20250806111118561.png" alt="image-20250806111118561"><figcaption>image-20250806111118561</figcaption></figure></p>
-<ul>
-<li>表示创建的系统地址范围在192.168.60.0到192.168.60.255之间，且192.168.60.0与192.168.60.255都不用作ip地址</li>
-</ul>
-<p><figure class="image-caption"><img lazyload src="/images/loading.svg" data-src="C:\Users\86150\AppData\Roaming\Typora\typora-user-images\image-20250806111342249.png" alt="image-20250806111342249"><figcaption>image-20250806111342249</figcaption></figure></p>
-<ul>
-<li>网关。联网时用。可以拿来做dns。</li>
-</ul>
-<p>中间设置网络的步骤太多，参考了太多帖子但忘掉了（落泪）。但总归是保证vmnet8的ip的第三位与虚拟机网络设置的ip第三位相同。</p>
-<p>还有个小点，就是设置虚拟网络编辑器的子网ip时，最后一位一定要是0。有些教程没有对这个地方进行说明，会导致报错：vmnet8子网ip与子网掩码不匹配。</p>
-<p>设置完成之后，尝试开虚拟机浏览器上网，或者</p>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ping www.baidu.com</span><br></pre></td></tr></table></figure></div>
+                <h2 id="2025-10-2"><a href="#2025-10-2" class="headerlink" title="2025.10.2"></a>2025.10.2</h2><p>最近好像摄入的信息中碎片化信息占比又有抬头趋势，感觉像是睡眠不足的副作用。一整天脑子也乱乱的，好像法国人的咖啡馆，稍不留意就一位新的有志之士上台发表演说。</p>
+<p>边吃薄荷味道巧克力碎冰淇淋，边打字。</p>
+<br>
 
-<p>就可以验证是否连接主机的网络。</p>
-<h2 id="查看虚拟机地址-虚拟机互相ping通"><a href="#查看虚拟机地址-虚拟机互相ping通" class="headerlink" title="查看虚拟机地址+虚拟机互相ping通"></a>查看虚拟机地址+虚拟机互相ping通</h2><p>在命令行输入<strong>ifconfig</strong>（注意不是ipconfig！很多教程都这么写，但现在没有这个指令）。</p>
+<p>我领了今年动画周翻译的活，准备负责五个片子的翻译工作。很巧的是这些片子的创作者来自五个不同的国家。有些片子有很长的对白，有些并没有。主办方要求尽量在国庆假期的最后一天之前翻译打轴完成，但我没有国庆假期。但现在学习生活的日程安排没有那么紧张，尚可一战。</p>
+<p>去年的这个时候，我接的是两个短片的翻译，出于不熟悉打轴软件与刚刚接触短片翻译、对自己的翻译不怎么有信心两个原因。今年突然狮子大开口，大概既有在新环境生活、想与过去建立某种连接，又有觉得自己目前的生活学习经历可以给翻译提供帮助两个原因。</p>
+<p>不过更重要也是更明显的是，我不再抗拒在日程表上添加待做事项了。宽裕的空闲时间中的一部分，被我用来推敲与培养一种灵活的时间管理方法，而这种时间管理方法成为了我日程安排的骨架，前一天推迟、新一天新出现或每日重复的待办事项如同肌肉被填充进去。这不再是一件会引起压力与恐慌的事，因为我知道任务完成的上限与下限，从而知道只要确保自己搭建的骨架不会崩溃这一下限，任何形式的放松与发呆都不会使生活失衡。</p>
+<p>在过去很长一段时间里，我会扔给自己一个模板，上面的孔洞不成人形。这是我定义的完美的样子，也是一个我无法长时间坚持下去的姿态。一旦我的姿势随着情绪、思想、身体与精神状态的变化而与模板产生偏差，我就会开始指责自己。这很无理取闹，但我大概在潜意识里认为，我对我自己的先行指责，可以减轻我所处的高压环境对我的指责。我成了我所处的环境的、离我最近的帮凶。但这个新的环境教会我一件很重要的事：要倾听需求，而不是去自定义它。休息与玩乐是一种正常的生理需求，解决它们只能用现下的行动，或是详细商讨后的未来安排。我几乎拿出规划正事的态度来规划休息时间，打算用这些精力浇筑起某种自尊。自己是不可以欺骗、亏待自己的。</p>
+<p>在这样的努力下，渐渐地我也有时间与力气走出自己的房间，为了不把房间外的世界当成无数个仅供作业、电影、游戏、睡眠使用的房间，而不抱有浪费时间的恐慌。因过去的经验告诉我，如果沉溺于这种恐慌之中，只会有更多的时间被浪费。我报名参加了很多我过去绝对不会想象自己参与其中的社交活动，让这些待办的印痕布满一整个十月的周末；我善待遇到的每一个人，将生活当成某个3A游戏的美好支线；我善待自己从超市精打细算地买回来的食材，将做饭看成一种与禅修类似的活动；我甚至某种程度上善待自己面前的课程知识点，不只是在临近考试时才与它们混个脸熟，甚至在理解之上尝试将新出现的知识赋予某种美感。</p>
+<p>于是我终于有余裕发问：如果我在进入过去的环境时已经掌握自我调节与规划的方法，那它们在我的眼中还会是如此不堪的样子吗？我发现我不能爽快地给出肯定答案。也许有一个平行时空的我，有或不必有足以抵御环境侵蚀的坚决、敢于与环境协商的胆量，并在最终，不用一遍遍地确认自己的伤疤，便足以让自己心安。我现在与这个环境有这样好的相性，这样的归属感充盈我内心，也有可能是现在的我更愿意将自己向世界敞开，而不是这个环境比我之前遇到的那些更愿意接纳我。</p>
+<p>不管怎样，我现在所经历的，都是我自己选择、自己尝试、自己珍惜的，自己的生命中最好的一段日子。我由衷为自己感到骄傲。</p>
+<h2 id="2025-10-3"><a href="#2025-10-3" class="headerlink" title="2025.10.3"></a>2025.10.3</h2><p>记录一下最近这个月想阅读、观看与游玩的：</p>
+<ol>
+<li><p>漫画</p>
 <ul>
-<li>下面的步骤用于下载对应包让ifconfig可用，需要虚拟机联网：</li>
+<li>金卡姆</li>
+<li>萩尾望都（长短篇）</li>
 </ul>
-<div class="highlight-container" data-rel="Cmd"><figure class="iseeu highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install <span class="built_in">net</span>-tools</span><br></pre></td></tr></table></figure></div>
+</li>
+<li><p>文字书</p>
+<ul>
+<li><p>四叠半神话大系</p>
+</li>
+<li><p>四畳半神話シリーズ</p>
+</li>
+<li><p>嫌われ松子の一生</p>
+</li>
+<li><p>本地作家的文学作品，与在书店拍摄的图片中的书</p>
+</li>
+</ul>
+</li>
+<li><p>游戏</p>
+<ul>
+<li><p>大逆转裁判</p>
+</li>
+<li><p>pentiment</p>
+</li>
+<li><p>奇异人生</p>
+</li>
+</ul>
+</li>
+<li><p>电视剧&#x2F;电影</p>
+<ul>
+<li>随便某部俄罗斯电视剧（？</li>
+</ul>
+</li>
+</ol>
+<p>但同时不要忘了这些任务：</p>
+<ol>
+<li><del>动画节的翻译</del></li>
+<li>学习三门课的内容</li>
+<li>提前练习写下学期python的代码</li>
+<li><del>每周记点什么东西</del></li>
+<li>每周出去不同的地方走走</li>
+<li>在这些之上，每天一定要在11点之前睡觉！！！</li>
+</ol>
+<h2 id="2025-10-12"><a href="#2025-10-12" class="headerlink" title="2025.10.12"></a>2025.10.12</h2><p>我写的大概比起文学意义上的文字，更像是生活意义上的文字。渐渐地接受了这一点。</p>
+<p>最近找到了一个很喜欢的作者的文字。并不紧迫，给人留下关于事物整体而非话语层面的印象。非要说有什么不好的话，就是对话太聪明了。两个聪明脑壳打架。</p>
+<p>昨天下午睡了很久，所以晚上没能在平时的点睡着。去了海边。海上的黑夜如同帷幕，星星很亮，那一刻我好像理解了地动里面为什么奥科吉害怕星星。以人类个体的视野、甚至群体的历史为喻，星星大概算是偶尔灵光一现的瞬间，而除此之外的黑夜，则更为混沌、宏大、广袤或令人沮丧。虽然明白我们同处一个宇宙之中，但星星对待人类的凝视，总让人觉得是从某一带孔黑纸外投来的目光，其中的内容与其上的情感并非沉湎于个人悲欢的躯壳所能理解。</p>
+<p>在能看到银河的地方，仍在想着上岸的事情。这周前校突然发布对于动漫社团的胜利宣言，从几年前就开始从制度上瓦解这个曾为前校五星级社团的、有二十余年历史的社团，而最近终于是在社团招新时完全禁止场地中的所有动漫要素。每次看到这种消息都觉得，自己一定要在现在的土地上留下来，扎下根。不因为它的先进与发达，甚至相比起来也不太因为此地岗位相比我过去环境的竞争压力差。</p>
+<p>最重要的原因是，它对人的尊重。当然，我明白这里也有种族歧视、治安的问题，自然也会有此地特色的潜规则，我现在没有遇到对应的情形，完全可以解释为一种样本偏差。我也明白，我抱持的玫瑰色滤镜，有可能只是因为环境与文化因我初来乍到，对它们不熟悉而酿就的朦胧善意。但不论是出于何种作用，它给我带来的安心的方面简直足以让我开启一段崭新的人生，只要我一放下手机、断绝由信号进行联系的过去，如今的生活就会像仓鼠的后背一般，毛茸茸地蹭过我的手背。从社会环境上，那些我曾经憎恶、抓挠、甚至发展至躯体化的东西就得以消解，这是我在之前长达六七年的压抑中从未想过的事情。在重视自省的文化中长大——当然并没有贬低它的意思，正是自省让我在如今压力降低的环境中选择用柔软与坚定代替报复性的跋扈——我从未想过环境能对一个人这么重要。</p>
+<p>它知道不应剥离一个人的喜好来评判一个人；它也知道一个人的生活是这个人状态的肌肉，一个人的精神是状态的骨骼，而状态健康不能以只有骨架、没有肌肉的形式成立。这里没有快捷的外卖系统、害怕超时的外卖员，但给人自己做饭的时间。这里找工作不看重学业成绩，更看重在基础的努力之上，进行理解与讲述的沟通与交际，而用外语沟通正是我从未害怕、从来便有细细打磨的信心、如今也跃跃欲试的事情。也许这里有它独有的政治正确，但逛商业书店——甚至并非所谓更有格调的独立书店——时时常从选品切听这个社会的脉搏，与某些东西隐隐比较，进而感受到包容。</p>
+<p>我昨天做完了翻译，虽然因为怕赶不上工期，把其中的一部片子让渡给了有缘人。我最喜欢的一部、也是翻译与打轴工作量最大的一部片子由埃及的一对双胞胎兄弟导演而成。其中的哥哥本与弟弟一同入选德国某知名院校的导演专业，但在三年前因意外在入学前一个月离世，这部片子就是弟弟后来接力在今年完成、最终献给哥哥的。所以这部片子在介绍兄弟俩的童年之余，在一个相对保守的环境里宗教与科技的冲突之外，也有悼亡作与安魂曲的意味。</p>
+<p>这部片子的打轴与翻译工作花费了我一个上午与一个晚上。也因此，在这些时间里都被一种哀而不伤的氛围笼罩。翻译的时候时常想，大概也会有许多分支的自己，作为类似孪生的存在。这些生命的碎屑在不同国家、不同纬度、不同的文化区域合唱。</p>
+<p>也许我潜意识里甚至并不想与这些人分开。正像片子的最后几句台词，我翻译：“我记得很清楚，这就是你对我隐而不言的那个梦。我以为如果我不说出口，它就不会发生。”还是也许，这些由我的生命衍生出的可能现在正在我身上的某处，在意识的黑夜中凝视着我现在的生活，其中的内容与其上的情感并非沉湎于个人悲欢的躯壳所能理解。</p>
+<h2 id="2025-10-13"><a href="#2025-10-13" class="headerlink" title="2025.10.13"></a>2025.10.13</h2><p>渐渐觉得，我的文字不是、也不会是文学的文字，我不过、也不会过文字的生活。</p>
+<h2 id="2025-10-14"><a href="#2025-10-14" class="headerlink" title="2025.10.14"></a>2025.10.14</h2><p>今天尝试了：用新买的蚝油、黑椒酱来腌制鸡腿肉，然后再用微波炉直接加热来吃。十分美味！就是因为按照教程把盘子盖在碗上，所以碗里好像酱汁四溅；而且鸡肉还是切得不够小块，里面的部分仍没有味道。</p>
+<p>顺带一提，我给鸡腿去骨的技术日益高超，已经可以做到外围一整块全部切下来了！</p>
+<p>deepseek: 深言达意</p>
+<p>deepsleep：深眠达意</p>
+<h2 id="2025-10-16"><a href="#2025-10-16" class="headerlink" title="2025.10.16"></a>2025.10.16</h2><p>有点慌期中考试。但严格意义上说并不慌乱…只是确实有点紧张了，觉得目前的自己明显还没有准备好。</p>
+<p>不过我觉得我在宿舍还是学不下去。也许该找些图书馆之类的…在公共假期花两天每天去不同图书馆自习也不错….</p>
+<br>
 
-<p>可以通过ifconfig的结果看到查询结果：</p>
-<p><figure class="image-caption"><img lazyload src="/images/loading.svg" data-src="C:\Users\86150\AppData\Roaming\Typora\typora-user-images\image-20250807094309912.png" alt="image-20250807094309912"><figcaption>image-20250807094309912</figcaption></figure></p>
-<p>这里的inet（最开始打码的部分）就是此虚拟机的ip。将两台虚拟机都进行设置之后会得到两个不同IP，尝试同时开两台虚拟机，互相ping对方的ip。没有丢包就说明没问题。</p>
-<p>【看到还可以尝试两台虚拟机ping通且不联网，但我现在急着做别的没有管这个】</p>
-<p>参考文献：<a class="link" target="_blank" rel="noopener" href="https://blog.csdn.net/m0_56015193/article/details/134590283">Ubuntu 搭建OpenVPN服务器-CSDN博客 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<p><a class="link" target="_blank" rel="noopener" href="https://blog.csdn.net/A465366918/article/details/142877548">自己服务器上搭建虚拟专用网络(超级详细图文并茂,从安装到连接，PS：本文章仅作学术交流使用)_docker ipsec-CSDN博客 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<p>七天后期中考两门，有点焦虑。但今日精力值好像已经全部清零….</p>
+<h2 id="2025-10-21"><a href="#2025-10-21" class="headerlink" title="2025.10.21"></a>2025.10.21</h2><p>还有2天就有两门期中考试..还有6天就是一个项目的截止日期….必须得在现在开始把项目能做一点是一点，不然考完试完全没法玩…</p>
+<p>我还看到有个11.25截止投递的、可以报销很大一部分开销的去日本玩的项目。而且时间也对得上，刚好玩回来就开学了…我一定要好好准备材料争取到这个！</p>
+<p>今天第一次尝试在学校图书馆自习。虽然这里的图书馆是允许人们讲话的、与州立图书馆不同，但耳机里有自己放音乐，隔绝了外界的声音，就觉得还是可以接受。</p>
+<p>看课件的进度比我想得要慢。我感觉像是我没有找到很合适的学习方法，总是被sidetrack困住。</p>
+<br>
+
+<p>因为复习，在心态上感觉拒绝自己寻找机会认真写点什么东西。可能也是因此，感觉好像并没有发生什么很让人兴奋的事，像是每日份额的好事都被压制成了铺路板砖，供第二天的自己走在上面一样。每天都过得朦朦胧胧的。</p>
+<p>周末跟宿舍的人一起去本地的旅游区看了海边的雕塑展，海很漂亮很温柔。那种边角被漂浅至于青色的蓝色，甚至称得上是端庄</p>
+<p>会去州图书馆自习，因为那里有很大的天井，空间很大。幸好平时多少有认真学，帮大忙了…考试复习时的注意力一般都很差</p>
+<p>还有一个项目的截止日期是下周一。可能没法去很远的地方玩了</p>
+<p>每天都会用买回来的咖啡粉给自己冲咖啡喝。一勺咖啡粉用热水冲泡，半杯咖啡，半杯牛奶。然后一个下午或者一个上午不困，就这样出去做事或者跟朋友出去玩</p>
+<p>带了趴趴鹅一起去自习，虽然在州立图书馆，但好像并没有让它看太多除了电脑屏幕外的东西</p>
+<p>去了几次仍然没法记清楚路，感觉市区的街道像是被泡发的面条。内含八角，上覆奶油，还有淡淡的味增和香茅味道</p>
+<p>有看到去日本与寄宿家庭生活六天的机会，主要吸引人的是可以不用出机票、住宿、交通与项目的钱。打算认真申请一下，以碰运气的心态</p>
+<p>看到了葵花鹦鹉，与小狗一般大。发给欧姆，欧姆说这种鸟足够聪明，至于有垃圾堆强盗之名</p>
+<p>在能看到地标的山坡上躺着，附近有新人在拍婚纱照。有快艇路过，快艇上的人拿着大喇叭对着他们喊：”CONGRATULATIONS!!!”</p>
+<p>想去拍蓝花楹，但是没有找到恰当的时间与机位。打算考完了去友校看看</p>
+<p>每次坐轻轨都在看嫌われ松子の一生的文库本，现在已经看了上册的三分之一。好令人难过的故事。一位女性被杀害，骨灰被数十年没有联系的兄弟嫌弃地带在身旁，就连故事也被她的亲属以极不在意的态度叙述。唯一在意的人、感到悲伤的人，居然只是女性外甥的女朋友，一个家族上的外人…</p>
+<p>去了市区很多次。去天文台山上看日落，去码头拍晚霞，去地标附近的植物园里的草坪上躺着，跟朋友一起去政府旧时所在地听爵士乐</p>
+<p>下雨的那个下午，我醒来时以为是小推车的声音</p>
+<p>困得跟黑椒酱一般倒在床上。</p>
+<p>有时候会觉得，走出房间，我的生活才真正开始。从这个意义上，做饭与把学习场所移至房间外，像是一种生活的唤醒</p>
+<p>因为复习不太有心情去学做新的菜。打算这周天去学一下。</p>
+<p>越发觉得，所谓的才华不是指灵感的有无，而是指抓住灵感的能力。</p>
+<h2 id="2025-10-25"><a href="#2025-10-25" class="headerlink" title="2025.10.25"></a>2025.10.25</h2><p>想写一个角色。相信科学到了信仰科学的地步。</p>
+<h2 id="2025-10-27"><a href="#2025-10-27" class="headerlink" title="2025.10.27"></a>2025.10.27</h2><p>今天下午把项目的代码交上去之后，终于有空写点东西。</p>
+<p>过去的两周都很忙，也很充实。第一周在改翻译与准备期中考。第二周期中考完后，又接了新的打轴活。刚刚过去的两天，除了睡觉、做饭与一些走动的时间，基本都花费在代码上。真的跟学姐告诉我的一模一样。每次去州立图书馆自习的时候都会路过愈发盛放的蓝花楹，但是除了饭点都完全没有心情停下来观赏；舍友参加去海边游泳的活动回来，告诉我之前认识的新加坡朋友专门问我为什么没有参加，只剩下苦笑，用一种被捏住后颈提起、反复踢蹬的猫的心情…</p>
+<p>过去的这两周是混沌的、看不出经脉的，生活重体验而轻语言。不将其切开以供观赏，是因为其吸收了我的精力、思考与梦境，俨然是一只活物。语言如刀，而因为在日常中往往只用到刀背，渐渐也忘记亮出刀锋之必要。时刻被提醒刀与刀下之物以同样血肉组成，便也下不去手。不带评判目的的目光，让生活可恼地变得一团和气，但同时缺失的注意力一点点地累积起来，地中海海底盐层缓慢成形。</p>
+<p>唯一希望的，只是自己有一天不会因我的话不如它们“本该是的样子”那般光滑、柔顺而再不去写。即使是粗拙的素描也包含着对于描述这件事的欲望；每一句话语里都坐着眼睛。</p>
+<p>于是想到赫塔·米勒。作为非母语人在德国生活、写作，她将一种语言的表达比作货币，储量影响自己可以“购买”的意义。在来到此地之后我才明白她所记述的东西的含义：随身钱包里的词汇与表达骤减，只能用粗线条的词来拟合自己需要传递的意义，未尝不是一种消费降级。我无法对同在海边漫步的韩国朋友讲清海在自己生命中扮演的角色，也无法在因为聊着手写汉字而顺便开启高考语文作文字数话题的场合，向热情的柬埔寨朋友解释，高考对我来说究竟是怎么一回事。</p>
+<p>这些生命中不可剥离的血液与伤疤，于我的语言表达水平、于浅而流动的社交方式而言都不合时宜，在对话中是隐式的，于是在生活中也变得模糊不清；在平淡忙碌的现实面前，无论如何滋味的回忆，只要需要语言细致雕琢、抛光，都无一例外被约束在高层的储物柜中，钥匙的名字是“总有一天”。我以类似寿沙都的形象在朋友们面前出现：与他人共享的情绪总有理智的支撑，将朋友们的话语陈列在新购置的毛绒坐垫上。怎么看，我现在都更像一个大人，而不是努力穿起大人皮囊的小孩子。</p>
+<p>我活成了过去的我的梦境，那种凝聚性的、温和的、没有明确边界与指向性的存在。</p>
+<h2 id="2025-10-29"><a href="#2025-10-29" class="headerlink" title="2025.10.29"></a>2025.10.29</h2><p>记录下想写的东西：</p>
+<ul>
+<li>海<ul>
+<li>并不会觉得它是一个多宏伟的景观。</li>
+<li>小时候跟父亲在湖里游泳，我们说，要游到湖对面去。站在海边时想，也许没有一个经常在海里的孩子，会有类似的想法吧</li>
+<li>从生活在有湖泊的城市，到生活在海边的城市。生命本来与水有关。在被提高海拔时，总觉得有些难过。总想着往下流</li>
+</ul>
+</li>
+<li>高中语文老师</li>
+</ul>
 
             </div>
 
@@ -523,16 +588,16 @@
                 <div class="post-copyright-info">
                     <div class="article-copyright-info-container">
     <ul>
-        <li><strong>標題:</strong> 从零开始搭建VPN实录</li>
+        <li><strong>標題:</strong> 当小鹅尝试敲击键盘|2025.10</li>
         <li><strong>作者:</strong> morimori0401</li>
-        <li><strong>撰寫于:</strong> 2025-08-06 12:51:59</li>
+        <li><strong>撰寫于:</strong> 2025-10-02 20:26:10</li>
         
             <li>
-                <strong>更新于:</strong> 2025-08-10 22:58:30
+                <strong>更新于:</strong> 2025-11-01 09:58:27
             </li>
         
         <li>
-            <strong>連結:</strong> https://morimori0401.github.io/2025/08/06/从零开始搭建VPN实录/
+            <strong>連結:</strong> https://morimori0401.github.io/2025/10/02/当小鹅尝试敲击键盘2025.10/
         </li>
         <li>
             <strong>版權宣告:</strong> 本作品采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0</a> 进行许可。
@@ -547,7 +612,7 @@
                 <ul class="post-tags-box">
                     
                         <li class="tag-item">
-                            <a href="/tags/tech/">#tech</a>&nbsp;
+                            <a href="/tags/%E5%9C%A8%E5%A4%A7%E5%AE%B6%E9%9D%A2%E5%89%8D%E6%88%91%E5%86%99%E7%9A%84%E5%8F%AA%E6%98%AF%E5%B0%8F%E9%B9%85%E8%80%8C%E5%B7%B2/">#在大家面前我写的只是小鹅而已</a>&nbsp;
                         </li>
                     
                 </ul>
@@ -561,13 +626,13 @@
                         <div class="article-prev">
                             <a class="prev"
                             rel="prev"
-                            href="/2025/08/17/%E5%BD%93%E5%B0%8F%E9%B9%85%E5%B0%9D%E8%AF%95%E6%95%B2%E5%87%BB%E9%94%AE%E7%9B%982025.8/"
+                            href="/2025/11/01/%E5%BD%93%E5%B0%8F%E9%B9%85%E5%B0%9D%E8%AF%95%E6%95%B2%E5%87%BB%E9%94%AE%E7%9B%982025.11/"
                             >
                                 <span class="left arrow-icon flex-center">
                                     <i class="fa-solid fa-chevron-left"></i>
                                 </span>
                                 <span class="title flex-center">
-                                    <span class="post-nav-title-item">当小鹅尝试敲击键盘|2025.8</span>
+                                    <span class="post-nav-title-item">当小鹅尝试敲击键盘|2025.11</span>
                                     <span class="post-nav-item">上一篇</span>
                                 </span>
                             </a>
@@ -577,10 +642,10 @@
                         <div class="article-next">
                             <a class="next"
                             rel="next"
-                            href="/2025/07/27/%E7%AA%81%E7%84%B6%E6%83%B3%E8%B5%B7%E7%9A%84%E8%B4%B5%E5%B7%9E%E7%BE%8E%E9%A3%9F%E6%95%B4%E7%90%86/"
+                            href="/2025/09/01/%E5%BD%93%E5%B0%8F%E9%B9%85%E5%B0%9D%E8%AF%95%E6%95%B2%E5%87%BB%E9%94%AE%E7%9B%982025.9/"
                             >
                                 <span class="title flex-center">
-                                    <span class="post-nav-title-item">突然想起的贵州美食整理</span>
+                                    <span class="post-nav-title-item">当小鹅尝试敲击键盘|2025.9</span>
                                     <span class="post-nav-item">下一篇</span>
                                 </span>
                                 <span class="right arrow-icon flex-center">
@@ -601,8 +666,8 @@
                 <div class="post-toc-wrap">
     <div class="post-toc">
         <div class="toc-title">此頁目錄</div>
-        <div class="page-title">从零开始搭建VPN实录</div>
-        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%86%99%E5%9C%A8%E5%89%8D%E9%9D%A2"><span class="nav-number">1.</span> <span class="nav-text">写在前面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%A6%82%E4%BD%95%E8%81%94%E7%BD%91%EF%BC%9F"><span class="nav-number">2.</span> <span class="nav-text">虚拟机如何联网？</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A1%A5%E6%8E%A5%E6%A8%A1%E5%BC%8F%EF%BC%88Bridged%EF%BC%89"><span class="nav-number">2.1.</span> <span class="nav-text">桥接模式（Bridged）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BD%91%E7%BB%9C%E8%BD%AC%E6%8D%A2%E6%A8%A1%E5%BC%8F%EF%BC%88NAT%EF%BC%89"><span class="nav-number">2.2.</span> <span class="nav-text">网络转换模式（NAT）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%85%E4%B8%BB%E6%9C%BA%E6%A8%A1%E5%BC%8F%EF%BC%88Host-Only%EF%BC%89"><span class="nav-number">2.3.</span> <span class="nav-text">仅主机模式（Host-Only）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9F%A5%E7%9C%8B%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%9C%B0%E5%9D%80-%E8%99%9A%E6%8B%9F%E6%9C%BA%E4%BA%92%E7%9B%B8ping%E9%80%9A"><span class="nav-number">3.</span> <span class="nav-text">查看虚拟机地址+虚拟机互相ping通</span></a></li></ol>
+        <div class="page-title">当小鹅尝试敲击键盘|2025.10</div>
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#2025-10-2"><span class="nav-number">1.</span> <span class="nav-text">2025.10.2</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2025-10-3"><span class="nav-number">2.</span> <span class="nav-text">2025.10.3</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2025-10-12"><span class="nav-number">3.</span> <span class="nav-text">2025.10.12</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2025-10-13"><span class="nav-number">4.</span> <span class="nav-text">2025.10.13</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2025-10-14"><span class="nav-number">5.</span> <span class="nav-text">2025.10.14</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2025-10-16"><span class="nav-number">6.</span> <span class="nav-text">2025.10.16</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2025-10-21"><span class="nav-number">7.</span> <span class="nav-text">2025.10.21</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2025-10-25"><span class="nav-number">8.</span> <span class="nav-text">2025.10.25</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2025-10-27"><span class="nav-number">9.</span> <span class="nav-text">2025.10.27</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2025-10-29"><span class="nav-number">10.</span> <span class="nav-text">2025.10.29</span></a></li></ol>
 
     </div>
 </div>
