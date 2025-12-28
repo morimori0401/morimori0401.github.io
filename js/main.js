@@ -74,3 +74,39 @@ window.addEventListener('DOMContentLoaded', () => {
   Global.printThemeInfo();
   Global.refresh();
 });
+
+// fireworks
+document.addEventListener("click", e => {
+  const count = 12;
+  const colors = ["#f7c0c1ff", "#f3ba75ff", "#40a9ff", "#73d13d", "#9254de"];
+
+  for (let i = 0; i < count; i++) {
+    const p = document.createElement("span");
+    p.style.position = "fixed";
+    p.style.left = e.clientX + "px";
+    p.style.top = e.clientY + "px";
+    p.style.width = "6px";
+    p.style.height = "6px";
+    p.style.borderRadius = "50%";
+    p.style.background = colors[Math.floor(Math.random() * colors.length)];
+    p.style.pointerEvents = "none";
+    p.style.zIndex = 9999;
+
+    const angle = (Math.PI * 2 * i) / count;
+    const distance = Math.random() * 80 + 20;
+
+    p.animate(
+      [
+        { transform: "translate(0, 0)", opacity: 1 },
+        {
+          transform: `translate(${Math.cos(angle) * distance}px, ${Math.sin(angle) * distance}px)`,
+          opacity: 0
+        }
+      ],
+      { duration: 700, easing: "ease-out" }
+    );
+
+    document.body.appendChild(p);
+    setTimeout(() => p.remove(), 700);
+  }
+});
