@@ -20,7 +20,9 @@
       curr = curr.substring(end + 2);
     }
     result += curr;
-    return result;
+
+    // 将文本中的换行符转换成 HTML 的换行标签 <br>
+    return result.replace(/\n/g, '<br>');
   }
 
   function renderStars(rating) {
@@ -30,6 +32,33 @@
 
     var score = Math.min(5, Math.max(0, Math.round(num / 2)));
     return '★'.repeat(score) + '☆'.repeat(5 - score) + ' (' + num + '分)';
+  }
+
+  // 提取评语的通用辅助函数（兼容多种 NeoDB JSON 导出格式）
+  function extractComment(item) {
+    if (!item) return '';
+
+    // 1. 优先尝试短评
+    if (item.comment && typeof item.comment === 'string' && item.comment.trim() !== '') {
+      return item.comment;
+    }
+
+    // 2. 尝试长评的各种可能字段与嵌套层级
+    if (typeof item.review === 'string' && item.review.trim() !== '') {
+      return item.review;
+    }
+    if (item.review && typeof item.review === 'object') {
+      if (item.review.content) return item.review.content;
+      if (item.review.body) return item.review.body;
+      if (item.review.text) return item.review.text;
+    }
+
+    if (item.review_body) return item.review_body;
+    if (item.review_content) return item.review_content;
+    if (item.review_text) return item.review_text;
+    if (item.description) return item.description;
+
+    return '';
   }
 
   function initNeoDB() {
@@ -73,7 +102,7 @@
         if (sidebarTimeline) sidebarTimeline.innerHTML = '';
 
         var timelineMap = {};
-        var createdMonthIds = {}; // 记录哪些月份的锚点已经创建
+        var createdMonthIds = {};
 
         items.forEach(function(item) {
           var dateStr = item.created_time || '';
@@ -99,9 +128,8 @@
           gItem.target = '_blank';
           gItem.title = (item.title || '') + ' (' + dateStr + ')';
 
-          // 如果这个月份在瀑布流中还没有锚点，给第一个遇到的元素分配 ID
           if (yearMonth !== '其他' && !createdMonthIds['grid-' + yearMonth]) {
-            gItem.id = 'sec-' + yearMonth; // 在瀑布流视图下提供跳转目标
+            gItem.id = 'sec-' + yearMonth;
             createdMonthIds['grid-' + yearMonth] = true;
           }
 
@@ -131,9 +159,7 @@
           var fItem = document.createElement('div');
           fItem.className = 'feed-card';
 
-          // 如果这个月份在动态视图中还没有锚点，给第一个遇到的元素分配同一个 ID 基础
           if (yearMonth !== '其他' && !createdMonthIds['feed-' + yearMonth]) {
-            // 如果是在动态视图下，赋予锚点；如果当前处于瀑布流视图，浏览器会自动滚动到上面的 gItem 锚点
             if (!gItem.id) {
               fItem.id = 'sec-' + yearMonth;
             }
@@ -169,7 +195,10 @@
             infoDiv.appendChild(ratingDiv);
           }
 
-          var parsedComment = parseSpoilers(item.comment);
+          // 逻辑优化：优先使用短评，无短评则使用长评（兼容 review / review_body 等常见字段）
+          var rawComment = extractComment(item);
+          var parsedComment = parseSpoilers(rawComment);
+
           var commentDiv = document.createElement('div');
           commentDiv.className = 'feed-comment';
           if (parsedComment) {
