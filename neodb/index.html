@@ -18,20 +18,17 @@
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     
-        <meta name="description" content=".neodb-switch { display: flex; gap: 10px; margin-bottom: 20px; } .neodb-btn { padding: 8px 16px; border: 1px solid var(--primary-color, #A31F34); border-radius: 8px; cursor: pointer; background: tran">
+        <meta name="description" content=".neodb-wrapper { display: flex; gap: 24px; position: relative; margin-top: 10px; } .neodb-sidebar { width: 140px; flex-shrink: 0; position: sticky; top: 80px; max-height: calc(100vh - 100px); overflo">
 <meta property="og:type" content="website">
 <meta property="og:title" content="书影音动态">
 <meta property="og:url" content="https://morimori0401.github.io/neodb/index.html">
 <meta property="og:site_name" content="梦的化石与现实记录">
-<meta property="og:description" content=".neodb-switch { display: flex; gap: 10px; margin-bottom: 20px; } .neodb-btn { padding: 8px 16px; border: 1px solid var(--primary-color, #A31F34); border-radius: 8px; cursor: pointer; background: tran">
+<meta property="og:description" content=".neodb-wrapper { display: flex; gap: 24px; position: relative; margin-top: 10px; } .neodb-sidebar { width: 140px; flex-shrink: 0; position: sticky; top: 80px; max-height: calc(100vh - 100px); overflo">
 <meta property="og:locale">
-<meta property="og:image" content="https://morimori0401.github.io/neodb/$%7Bitem.cover%7D">
-<meta property="og:image" content="https://morimori0401.github.io/neodb/$%7Bitem.cover%7D">
 <meta property="article:published_time" content="2026-08-27T06:17:29.000Z">
-<meta property="article:modified_time" content="2026-08-27T09:17:00.111Z">
+<meta property="article:modified_time" content="2026-08-27T10:39:23.210Z">
 <meta property="article:author" content="morimori">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://morimori0401.github.io/neodb/$%7Bitem.cover%7D">
     
     
     <!--- Icon Part-->
@@ -149,7 +146,7 @@
                                         
                                             <i class="fa-solid fa-house"></i>
                                         
-                                        首页
+                                        HOME
                                     
                                 </a>
                                 <!-- Submenu -->
@@ -165,7 +162,7 @@
                                         
                                             <i class="fa-brands fa-docker"></i>
                                         
-                                        归档
+                                        ARCHIVES
                                     
                                 </a>
                                 <!-- Submenu -->
@@ -181,7 +178,7 @@
                                         
                                             <i class="fa-solid fa-sparkles"></i>
                                         
-                                        关于&nbsp;<i class="fa-solid fa-chevron-down"></i>
+                                        ABOUT&nbsp;<i class="fa-solid fa-chevron-down"></i>
                                     
                                 </a>
                                 <!-- Submenu -->
@@ -211,7 +208,7 @@
                                         
                                             <i class="fa-solid fa-rabbit"></i>
                                         
-                                        友情链接
+                                        FRIENDS
                                     
                                 </a>
                                 <!-- Submenu -->
@@ -311,7 +308,7 @@
                                 
                                     <i class="fa-solid fa-house"></i>
                                 
-                                首页
+                                HOME
                             
                         </a>
                     </li>
@@ -326,7 +323,7 @@
                                 
                                     <i class="fa-brands fa-docker"></i>
                                 
-                                归档
+                                ARCHIVES
                             
                         </a>
                     </li>
@@ -341,7 +338,7 @@
                                 
                                     <i class="fa-solid fa-sparkles"></i>
                                 
-                                关于&nbsp;<i class="fa-solid fa-chevron-down"></i>
+                                ABOUT&nbsp;<i class="fa-solid fa-chevron-down"></i>
                             
                         </a>
                     </li>
@@ -366,7 +363,7 @@
                                 
                                     <i class="fa-solid fa-rabbit"></i>
                                 
-                                友情链接
+                                FRIENDS
                             
                         </a>
                     </li>
@@ -454,197 +451,63 @@
         <div class="page-template-content markdown-body">
             
                 <style>
+.neodb-wrapper { display: flex; gap: 24px; position: relative; margin-top: 10px; }
+.neodb-sidebar { width: 140px; flex-shrink: 0; position: sticky; top: 80px; max-height: calc(100vh - 100px); overflow-y: auto; border-right: 2px solid rgba(0,0,0,0.06); padding-right: 12px; }
+.archive-year { font-weight: bold; font-size: 1.1rem; margin-top: 12px; color: var(--text-color, #333); }
+.archive-month-list { list-style: none; padding-left: 12px; margin: 6px 0; }
+.archive-month-item { margin: 4px 0; font-size: 0.9rem; }
+.archive-month-item a { color: #666; text-decoration: none; transition: color 0.2s; }
+.archive-month-item a:hover { color: var(--primary-color, #A31F34); font-weight: bold; }
+
+.neodb-main { flex: 1; min-width: 0; }
 .neodb-switch { display: flex; gap: 10px; margin-bottom: 20px; }
 .neodb-btn { padding: 8px 16px; border: 1px solid var(--primary-color, #A31F34); border-radius: 8px; cursor: pointer; background: transparent; color: var(--text-color, #333); font-weight: bold; }
 .neodb-btn.active { background: var(--primary-color, #A31F34); color: #fff; }
 
-/* 瀑布流海报视图 */
-.view-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 16px; }
-.grid-card { 
-  display: block; 
-  position: relative; 
-  border-radius: 8px; 
-  overflow: hidden; 
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1); 
-  aspect-ratio: 2/3; 
-  background: #f0f0f0; 
-  text-decoration: none;
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-.grid-card:hover { transform: translateY(-4px); box-shadow: 0 6px 16px rgba(0,0,0,0.15); }
-.grid-card img { width: 100%; height: 100%; object-fit: cover; display: block; border: 0; }
-.grid-card .title-fallback { 
-  position: absolute; 
-  inset: 0; 
-  display: flex; 
-  align-items: center; 
-  justify-content: center; 
-  padding: 10px; 
-  text-align: center; 
-  font-size: 0.85rem; 
-  color: #555; 
-  font-weight: bold;
-  background: #e9ecef;
-}
+.view-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 16px; }
+.grid-card { display: block; position: relative; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.08); aspect-ratio: 2/3; background: #eee; text-decoration: none; transition: transform 0.2s; }
+.grid-card:hover { transform: translateY(-4px); }
+.grid-card img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.grid-card .title-fallback { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; padding: 8px; text-align: center; font-size: 0.85rem; color: #555; background: #e9ecef; }
 
-/* 动态详情视图 */
 .view-feed { display: flex; flex-direction: column; gap: 16px; }
-.feed-card { 
-  display: flex; 
-  gap: 16px; 
-  border: 1px solid rgba(0,0,0,0.08); 
-  border-radius: 12px; 
-  padding: 16px; 
-  background: var(--card-bg, #fff); 
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04); 
-}
-.feed-cover { width: 70px; height: 105px; flex-shrink: 0; border-radius: 6px; overflow: hidden; background: #eee; }
+.feed-card { display: flex; gap: 16px; border: 1px solid rgba(0,0,0,0.08); border-radius: 12px; padding: 16px; background: var(--card-bg, #fff); box-shadow: 0 2px 8px rgba(0,0,0,0.04); }
+.feed-cover { width: 80px; height: 120px; flex-shrink: 0; border-radius: 6px; overflow: hidden; background: #eee; }
 .feed-cover img { width: 100%; height: 100%; object-fit: cover; }
-.feed-info { flex: 1; display: flex; flex-direction: column; justify-content: center; }
-.feed-title { font-weight: bold; font-size: 1.1rem; margin-bottom: 6px; }
+.feed-info { flex: 1; }
+.feed-header { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; margin-bottom: 6px; }
+.feed-title { font-weight: bold; font-size: 1.15rem; }
 .feed-title a { color: var(--primary-color, #A31F34); text-decoration: none; }
-.feed-rating { color: #ff9800; font-size: 0.95rem; margin-bottom: 8px; }
-.feed-comment { 
-  font-size: 0.95rem; 
-  color: #444; 
-  background: rgba(0,0,0,0.03); 
-  padding: 10px 12px; 
-  border-radius: 8px; 
-  line-height: 1.5; 
-  border-left: 3px solid var(--primary-color, #A31F34);
-}
+.feed-date { font-size: 0.85rem; color: #888; font-weight: normal; }
+.feed-rating { color: #ff9800; font-size: 0.9rem; margin-bottom: 8px; }
+.feed-comment { font-size: 0.95rem; color: #444; background: rgba(0,0,0,0.03); padding: 10px 12px; border-radius: 8px; line-height: 1.6; border-left: 3px solid var(--primary-color, #A31F34); }
 
-.loading-tip { text-align: center; padding: 40px; color: #888; font-size: 1rem; }
+.spoiler { background-color: #333; color: transparent; filter: blur(4px); cursor: pointer; transition: all 0.3s ease; user-select: none; padding: 0 2px; border-radius: 4px; }
+.spoiler:hover, .spoiler.revealed { background-color: transparent; color: inherit; filter: blur(0); user-select: text; }
+
+@media (max-width: 768px) {
+  .neodb-wrapper { flex-direction: column; }
+  .neodb-sidebar { width: 100%; position: static; max-height: none; border-right: none; border-bottom: 1px solid #eee; padding-bottom: 12px; }
+}
 </style>
 
-<div class="neodb-switch">
-  <button id="btn-grid" class="neodb-btn active" type="button">瀑布流视图</button>
-  <button id="btn-feed" class="neodb-btn" type="button">动态详情视图</button>
+<div class="neodb-wrapper">
+  <div class="neodb-sidebar">
+    <div style="font-weight:bold;margin-bottom:8px;">归档时间轴</div>
+    <div id="sidebar-timeline"></div>
+  </div>
+  <div class="neodb-main">
+    <div class="neodb-switch">
+      <button id="btn-grid" class="neodb-btn active" type="button">瀑布流视图</button>
+      <button id="btn-feed" class="neodb-btn" type="button">动态详情视图</button>
+    </div>
+    <div id="neodb-loading" style="text-align:center;padding:40px;color:#888;">正在载入书影音全量数据...</div>
+    <div id="grid-view" class="view-grid"></div>
+    <div id="feed-view" class="view-feed" style="display: none;"></div>
+  </div>
 </div>
 
-<div id="neodb-loading" class="loading-tip">正在载入书影音全量数据...</div>
-
-<div id="neodb-container">
-  <div id="grid-view" class="view-grid"></div>
-  <div id="feed-view" class="view-feed" style="display: none;"></div>
-</div>
-
-<script>
-(function() {
-  function renderStars(rating) {
-    if (!rating) return '';
-    // 如果 rating 是 10 分制转化为 5 星
-    const score = rating > 5 ? Math.round(rating / 2) : Math.round(rating);
-    return '★'.repeat(score) + '☆'.repeat(5 - score) + ` (${rating}分)`;
-  }
-
-  function bindViewSwitch() {
-    const btnGrid = document.getElementById('btn-grid');
-    const btnFeed = document.getElementById('btn-feed');
-    const gridView = document.getElementById('grid-view');
-    const feedView = document.getElementById('feed-view');
-
-    if (btnGrid && btnFeed) {
-      btnGrid.onclick = function() {
-        gridView.style.display = 'grid';
-        feedView.style.display = 'none';
-        btnGrid.classList.add('active');
-        btnFeed.classList.remove('active');
-      };
-      btnFeed.onclick = function() {
-        gridView.style.display = 'none';
-        feedView.style.display = 'flex';
-        btnFeed.classList.add('active');
-        btnGrid.classList.remove('active');
-      };
-    }
-  }
-
-  async function fetchNeoDBData() {
-    const loading = document.getElementById('neodb-loading');
-    const gridContainer = document.getElementById('grid-view');
-    const feedContainer = document.getElementById('feed-view');
-
-    if (!loading || !gridContainer || !feedContainer) return;
-    
-    try {
-      const res = await fetch('/neodb_data.json');
-      if (!res.ok) throw new Error(`HTTP ${res.status}`);
-      
-      const items = await res.json();
-    
-      if (!items || items.length === 0) {
-        loading.innerText = '暂无已标记的书影音';
-        return;
-      }
-    
-      loading.style.display = 'none';
-      gridContainer.innerHTML = '';
-      feedContainer.innerHTML = '';
-    
-      items.forEach(item => {
-        // 1. 渲染瀑布流卡片
-        const gItem = document.createElement('a');
-        gItem.className = 'grid-card';
-        gItem.href = item.link;
-        gItem.target = '_blank';
-        gItem.title = item.title;
-    
-        if (item.cover) {
-          gItem.innerHTML = `<figure class="image-caption"><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="${item.cover}"
-                      alt="${item.title}" loading="lazy" onerror="this.onerror=null;this.parentElement.innerHTML='<div class=\\'title-fallback\\'
-                ><figcaption>${item.title}</figcaption></figure>${item.title}</div>';">`;
-        } else {
-          gItem.innerHTML = `<div class="title-fallback">${item.title}</div>`;
-        }
-        gridContainer.appendChild(gItem);
-    
-        // 2. 渲染动态详情卡片（作品信息 + 评分 + 评语）
-        const fItem = document.createElement('div');
-        fItem.className = 'feed-card';
-        
-        const starsHtml = item.rating ? `<div class="feed-rating">${renderStars(item.rating)}</div>` : '';
-        const commentHtml = item.comment ? `<div class="feed-comment">${item.comment}</div>` : '<div class="feed-comment" style="color:#999;font-style:italic;">暂无文字评语</div>';
-        const coverHtml = item.cover ? `<div class="feed-cover"><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="${item.cover}"
-                      loading="lazy"
-                ></div>` : '';
-    
-        fItem.innerHTML = `
-          ${coverHtml}
-          <div class="feed-info">
-            <div class="feed-title"><a href="${item.link}" target="_blank">${item.title}</a></div>
-            ${starsHtml}
-            ${commentHtml}
-          </div>
-        `;
-        feedContainer.appendChild(fItem);
-      });
-    
-    } catch (err) {
-      console.error('加载本地 JSON 失败:', err);
-      if (loading) loading.innerText = '数据载入失败，请检查构建日志';
-    }
-  }
-
-  function init() {
-    bindViewSwitch();
-    fetchNeoDBData();
-  }
-
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', init);
-  } else {
-    init();
-  }
-  document.addEventListener('pjax:complete', init);
-})();
-</script>
+<script src="/js/neodb.js"></script>
 
             
         </div>
@@ -682,9 +545,9 @@
             </div>
         
         <div class="theme-info info-item">
-            <span class="powered-by-container">由 <?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1rem" height="1rem" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path fill="#0E83CD" d="M256.4,25.8l-200,115.5L56,371.5l199.6,114.7l200-115.5l0.4-230.2L256.4,25.8z M349,354.6l-18.4,10.7l-18.6-11V275H200v79.6l-18.4,10.7l-18.6-11v-197l18.5-10.6l18.5,10.8V237h112v-79.6l18.5-10.6l18.5,10.8V354.6z"/></svg><a target="_blank" href="https://hexo.io">Hexo</a> 驱动</span>
+            <span class="powered-by-container">POWERED BY <?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1rem" height="1rem" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path fill="#0E83CD" d="M256.4,25.8l-200,115.5L56,371.5l199.6,114.7l200-115.5l0.4-230.2L256.4,25.8z M349,354.6l-18.4,10.7l-18.6-11V275H200v79.6l-18.4,10.7l-18.6-11v-197l18.5-10.6l18.5,10.8V237h112v-79.6l18.5-10.6l18.5,10.8V354.6z"/></svg><a target="_blank" href="https://hexo.io">Hexo</a></span>
                 <br>
-            <span class="theme-version-container">主题&nbsp;<a class="theme-version" target="_blank" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine v2.2.1</a>
+            <span class="theme-version-container">THEME&nbsp;<a class="theme-version" target="_blank" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine v2.2.1</a>
         </div>
         
         
@@ -768,7 +631,7 @@
                 <input autocomplete="off"
                        autocorrect="off"
                        autocapitalize="off"
-                       placeholder="搜索..."
+                       placeholder="Search..."
                        spellcheck="false"
                        type="search"
                        class="search-input"
