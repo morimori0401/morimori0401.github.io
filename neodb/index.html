@@ -18,19 +18,20 @@
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     
-        <meta name="description" content=".neodb-switch { display: flex; gap: 10px; margin-bottom: 20px; } .neodb-btn { padding: 8px 16px; border: 1px solid var(--primary-color); border-radius: 8px; cursor: pointer; background: transparent;">
+        <meta name="description" content=".neodb-switch { display: flex; gap: 10px; margin-bottom: 20px; } .neodb-btn { padding: 8px 16px; border: 1px solid var(--primary-color, #A31F34); border-radius: 8px; cursor: pointer; background: tran">
 <meta property="og:type" content="website">
 <meta property="og:title" content="书影音动态">
 <meta property="og:url" content="https://morimori0401.github.io/neodb/index.html">
 <meta property="og:site_name" content="梦的化石与现实记录">
-<meta property="og:description" content=".neodb-switch { display: flex; gap: 10px; margin-bottom: 20px; } .neodb-btn { padding: 8px 16px; border: 1px solid var(--primary-color); border-radius: 8px; cursor: pointer; background: transparent;">
+<meta property="og:description" content=".neodb-switch { display: flex; gap: 10px; margin-bottom: 20px; } .neodb-btn { padding: 8px 16px; border: 1px solid var(--primary-color, #A31F34); border-radius: 8px; cursor: pointer; background: tran">
 <meta property="og:locale">
-<meta property="og:image" content="https://morimori0401.github.io/neodb/$%7BimgSrc%7D">
+<meta property="og:image" content="https://morimori0401.github.io/neodb/$%7Bitem.cover%7D">
+<meta property="og:image" content="https://morimori0401.github.io/neodb/$%7Bitem.cover%7D">
 <meta property="article:published_time" content="2026-08-27T06:17:29.000Z">
-<meta property="article:modified_time" content="2026-08-27T06:32:59.980Z">
+<meta property="article:modified_time" content="2026-08-27T09:17:00.111Z">
 <meta property="article:author" content="morimori">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://morimori0401.github.io/neodb/$%7BimgSrc%7D">
+<meta name="twitter:image" content="https://morimori0401.github.io/neodb/$%7Bitem.cover%7D">
     
     
     <!--- Icon Part-->
@@ -454,33 +455,74 @@
             
                 <style>
 .neodb-switch { display: flex; gap: 10px; margin-bottom: 20px; }
-.neodb-btn { padding: 8px 16px; border: 1px solid var(--primary-color); border-radius: 8px; cursor: pointer; background: transparent; color: var(--text-color); }
-.neodb-btn.active { background: var(--primary-color); color: #fff; }
+.neodb-btn { padding: 8px 16px; border: 1px solid var(--primary-color, #A31F34); border-radius: 8px; cursor: pointer; background: transparent; color: var(--text-color, #333); font-weight: bold; }
+.neodb-btn.active { background: var(--primary-color, #A31F34); color: #fff; }
 
-/* 视图1：瀑布流 */
-.view-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 15px; }
-.grid-item { border-radius: 8px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.15); transition: transform 0.2s; aspect-ratio: 2/3; background: rgba(0,0,0,0.05); }
-.grid-item:hover { transform: translateY(-4px); }
-.grid-item img { width: 100%; height: 100%; object-fit: cover; display: block; }
+/* 瀑布流海报视图 */
+.view-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 16px; }
+.grid-card { 
+  display: block; 
+  position: relative; 
+  border-radius: 8px; 
+  overflow: hidden; 
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1); 
+  aspect-ratio: 2/3; 
+  background: #f0f0f0; 
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.grid-card:hover { transform: translateY(-4px); box-shadow: 0 6px 16px rgba(0,0,0,0.15); }
+.grid-card img { width: 100%; height: 100%; object-fit: cover; display: block; border: 0; }
+.grid-card .title-fallback { 
+  position: absolute; 
+  inset: 0; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  padding: 10px; 
+  text-align: center; 
+  font-size: 0.85rem; 
+  color: #555; 
+  font-weight: bold;
+  background: #e9ecef;
+}
 
-/* 视图2：动态卡片 */
-.view-feed { display: flex; flex-direction: column; gap: 20px; }
-.feed-card { border: 1px solid rgba(0,0,0,0.08); border-radius: 12px; padding: 16px; background: var(--background-color); box-shadow: 0 2px 8px rgba(0,0,0,0.04); }
-.feed-title { font-weight: bold; margin-bottom: 8px; color: var(--primary-color); }
-.feed-content { font-size: 0.95rem; line-height: 1.6; margin-bottom: 12px; }
+/* 动态详情视图 */
+.view-feed { display: flex; flex-direction: column; gap: 16px; }
+.feed-card { 
+  display: flex; 
+  gap: 16px; 
+  border: 1px solid rgba(0,0,0,0.08); 
+  border-radius: 12px; 
+  padding: 16px; 
+  background: var(--card-bg, #fff); 
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04); 
+}
+.feed-cover { width: 70px; height: 105px; flex-shrink: 0; border-radius: 6px; overflow: hidden; background: #eee; }
+.feed-cover img { width: 100%; height: 100%; object-fit: cover; }
+.feed-info { flex: 1; display: flex; flex-direction: column; justify-content: center; }
+.feed-title { font-weight: bold; font-size: 1.1rem; margin-bottom: 6px; }
+.feed-title a { color: var(--primary-color, #A31F34); text-decoration: none; }
+.feed-rating { color: #ff9800; font-size: 0.95rem; margin-bottom: 8px; }
+.feed-comment { 
+  font-size: 0.95rem; 
+  color: #444; 
+  background: rgba(0,0,0,0.03); 
+  padding: 10px 12px; 
+  border-radius: 8px; 
+  line-height: 1.5; 
+  border-left: 3px solid var(--primary-color, #A31F34);
+}
 
-/* 防剧透 (Spoiler) */
-details.spoiler { border: 1px solid rgba(0,0,0,0.1); border-radius: 6px; padding: 10px; margin-top: 8px; background: rgba(0,0,0,0.02); }
-details.spoiler summary { cursor: pointer; font-weight: bold; color: #888; }
-.loading-tip { text-align: center; padding: 30px; color: #888; }
+.loading-tip { text-align: center; padding: 40px; color: #888; font-size: 1rem; }
 </style>
 
 <div class="neodb-switch">
-  <button id="btn-grid" class="neodb-btn active" onclick="switchNeoDBView('grid')">瀑布流视图</button>
-  <button id="btn-feed" class="neodb-btn" onclick="switchNeoDBView('feed')">动态详情视图</button>
+  <button id="btn-grid" class="neodb-btn active" type="button">瀑布流视图</button>
+  <button id="btn-feed" class="neodb-btn" type="button">动态详情视图</button>
 </div>
 
-<div id="neodb-loading" class="loading-tip">正在调取 NeoDB 动态...</div>
+<div id="neodb-loading" class="loading-tip">正在载入书影音全量数据...</div>
 
 <div id="neodb-container">
   <div id="grid-view" class="view-grid"></div>
@@ -488,110 +530,120 @@ details.spoiler summary { cursor: pointer; font-weight: bold; color: #888; }
 </div>
 
 <script>
-function switchNeoDBView(type) {
-  const g = document.getElementById('grid-view');
-  const f = document.getElementById('feed-view');
-  const btnG = document.getElementById('btn-grid');
-  const btnF = document.getElementById('btn-feed');
-
-  if(type === 'grid') {
-    g.style.display = 'grid';
-    f.style.display = 'none';
-    btnG.classList.add('active');
-    btnF.classList.remove('active');
-  } else {
-    g.style.display = 'none';
-    f.style.display = 'flex';
-    btnF.classList.add('active');
-    btnG.classList.remove('active');
+(function() {
+  function renderStars(rating) {
+    if (!rating) return '';
+    // 如果 rating 是 10 分制转化为 5 星
+    const score = rating > 5 ? Math.round(rating / 2) : Math.round(rating);
+    return '★'.repeat(score) + '☆'.repeat(5 - score) + ` (${rating}分)`;
   }
-}
 
-async function initNeoDB() {
-  const rssUrl = 'https://neodb.social/users/porcelain_smile/rss';
-  const proxyUrl = `https://api.allorigins.win/get?url=${encodeURIComponent(rssUrl)}`;
+  function bindViewSwitch() {
+    const btnGrid = document.getElementById('btn-grid');
+    const btnFeed = document.getElementById('btn-feed');
+    const gridView = document.getElementById('grid-view');
+    const feedView = document.getElementById('feed-view');
 
-  try {
-    const res = await fetch(proxyUrl);
-    const data = await res.json();
-    const parser = new DOMParser();
-    const xml = parser.parseFromString(data.contents, "text/xml");
-    const items = xml.querySelectorAll("item");
+    if (btnGrid && btnFeed) {
+      btnGrid.onclick = function() {
+        gridView.style.display = 'grid';
+        feedView.style.display = 'none';
+        btnGrid.classList.add('active');
+        btnFeed.classList.remove('active');
+      };
+      btnFeed.onclick = function() {
+        gridView.style.display = 'none';
+        feedView.style.display = 'flex';
+        btnFeed.classList.add('active');
+        btnGrid.classList.remove('active');
+      };
+    }
+  }
 
+  async function fetchNeoDBData() {
+    const loading = document.getElementById('neodb-loading');
     const gridContainer = document.getElementById('grid-view');
     const feedContainer = document.getElementById('feed-view');
-    const loading = document.getElementById('neodb-loading');
+
+    if (!loading || !gridContainer || !feedContainer) return;
     
-    if (items.length === 0) {
-      loading.innerText = '暂无书影音动态';
-      return;
-    }
+    try {
+      const res = await fetch('/neodb_data.json');
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      
+      const items = await res.json();
     
-    loading.style.display = 'none';
-    gridContainer.innerHTML = '';
-    feedContainer.innerHTML = '';
+      if (!items || items.length === 0) {
+        loading.innerText = '暂无已标记的书影音';
+        return;
+      }
     
-    items.forEach(item => {
-      const title = item.querySelector("title")?.textContent || '';
-      const description = item.querySelector("description")?.textContent || '';
-      const link = item.querySelector("link")?.textContent || '#';
+      loading.style.display = 'none';
+      gridContainer.innerHTML = '';
+      feedContainer.innerHTML = '';
     
-      // 尝试提取 RSS HTML 中的封面图片
-      const doc = parser.parseFromString(description, 'text/html');
-      const imgTag = doc.querySelector("img");
-      const imgSrc = imgTag ? imgTag.getAttribute("src") : '';
-    
-      // 1. 渲染瀑布流
-      if (imgSrc) {
+      items.forEach(item => {
+        // 1. 渲染瀑布流卡片
         const gItem = document.createElement('a');
-        gItem.className = 'grid-item';
-        gItem.href = link;
+        gItem.className = 'grid-card';
+        gItem.href = item.link;
         gItem.target = '_blank';
-        gItem.innerHTML = `<img  
+        gItem.title = item.title;
+    
+        if (item.cover) {
+          gItem.innerHTML = `<figure class="image-caption"><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="${imgSrc}"
-                      title="${title}"
-                >`;
+                     data-src="${item.cover}"
+                      alt="${item.title}" loading="lazy" onerror="this.onerror=null;this.parentElement.innerHTML='<div class=\\'title-fallback\\'
+                ><figcaption>${item.title}</figcaption></figure>${item.title}</div>';">`;
+        } else {
+          gItem.innerHTML = `<div class="title-fallback">${item.title}</div>`;
+        }
         gridContainer.appendChild(gItem);
-      }
     
-      // 2. 渲染动态详情（含防剧透逻辑）
-      const fItem = document.createElement('div');
-      fItem.className = 'feed-card';
-      
-      let htmlContent = description;
-      // 检测是否带有剧透标记或转换 details 标签
-      if (description.includes("spoiler") || description.includes("剧透")) {
-        htmlContent = `
-          <details class="spoiler">
-            <summary>关于 ${title}，可能包含剧透或敏感内容</summary>
-            <div style="margin-top: 10px;">${description}</div>
-          </details>
+        // 2. 渲染动态详情卡片（作品信息 + 评分 + 评语）
+        const fItem = document.createElement('div');
+        fItem.className = 'feed-card';
+        
+        const starsHtml = item.rating ? `<div class="feed-rating">${renderStars(item.rating)}</div>` : '';
+        const commentHtml = item.comment ? `<div class="feed-comment">${item.comment}</div>` : '<div class="feed-comment" style="color:#999;font-style:italic;">暂无文字评语</div>';
+        const coverHtml = item.cover ? `<div class="feed-cover"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="${item.cover}"
+                      loading="lazy"
+                ></div>` : '';
+    
+        fItem.innerHTML = `
+          ${coverHtml}
+          <div class="feed-info">
+            <div class="feed-title"><a href="${item.link}" target="_blank">${item.title}</a></div>
+            ${starsHtml}
+            ${commentHtml}
+          </div>
         `;
-      }
+        feedContainer.appendChild(fItem);
+      });
     
-      fItem.innerHTML = `
-        <div class="feed-title"><a href="${link}" target="_blank" style="color: inherit;">${title}</a></div>
-        <div class="feed-content">${htmlContent}</div>
-      `;
-      feedContainer.appendChild(fItem);
-    });
-
-  } catch (e) {
-    console.error("加载 NeoDB 失败:", e);
-    const loading = document.getElementById('neodb-loading');
-    if (loading) loading.innerText = '加载数据失败，请刷新重试';
+    } catch (err) {
+      console.error('加载本地 JSON 失败:', err);
+      if (loading) loading.innerText = '数据载入失败，请检查构建日志';
+    }
   }
-}
 
-// 兼容常规加载与 Redefine 主题的 PJAX 无刷新加载
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', initNeoDB);
-} else {
-  initNeoDB();
-}
-document.addEventListener('pjax:complete', initNeoDB);
+  function init() {
+    bindViewSwitch();
+    fetchNeoDBData();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+  document.addEventListener('pjax:complete', init);
+})();
 </script>
 
             
