@@ -13,22 +13,24 @@
     
     <!--- Seo Part-->
     
-    <link rel="canonical" href="https://morimori0401.github.io/links/"/>
+    <link rel="canonical" href="https://morimori0401.github.io/neodb/"/>
     <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     
-        <meta name="description" content="书影音">
+        <meta name="description" content=".neodb-switch { display: flex; gap: 10px; margin-bottom: 20px; } .neodb-btn { padding: 8px 16px; border: 1px solid var(--primary-color); border-radius: 8px; cursor: pointer; background: transparent;">
 <meta property="og:type" content="website">
-<meta property="og:title" content="通往其他宇宙...">
-<meta property="og:url" content="https://morimori0401.github.io/links/index.html">
+<meta property="og:title" content="书影音动态">
+<meta property="og:url" content="https://morimori0401.github.io/neodb/index.html">
 <meta property="og:site_name" content="梦的化石与现实记录">
-<meta property="og:description" content="书影音">
+<meta property="og:description" content=".neodb-switch { display: flex; gap: 10px; margin-bottom: 20px; } .neodb-btn { padding: 8px 16px; border: 1px solid var(--primary-color); border-radius: 8px; cursor: pointer; background: transparent;">
 <meta property="og:locale">
-<meta property="article:published_time" content="2023-07-14T01:46:36.000Z">
-<meta property="article:modified_time" content="2025-12-29T05:33:18.404Z">
+<meta property="og:image" content="https://morimori0401.github.io/neodb/$%7BimgSrc%7D">
+<meta property="article:published_time" content="2026-08-27T06:17:29.000Z">
+<meta property="article:modified_time" content="2026-08-27T06:32:59.980Z">
 <meta property="article:author" content="morimori">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://morimori0401.github.io/neodb/$%7BimgSrc%7D">
     
     
     <!--- Icon Part-->
@@ -40,7 +42,7 @@
     
     <title>
         
-            通往其他宇宙... -
+            书影音动态 -
         
         第四十四个宇宙的兔子洞
     </title>
@@ -202,7 +204,7 @@
                         
                             <li class="navbar-item">
                                 <!-- Menu -->
-                                <a class="active" 
+                                <a class="" 
                                     href="/links/"  >
                                     
                                         
@@ -264,7 +266,7 @@
                         
                             <li class="navbar-item">
                                 <!-- Menu -->
-                                <a class="" 
+                                <a class="active" 
                                     href="/neodb/"  >
                                     
                                         
@@ -357,7 +359,7 @@
             
                 
                     <li class="drawer-navbar-item flex-center">
-                        <a class="active" 
+                        <a class="" 
                         href="/links/"  >
                              
                                 
@@ -412,7 +414,7 @@
             
                 
                     <li class="drawer-navbar-item flex-center">
-                        <a class="" 
+                        <a class="active" 
                         href="/neodb/"  >
                              
                                 
@@ -448,43 +450,150 @@
         
         
         
-            <div class="friends-link-container">
-    <div class="friend-links-title">
-        <h1 class="article-title-regular">通往其他宇宙...</h1>
-    </div>
-    
-        <div class="friend-links-subtitle">
-            <h2 class="article-title-regular">打打招呼</h2>
-        </div>
-        
-        <ul class="friends-link-list">
-            
-                <li class="friends-link-item">
-                    <a target="_blank" rel="noopener" href="https://luoyutong47.github.io">
-                        <div class="content">
-                            <div class="avatar radius">
-                                
-                                    <i class="fa-solid fa-user-group"></i>
-                                
-                            </div>
-                            <div class="info">
-                                <div class="name ellipsis">luoyutong47</div>
-                                <div class="description ellipsis">想做会摄影的写作者的程序员</div>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-            
-        </ul>
-        
-    
-    <div class="clear"></div>
-</div>
-
-        
         <div class="page-template-content markdown-body">
             
-                
+                <style>
+.neodb-switch { display: flex; gap: 10px; margin-bottom: 20px; }
+.neodb-btn { padding: 8px 16px; border: 1px solid var(--primary-color); border-radius: 8px; cursor: pointer; background: transparent; color: var(--text-color); }
+.neodb-btn.active { background: var(--primary-color); color: #fff; }
+
+/* 视图1：瀑布流 */
+.view-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 15px; }
+.grid-item { border-radius: 8px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.15); transition: transform 0.2s; aspect-ratio: 2/3; background: rgba(0,0,0,0.05); }
+.grid-item:hover { transform: translateY(-4px); }
+.grid-item img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+/* 视图2：动态卡片 */
+.view-feed { display: flex; flex-direction: column; gap: 20px; }
+.feed-card { border: 1px solid rgba(0,0,0,0.08); border-radius: 12px; padding: 16px; background: var(--background-color); box-shadow: 0 2px 8px rgba(0,0,0,0.04); }
+.feed-title { font-weight: bold; margin-bottom: 8px; color: var(--primary-color); }
+.feed-content { font-size: 0.95rem; line-height: 1.6; margin-bottom: 12px; }
+
+/* 防剧透 (Spoiler) */
+details.spoiler { border: 1px solid rgba(0,0,0,0.1); border-radius: 6px; padding: 10px; margin-top: 8px; background: rgba(0,0,0,0.02); }
+details.spoiler summary { cursor: pointer; font-weight: bold; color: #888; }
+.loading-tip { text-align: center; padding: 30px; color: #888; }
+</style>
+
+<div class="neodb-switch">
+  <button id="btn-grid" class="neodb-btn active" onclick="switchNeoDBView('grid')">瀑布流视图</button>
+  <button id="btn-feed" class="neodb-btn" onclick="switchNeoDBView('feed')">动态详情视图</button>
+</div>
+
+<div id="neodb-loading" class="loading-tip">正在调取 NeoDB 动态...</div>
+
+<div id="neodb-container">
+  <div id="grid-view" class="view-grid"></div>
+  <div id="feed-view" class="view-feed" style="display: none;"></div>
+</div>
+
+<script>
+function switchNeoDBView(type) {
+  const g = document.getElementById('grid-view');
+  const f = document.getElementById('feed-view');
+  const btnG = document.getElementById('btn-grid');
+  const btnF = document.getElementById('btn-feed');
+
+  if(type === 'grid') {
+    g.style.display = 'grid';
+    f.style.display = 'none';
+    btnG.classList.add('active');
+    btnF.classList.remove('active');
+  } else {
+    g.style.display = 'none';
+    f.style.display = 'flex';
+    btnF.classList.add('active');
+    btnG.classList.remove('active');
+  }
+}
+
+async function initNeoDB() {
+  const rssUrl = 'https://neodb.social/users/porcelain_smile/rss';
+  const proxyUrl = `https://api.allorigins.win/get?url=${encodeURIComponent(rssUrl)}`;
+
+  try {
+    const res = await fetch(proxyUrl);
+    const data = await res.json();
+    const parser = new DOMParser();
+    const xml = parser.parseFromString(data.contents, "text/xml");
+    const items = xml.querySelectorAll("item");
+
+    const gridContainer = document.getElementById('grid-view');
+    const feedContainer = document.getElementById('feed-view');
+    const loading = document.getElementById('neodb-loading');
+    
+    if (items.length === 0) {
+      loading.innerText = '暂无书影音动态';
+      return;
+    }
+    
+    loading.style.display = 'none';
+    gridContainer.innerHTML = '';
+    feedContainer.innerHTML = '';
+    
+    items.forEach(item => {
+      const title = item.querySelector("title")?.textContent || '';
+      const description = item.querySelector("description")?.textContent || '';
+      const link = item.querySelector("link")?.textContent || '#';
+    
+      // 尝试提取 RSS HTML 中的封面图片
+      const doc = parser.parseFromString(description, 'text/html');
+      const imgTag = doc.querySelector("img");
+      const imgSrc = imgTag ? imgTag.getAttribute("src") : '';
+    
+      // 1. 渲染瀑布流
+      if (imgSrc) {
+        const gItem = document.createElement('a');
+        gItem.className = 'grid-item';
+        gItem.href = link;
+        gItem.target = '_blank';
+        gItem.innerHTML = `<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="${imgSrc}"
+                      title="${title}"
+                >`;
+        gridContainer.appendChild(gItem);
+      }
+    
+      // 2. 渲染动态详情（含防剧透逻辑）
+      const fItem = document.createElement('div');
+      fItem.className = 'feed-card';
+      
+      let htmlContent = description;
+      // 检测是否带有剧透标记或转换 details 标签
+      if (description.includes("spoiler") || description.includes("剧透")) {
+        htmlContent = `
+          <details class="spoiler">
+            <summary>关于 ${title}，可能包含剧透或敏感内容</summary>
+            <div style="margin-top: 10px;">${description}</div>
+          </details>
+        `;
+      }
+    
+      fItem.innerHTML = `
+        <div class="feed-title"><a href="${link}" target="_blank" style="color: inherit;">${title}</a></div>
+        <div class="feed-content">${htmlContent}</div>
+      `;
+      feedContainer.appendChild(fItem);
+    });
+
+  } catch (e) {
+    console.error("加载 NeoDB 失败:", e);
+    const loading = document.getElementById('neodb-loading');
+    if (loading) loading.innerText = '加载数据失败，请刷新重试';
+  }
+}
+
+// 兼容常规加载与 Redefine 主题的 PJAX 无刷新加载
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initNeoDB);
+} else {
+  initNeoDB();
+}
+document.addEventListener('pjax:complete', initNeoDB);
+</script>
+
             
         </div>
         <div class="page-template-comments">
