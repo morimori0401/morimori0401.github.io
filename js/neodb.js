@@ -20,8 +20,6 @@
       curr = curr.substring(end + 2);
     }
     result += curr;
-
-    // 将文本中的换行符转换成 HTML 的换行标签 <br>
     return result.replace(/\n/g, '<br>');
   }
 
@@ -34,16 +32,11 @@
     return '★'.repeat(score) + '☆'.repeat(5 - score) + ' (' + num + '分)';
   }
 
-  // 提取评语的通用辅助函数（兼容多种 NeoDB JSON 导出格式）
   function extractComment(item) {
     if (!item) return '';
-
-    // 1. 优先尝试短评
     if (item.comment && typeof item.comment === 'string' && item.comment.trim() !== '') {
       return item.comment;
     }
-
-    // 2. 尝试长评的各种可能字段与嵌套层级
     if (typeof item.review === 'string' && item.review.trim() !== '') {
       return item.review;
     }
@@ -52,12 +45,10 @@
       if (item.review.body) return item.review.body;
       if (item.review.text) return item.review.text;
     }
-
     if (item.review_body) return item.review_body;
     if (item.review_content) return item.review_content;
     if (item.review_text) return item.review_text;
     if (item.description) return item.description;
-
     return '';
   }
 
@@ -129,8 +120,7 @@
           gItem.target = '_blank';
           gItem.title = (item.title || '') + ' (' + dateStr + ')';
 
-          // 为网格视图独立设置每个月份的锚点 ID（前缀 grid-sec-）
-          if (yearMonth !== '其他' && !createdMonthGridIds[yearMonth]) {
+          if (yearMonth !== 'other' && !createdMonthGridIds[yearMonth]) {
             gItem.id = 'grid-sec-' + yearMonth;
             createdMonthGridIds[yearMonth] = true;
           }
@@ -161,8 +151,7 @@
           var fItem = document.createElement('div');
           fItem.className = 'feed-card';
 
-          // 为动态视图独立设置每个月份的锚点 ID（前缀 feed-sec-）
-          if (yearMonth !== '其他' && !createdMonthFeedIds[yearMonth]) {
+          if (yearMonth !== 'other' && !createdMonthFeedIds[yearMonth]) {
             fItem.id = 'feed-sec-' + yearMonth;
             createdMonthFeedIds[yearMonth] = true;
           }
@@ -186,7 +175,14 @@
 
           var headerDiv = document.createElement('div');
           headerDiv.className = 'feed-header';
-          headerDiv.innerHTML = '<span class="feed-title"><a href="' + (item.link || '#') + '" target="_blank">' + (item.title || '') + '</a></span><span class="feed-date">' + dateStr + '</span>';
+
+          // 如果是 dropped（放弃）状态，生成一个“放弃”标签
+          var statusTag = '';
+          if (item.category === 'dropped') {
+            statusTag = '<span style="background-color: #f56c6c; color: #fff; font-size: 12px; padding: 1px 6px; border-radius: 4px; margin-left: 6px; vertical-align: middle;">放弃</span>';
+          }
+
+          headerDiv.innerHTML = '<span class="feed-title"><a href="' + (item.link || '#') + '" target="_blank">' + (item.title || '') + '</a>' + statusTag + '</span><span class="feed-date">' + dateStr + '</span>';
           infoDiv.appendChild(headerDiv);
 
           if (item.rating || item.rating === 0) {
@@ -214,7 +210,7 @@
           feedView.appendChild(fItem);
         });
 
-        // 3. 时间轴渲染（根据当前所处视图智能匹配并滚动）
+        // 3. 时间轴渲染（保持原有的独立视图滚动逻辑）
         if (sidebarTimeline) {
           Object.keys(timelineMap).sort(function(a, b) { return b.localeCompare(a); }).forEach(function(year) {
             var yearEl = document.createElement('div');
@@ -236,9 +232,7 @@
 
               aTag.onclick = function(e) {
                 e.preventDefault();
-                // 判断当前是网格视图还是动态详情视图
                 var isGridActive = gridView && gridView.style.display !== 'none';
-
                 var targetId = isGridActive ? ('grid-sec-' + ym) : ('feed-sec-' + ym);
                 var targetEl = document.getElementById(targetId);
 
