@@ -102,7 +102,8 @@
         if (sidebarTimeline) sidebarTimeline.innerHTML = '';
 
         var timelineMap = {};
-        var createdMonthIds = {};
+        var createdMonthGridIds = {};
+        var createdMonthFeedIds = {};
 
         items.forEach(function(item) {
           var dateStr = item.created_time || '';
@@ -127,6 +128,12 @@
           gItem.href = item.link || '#';
           gItem.target = '_blank';
           gItem.title = (item.title || '') + ' (' + dateStr + ')';
+
+          // 为网格视图独立设置每个月份的锚点 ID（前缀 grid-sec-）
+          if (yearMonth !== '其他' && !createdMonthGridIds[yearMonth]) {
+            gItem.id = 'grid-sec-' + yearMonth;
+            createdMonthGridIds[yearMonth] = true;
+          }
 
           if (item.cover) {
             var img = document.createElement('img');
@@ -154,10 +161,10 @@
           var fItem = document.createElement('div');
           fItem.className = 'feed-card';
 
-          // 将时间轴的月份锚点优先绑定在动态详情视图上
-          if (yearMonth !== '其他' && !createdMonthIds['feed-' + yearMonth]) {
-            fItem.id = 'sec-' + yearMonth;
-            createdMonthIds['feed-' + yearMonth] = true;
+          // 为动态视图独立设置每个月份的锚点 ID（前缀 feed-sec-）
+          if (yearMonth !== '其他' && !createdMonthFeedIds[yearMonth]) {
+            fItem.id = 'feed-sec-' + yearMonth;
+            createdMonthFeedIds[yearMonth] = true;
           }
 
           if (item.cover) {
@@ -207,7 +214,7 @@
           feedView.appendChild(fItem);
         });
 
-        // 3. 时间轴渲染（增加点击平滑跳转与视图切换逻辑）
+        // 3. 时间轴渲染（根据当前所处视图智能匹配并滚动）
         if (sidebarTimeline) {
           Object.keys(timelineMap).sort(function(a, b) { return b.localeCompare(a); }).forEach(function(year) {
             var yearEl = document.createElement('div');
@@ -224,17 +231,18 @@
               li.className = 'archive-month-item';
 
               var aTag = document.createElement('a');
-              aTag.href = '#sec-' + ym;
+              aTag.href = '#';
               aTag.innerText = ym + ' (' + count + ')';
 
               aTag.onclick = function(e) {
-                // 如果当前处于网格视图，自动切到动态详情视图
-                if (btnFeed && feedView && feedView.style.display === 'none') {
-                  btnFeed.click();
-                }
-                var targetEl = document.getElementById('sec-' + ym);
+                e.preventDefault();
+                // 判断当前是网格视图还是动态详情视图
+                var isGridActive = gridView && gridView.style.display !== 'none';
+
+                var targetId = isGridActive ? ('grid-sec-' + ym) : ('feed-sec-' + ym);
+                var targetEl = document.getElementById(targetId);
+
                 if (targetEl) {
-                  e.preventDefault();
                   targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 }
               };
