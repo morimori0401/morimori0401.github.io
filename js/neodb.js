@@ -128,11 +128,6 @@
           gItem.target = '_blank';
           gItem.title = (item.title || '') + ' (' + dateStr + ')';
 
-          if (yearMonth !== '其他' && !createdMonthIds['grid-' + yearMonth]) {
-            gItem.id = 'sec-' + yearMonth;
-            createdMonthIds['grid-' + yearMonth] = true;
-          }
-
           if (item.cover) {
             var img = document.createElement('img');
             img.src = item.cover;
@@ -159,10 +154,9 @@
           var fItem = document.createElement('div');
           fItem.className = 'feed-card';
 
+          // 将时间轴的月份锚点优先绑定在动态详情视图上
           if (yearMonth !== '其他' && !createdMonthIds['feed-' + yearMonth]) {
-            if (!gItem.id) {
-              fItem.id = 'sec-' + yearMonth;
-            }
+            fItem.id = 'sec-' + yearMonth;
             createdMonthIds['feed-' + yearMonth] = true;
           }
 
@@ -195,7 +189,6 @@
             infoDiv.appendChild(ratingDiv);
           }
 
-          // 逻辑优化：优先使用短评，无短评则使用长评（兼容 review / review_body 等常见字段）
           var rawComment = extractComment(item);
           var parsedComment = parseSpoilers(rawComment);
 
@@ -214,7 +207,7 @@
           feedView.appendChild(fItem);
         });
 
-        // 3. 时间轴渲染
+        // 3. 时间轴渲染（增加点击平滑跳转与视图切换逻辑）
         if (sidebarTimeline) {
           Object.keys(timelineMap).sort(function(a, b) { return b.localeCompare(a); }).forEach(function(year) {
             var yearEl = document.createElement('div');
@@ -229,7 +222,24 @@
               var count = timelineMap[year][ym].length;
               var li = document.createElement('li');
               li.className = 'archive-month-item';
-              li.innerHTML = '<a href="#sec-' + ym + '">' + ym + ' (' + count + ')</a>';
+
+              var aTag = document.createElement('a');
+              aTag.href = '#sec-' + ym;
+              aTag.innerText = ym + ' (' + count + ')';
+
+              aTag.onclick = function(e) {
+                // 如果当前处于网格视图，自动切到动态详情视图
+                if (btnFeed && feedView && feedView.style.display === 'none') {
+                  btnFeed.click();
+                }
+                var targetEl = document.getElementById('sec-' + ym);
+                if (targetEl) {
+                  e.preventDefault();
+                  targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+              };
+
+              li.appendChild(aTag);
               monthUl.appendChild(li);
             });
             sidebarTimeline.appendChild(monthUl);
